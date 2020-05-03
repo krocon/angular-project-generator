@@ -1,0 +1,10 @@
+
+.route-container {
+  position: relative;
+  //min-height: calc(100% - 65px);
+  min-height: calc(100vh - 290px);
+}
+
+.route-container > * {
+  display: block;
+}

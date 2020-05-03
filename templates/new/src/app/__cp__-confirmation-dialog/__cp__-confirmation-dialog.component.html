@@ -1,0 +1,56 @@
+<div [className]="data.cssClass" data-test-id="confirm-dialog-div">
+
+  <div *ngIf="data && data?.title" mat-dialog-title>
+    <button (click)="onCloseClicked()" class="__cp__-float-right" mat-icon-button>&#x2716;</button>
+    <h4>{{data?.title}}</h4>
+  </div>
+
+  <div mat-dialog-content>
+    <p *ngFor="let phrase of data?.phrases">{{phrase}}</p>
+
+    <div *ngIf="data.inputs && data.inputs.length" class="inputs-div">
+      <form>
+        <div *ngFor="let input of data?.inputs">
+          <mat-form-field *ngIf="input.type === 'text'" class="__cp__-full-width">
+            <input [(ngModel)]="data.inputModel[input.key]"
+                   [attr.name]="input.key"
+                   [attr.placeholder]="input.label"
+                   [maxLength]="50"
+                   autocapitalize="off"
+                   autocomplete="off"
+                   matInput
+                   spellcheck="false">
+          </mat-form-field>
+          <mat-checkbox
+            *ngIf="input.type === 'checkbox'"
+            [(ngModel)]="data.inputModel[input.key]"
+            name="{{input.key}}">{{input.label}}</mat-checkbox>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div *ngIf="vertical" align="end" class="buttons-vertical-div" layout-align="vertical">
+    <button (click)="onButtonClicked(btn)"
+            *ngFor="let btn of data?.buttons; let i = index"
+            [attr.data-test-id]="'confirm-dialog-button-v-' + i"
+            [color]="btn.color"
+            [ngClass]="{'__cp__-full-width':vertical}"
+            class="display-inline-block"
+            mat-flat-button>{{btn.label}}
+    </button>
+  </div>
+  <div *ngIf="!vertical" align="end" class="buttons-horizontal-div">
+    <button (click)="onButtonClicked(btn)"
+            *ngFor="let btn of data?.buttons; let i = index"
+            [attr.data-test-id]="'confirm-dialog-button-h-' + i"
+            [color]="btn.color"
+            [ngClass]="{'__cp__-full-width':vertical}"
+            class="display-inline-block"
+            mat-flat-button>{{btn.label}}
+    </button>
+  </div>
+
+</div>

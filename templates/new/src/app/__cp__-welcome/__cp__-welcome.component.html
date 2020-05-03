@@ -1,0 +1,62 @@
+<div
+  class="__cp__-welcome-outer-div"
+  [ngClass]="{'display-none': (isSmall$ | async)}"
+  ngClass.lt-sm="display-none">
+  <div *ngIf="bgImageVisible" class="__cp__-welcome-div"></div>
+</div>
+
+<div
+  class="__cp__-padding"
+  [ngClass]="{'overlay-div': textAsOverlay && !(isSmall$ | async)}">
+
+  <h1>AppXyz</h1>
+
+  <br>
+  <p class="__cp__-max-width-300-px">
+    Achten Sie darauf, dass die wesentliche Botschaft Ihrer Website auf Ihrer Startseite SOFORT zu sehen ist,
+    OHNE dass man dazu weiter runterscrollen muss
+  </p>
+
+  <br>
+
+  <button color="primary" mat-flat-button routerLink="/demo">
+    Starten <i class="material-icons">arrow_forward_ios</i>
+  </button>
+</div>
+
+
+
+<div class="__cp__-padding"
+     fxLayout="row wrap"
+     fxLayoutAlign="start stretch"
+     fxLayoutGap="1rem" fxLayoutGap.lt-md="0">
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Tip</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Small&Handset: {{(isSmall$ | async)}}</p>
+    <p><a href="https://www.svgbackgrounds.com/">svgbackgrounds.com</a></p>
+  </div>
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Top</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Lorem</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <div fxFlex.lt-sm="100%" fxFlex.lt-md="calc(50% - 1rem)" fxFlex="calc(25% - 1rem)">
+    <h3>Ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+</div>
+
+
+<div class="__cp__-text-hidden __cp__-font-monospace">
+  production: {{ environment.production }}<br>
+  envName: '{{ environment.env }}'<br>
+  version: '{{ environment.version }}'<br>
+  commit: '{{ environment.commitHash }}'<br>
+</div>

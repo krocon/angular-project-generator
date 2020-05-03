@@ -34,12 +34,14 @@ program
   .command('new')
   .description('Generate a new angular project')
   .option('-f, --force', 'No confirm dialog / no prompts.', false)
+  .option('-e, --e2e', 'E2E Gherkin configuration.', true)
   .option('-a, --app <app>', 'The app name', 'demo')
   .option('-l, --logo <logo>', 'A predefined logo [dummy, deutschebank, deutschebahn]', 'dummy')
   .option('-p, --prefix <prefix>', 'The app prefix', 'app')
   .option('-cp, --componentprefix <componentprefix>', 'The component prefix', '') // no default
   .action(async (options) => {
       const opts = {
+        e2e: !!options.e2e,
         force: options.force,
         app: options.app,
         prefix: options.prefix,

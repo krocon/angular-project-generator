@@ -1,0 +1,83 @@
+
+:host {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.8em;
+  margin: 15px 0 50px 0;
+}
+
+.display-none {
+  display: none;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overlay-div {
+  position: relative;
+  background: transparent;
+  color: #fff;
+  top: -400px;
+  z-index: 2;
+  height: 0;
+  overflow-y: visible;
+}
+
+.__cp__-welcome-outer-div {
+  height: 450px;
+  background-image: url('../../assets/img/bg-quantum-gradient-01.svg');
+  //background-image: url('../../assets/img/bg-quantum-gradient-02.svg');
+  //background-image: url('../../assets/img/bg-liquid-cheese.svg');
+  background-size: cover;
+}
+
+.__cp__-welcome-div {
+  -webkit-font-smoothing: antialiased;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-size: cover;
+  height: 400px;
+  max-height: 400px;
+  overflow: hidden;
+
+  background-image: url('./../../assets/img/boerse.jpg');
+  background-position: center center;
+
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+

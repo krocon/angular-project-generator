@@ -1,0 +1,92 @@
+<h2 class="__cp__-padding hidden" data-test-id="page-subtitle-h2">Login</h2>
+
+
+<form [formGroup]="formGroup" autocomplete="off" ngNoForm *ngIf="initialized">
+  <div class="__cp__-text-align-center">
+    <div class="login">
+
+      <div class="person-icon-div">
+        <mat-icon
+          [ngClass]="{
+              'pulse': buttonSpinnerVisible || hasError,
+              '__cp__-color-error': hasError || !formGroup.valid || buttonSpinnerVisible
+            }">person
+        </mat-icon>
+      </div>
+
+      <h2>Bitte melden Sie sich an, um fortzufahren.</h2>
+
+      <mat-form-field>
+        <input
+          #username
+          (keydown.enter)="onLogin()"
+          app__capcp__Autofocus="{{focusOnUsername}}"
+          data-test-id="test-user"
+          formControlName="username"
+          matInput
+          placeholder="Benutzername">
+        <mat-error>
+          Bitte geben Sie einen gültigen Benutzernamen ein (min. 2 Zeichen)
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          (keydown.enter)="onLogin()"
+          [type]="hidePassword ? 'password' : 'text'"
+          app__capcp__Autofocus="{{focusOnPassword}}"
+          data-test-id="test-password"
+          formControlName="password"
+          matInput
+          placeholder="Kennwort">
+        <mat-error>
+          Bitte geben Sie einen gültiges Kennwort oder einen gültigen Benutzernamen ein (min. 2 Zeichen)
+        </mat-error>
+        <button
+          (click)="hidePassword = !hidePassword"
+          [attr.aria-label]="'Kennwort ausblenden'" [attr.aria-pressed]="hidePassword"
+          [disabled]="buttonSpinnerVisible"
+          mat-icon-button
+          matSuffix>
+          <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div class="checkbox-and-link-div __cp__-padding-top __cp__-padding-bottom">
+        <div data-test-id="test-benutzername-merken-login">
+          <mat-checkbox [attr.disabled]="buttonSpinnerVisible" color="primary" formControlName="remember">
+            Benutzername merken
+          </mat-checkbox>
+        </div>
+
+        <div class="__cp__-text-align-right __cp__-float-right">
+          <a [attr.href]="linkPasswordReset" target="_blank">
+            Passwort wiederherstellen
+          </a>
+        </div>
+      </div>
+
+      <div class="__cp__-padding-top __cp__-padding-bottom">
+        <mat-error *ngIf="hasError" [innerText]="errorMesasage"></mat-error>
+      </div>
+
+      <div class="cta">
+        <button
+          (click)="onLogin()"
+          [disabled]="!formGroup.valid || buttonSpinnerVisible"
+          class="__cp__-full-width"
+          color="primary"
+          data-test-id="test-anmelden-login"
+          mat-raised-button>
+          <mat-spinner
+            *ngIf="buttonSpinnerVisible"
+            [diameter]="24"></mat-spinner>
+          <span>Anmelden</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</form>
+

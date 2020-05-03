@@ -1,0 +1,82 @@
+
+h2.hidden {
+  color: transparent;
+  font-size: 1px;
+}
+
+div.login {
+  text-align: left;
+  max-width: 400px;
+  margin: auto;
+
+  .person-icon-div {
+    height: 190px;
+    text-align: center;
+
+    mat-icon {
+      font-size: 200px;
+      width: 200px;
+      height: 200px;
+      color: #878C96;
+
+      &.__cp__-color-error {
+        color: #F01414;
+      }
+    }
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .checkbox-and-link-div {
+    margin-top: 24px;
+
+    & > * {
+      width: 45%;
+      display: inline-block;
+    }
+  }
+
+  mat-spinner {
+    display: inline;
+    width: 24px;
+    margin: 4px 0 0 0;
+  }
+}
+
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
+}

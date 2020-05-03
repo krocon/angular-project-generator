@@ -1,0 +1,185 @@
+
+
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to init a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-warn:    mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($candy-app-theme);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$__cp__-color-red:#F01414;
+$__cp__-color-blue:#0A1E6E;
+$__cp__-color-gray:#878C96;
+$__cp__-color-white:#ffffff;
+$__cp__-color-black:#282d37; // black on screen
+$__cp__-color-04-06:#F05000; // orange
+
+
+$__cp__-color-red-palette: (
+        50 : #fde3e3,
+        100 : #fbb9b9,
+        200 : #f88a8a,
+        300 : #f55b5b,
+        400 : #f23737,
+        500 : #f01414,
+        600 : #ee1212,
+        700 : #ec0e0e,
+        800 : #e90b0b,
+        900 : #e50606,
+        A100 : #ffffff,
+        A200 : #ffdada,
+        A400 : #ffa7a7,
+        A700 : #ff8d8d,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #ffffff,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
+);
+
+$__cp__-color-blue-palette: (
+        50 : #e2e4ee,
+        100 : #b6bcd4,
+        200 : #858fb7,
+        300 : #54629a,
+        400 : #2f4084,
+        500 : #0a1e6e,
+        600 : #091a66,
+        700 : #07165b,
+        800 : #051251,
+        900 : #030a3f,
+        A100 : #747dff,
+        A200 : #414eff,
+        A400 : #0e1eff,
+        A700 : #0010f4,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #ffffff,
+                400 : #ffffff,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #ffffff,
+                A400 : #ffffff,
+                A700 : #ffffff,
+        )
+);
+
+$__cp__-app-primary: mat-palette($__cp__-color-red-palette);
+$__cp__-app-accent:  mat-palette($__cp__-color-blue-palette);
+
+
+// The warn palette is optional (defaults to red).
+$__cp__-app-warn:    mat-palette($__cp__-color-red-palette);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$__cp__-app-theme: mat-light-theme($__cp__-app-primary, $__cp__-app-accent, $__cp__-app-warn);
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($__cp__-app-theme);
+
+.mat-form-field-appearance-fill {
+  .mat-form-field-flex {
+    background-color: #fff;
+  }
+}
+
+.mat-drawer {
+  background: #fefefe;
+  //background: #fdfdfd;
+  //background: ##F1F2F3;
+}
+
+.mat-drawer-content {
+  background: #fff;
+}
+
+mat-sidenav-content .mat-toolbar {
+  background: #fff;
+}
+mat-toolbar.mat-primary.mat-toolbar-single-row {
+  background: #fff;
+  color: #000;
+}
+.mat-card {
+  background: #fff;
+  .mat-card-header {
+    .mat-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+  .mat-card-header-text{
+    margin-left: 0;
+  }
+}
+
+
+a {
+  color: #0087b9;
+}
+
+.__cp__-content {
+  background: #e1e6eb;
+}
+
+.__cp__-footer-bg {
+  background: #fff;
+}
+
+.__cp__-blue-bg-gradient {
+  background: #3d6592;
+  background: linear-gradient(90deg, #8ab3d6 0%, #3d6592 100%);
+}
+
+.mat-table {
+  background: transparent;
+}
+
+.mat-tooltip {
+  background: #0A1E6E;
+  color: #F0F3F5;
+}
+
+mat-card.__cp__-mat-card-fancy-input-semi-bg {
+  background: #f3f5f8;
+}
+
+.__cp__-color-error {
+  color: $__cp__-color-red;
+}
+.__cp__-color-success {
+  color: #408335;
+}
+

@@ -1,0 +1,18 @@
+
+:host-context > div {
+  min-height: 180px;
+  background: #fff;
+  padding: 0;
+  padding-top: 8px;
+  padding-left: 16px;
+
+  > div {
+    padding: 0;
+    padding-right: 1rem;
+  }
+
+  .__cp__-font-weight-bold {
+    margin-bottom: 6px;
+  }
+}
+

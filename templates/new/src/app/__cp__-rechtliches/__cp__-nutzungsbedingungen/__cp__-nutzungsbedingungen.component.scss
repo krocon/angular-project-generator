@@ -1,0 +1,23 @@
+@media only screen and (min-width: 600px) {
+  :host-context > div {
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  :host-context > div {
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  :host-context > div {
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  :host-context > div {
+    column-count: 4;
+  }
+}

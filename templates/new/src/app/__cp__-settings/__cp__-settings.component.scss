@@ -1,0 +1,32 @@
+
+.settings-component-div {
+  text-align: center;
+}
+
+.content-div {
+  max-width: 400px;
+  margin: auto;
+}
+
+.icon i {
+  font-size: 180px;
+}
+
+
+.formfield-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.formfield-container > * {
+  width: 100%;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.button-row button {
+  margin-left: 10px;
+}

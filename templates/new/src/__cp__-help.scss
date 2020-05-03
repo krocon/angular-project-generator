@@ -1,0 +1,144 @@
+
+
+$properties: 'margin', 'padding';
+$positions: 'top', 'right', 'bottom', 'left';
+$sizes: 0px, 16px, 32px, 48px;
+
+@each $prop in $properties {
+  .__cp__-#{$prop} {
+    #{$prop}: 16px;
+  }
+
+  @each $pos in $positions {
+    .__cp__-#{$prop}-#{$pos} {
+      #{$prop}-#{$pos}: 16px;
+    }
+
+    @each $size in $sizes {
+      .__cp__-#{$prop}-#{$pos}-#{$size} {
+        #{$prop}-#{$pos}: $size;
+      }
+    }
+  }
+}
+
+@each $pos in $positions {
+  .__cp__-border-#{$pos} {
+    border#{$pos}: solid 1px #e1e6eb;
+  }
+}
+
+
+.__cp__-full-width {
+  width: 100% !important;
+}
+
+.__cp__-full-height-and-width {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.__cp__-font-monospace {
+  font-family: monospace !important;
+  white-space: pre;
+}
+
+.__cp__-font-weight-bold {
+  font-weight: bold;
+}
+
+.__cp__-text-align-center {
+  text-align: center;
+}
+
+.__cp__-text-align-right {
+  text-align: right;
+}
+
+.__cp__-text-align-left {
+  text-align: left;
+}
+
+.__cp__-vertical-align-top {
+  vertical-align: top;
+}
+
+.__cp__-vertical-align-middle {
+  vertical-align: middle;
+}
+
+.__cp__-vertical-align-bottom {
+  vertical-align: bottom;
+}
+
+.__cp__-text-align-left {
+  text-align: left;
+}
+
+.__cp__-text-align-right {
+  text-align: right;
+}
+
+.__cp__-text-align-center {
+  text-align: center;
+}
+
+
+.__cp__-position-fixed {
+  position: fixed;
+}
+
+.__cp__-float-right {
+  float: right;
+}
+
+.__cp__-float-left {
+  float: left;
+}
+
+.__cp__-clear-both {
+  clear: both;
+}
+
+.__cp__-text-hidden {
+  color: transparent;
+}
+
+.__cp__-display-none {
+  display: none !important;
+}
+
+ //This fills the remaining space of the current row
+.__cp__-flex-fill-space {
+  flex: 1 1 auto;
+}
+
+.__cp__-flex-direction-row {
+  flex-direction: row;
+}
+
+.__cp__-flex-direction-column {
+  flex-direction: column;
+}
+
+.__cp__-display-inline-flex {
+  display: inline-flex;
+}
+
+$widthPers: 20, 25, 33, 50;
+@each $w in $widthPers {
+  .__cp__-width-#{$w}-per {
+    width: unquote(#{$w} + '%');
+  }
+}
+
+$maxwidth: 300, 600, 960, 1280, 1920;
+@each $w in $maxwidth {
+  .__cp__-max-width-#{$w}-px {
+    max-width: unquote(#{$w} + 'px');
+  }
+}

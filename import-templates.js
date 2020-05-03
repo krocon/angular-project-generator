@@ -19,6 +19,14 @@ const copyBase = async () => {
   });
 };
 
+
+const copyE2E = async () => {
+  let src = path.join(sourceRoot, '/e2e');
+  let target = path.join(__dirname, '/templates/e2e/e2e');
+  await fse.emptyDirSync(target);
+  await fse.copySync(src, target);
+};
+
 const copyEntityService = async () => {
   let src = path.join(sourceRoot, '/src/app/__cp__-__kebabentity__-service');
   let target = path.join(__dirname, '/templates/entity-service/app/__cp__-__kebabentity__-service');
@@ -42,6 +50,7 @@ const copyAll = async () => {
   await copyBase();
   await copyEntityService();
   await copyStoreService();
+  await copyE2E();
 };
 
 copyAll();
