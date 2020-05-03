@@ -27,16 +27,9 @@ The generated app will have a lot of common features like:
 
 ![apg-cli](https://user-images.githubusercontent.com/11378781/80909867-f0209a00-8d2b-11ea-9fd4-2c8aff503f3d.png)
 
-## Welcome dialog
-![app-welcome](https://user-images.githubusercontent.com/11378781/80910383-607cea80-8d2f-11ea-895f-5d3a8554fe23.png)
-
-## Login dialog
-![app-login](https://user-images.githubusercontent.com/11378781/80910331-1431aa80-8d2f-11ea-972a-db32feab08f2.png)
-
-
 ### Install apg
 ```console
-npm i -g apg@latest
+npm i -g angular-project-generator@latest
 ```
 
 ### Show help
@@ -55,4 +48,11 @@ apg update
 ```console
 apg new -a MyApp -p app -cp ma
 ``` 
+
+## Welcome dialog
+![app-welcome](https://user-images.githubusercontent.com/11378781/80910383-607cea80-8d2f-11ea-895f-5d3a8554fe23.png)
+
+
+## Login dialog
+![app-login](https://user-images.githubusercontent.com/11378781/80910331-1431aa80-8d2f-11ea-972a-db32feab08f2.png)
 
