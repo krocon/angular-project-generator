@@ -1,0 +1,62 @@
+{
+  "name": "angular-project-generator",
+  "version": "9.1.0",
+  "description": "Angular Project Generator",
+  "scripts": {
+    "test": "jest --findRelatedTests bin/ lib/",
+    "install-g-local": "npm uninstall -g apge & npm install -g ./",
+    "import-templates": "node import-templates.js",
+    "npm-patch": "npm version patch",
+    "npm-publish": "npm publish"
+  },
+  "main": "lib/cmd-generate-new.js",
+  "bin": {
+    "apg": "bin/apg.js"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krocon/angular-project-generator.git"
+  },
+  "keywords": [
+    "angular",
+    "cli",
+    "generator",
+    "project",
+    "seed",
+    "angular 9",
+    "angular 10"
+  ],
+  "files": [
+    "bin/*.*",
+    "lib/*.*",
+    "templates/*.*",
+    "!test"
+  ],
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Marc Kronberg",
+    "email": "krocon@gmail.com",
+    "url": "https://gui.expert/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krocon/angular-project-generator/issues"
+  },
+  "homepage": "https://github.com/krocon/angular-project-generator#readme",
+  "dependencies": {
+    "cfonts": "^2.8.1",
+    "chalk": "^4.0.0",
+    "commander": "^5.0.0",
+    "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0",
+    "progress": "^2.0.3",
+    "prompts": "^2.3.2",
+    "replace-in-file": "^5.0.2",
+    "to-kebab": "^1.0.0",
+    "window-size": "^1.1.1"
+  },
+  "devDependencies": {
+    "jest": "^25.5.4"
+  }
+}
