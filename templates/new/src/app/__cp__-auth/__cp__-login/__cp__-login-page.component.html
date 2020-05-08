@@ -21,7 +21,7 @@
           #username
           (keydown.enter)="onLogin()"
           app__capcp__Autofocus="{{focusOnUsername}}"
-          data-test-id="test-user"
+          data-test-id="login-user-input"
           formControlName="username"
           matInput
           placeholder="Benutzername">
@@ -35,7 +35,7 @@
           (keydown.enter)="onLogin()"
           [type]="hidePassword ? 'password' : 'text'"
           app__capcp__Autofocus="{{focusOnPassword}}"
-          data-test-id="test-password"
+          data-test-id="login-password-input"
           formControlName="password"
           matInput
           placeholder="Kennwort">
@@ -76,7 +76,7 @@
           [disabled]="!formGroup.valid || buttonSpinnerVisible"
           class="__cp__-full-width"
           color="primary"
-          data-test-id="test-anmelden-login"
+          data-test-id="anmelden-login-button"
           mat-raised-button>
           <mat-spinner
             *ngIf="buttonSpinnerVisible"
@@ -84,9 +84,8 @@
           <span>Anmelden</span>
         </button>
       </div>
+
     </div>
-
   </div>
-
 </form>
 

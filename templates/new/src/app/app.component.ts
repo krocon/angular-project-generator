@@ -23,7 +23,7 @@ export class AppComponent {
     __capcp__NavComponent.forRoot({
         routeTitles: {
           home: 'Herzlich willkommen!',
-          login: 'Anmelden',
+          anmelden: 'Anmelden',
           demofonts: 'Demos / Fonts',
           demobuttons: 'Demos / Buttons',
           demoforms: 'Demos / Forms',

@@ -19,6 +19,7 @@ Before(() => {
 // =======================================================================================================
 
 
+
 Given(/^I am logged in$/,
   {timeout: 20 * 1000}, async () => {
     await page.navigateTo('anmelden');
@@ -81,6 +82,7 @@ Given(/^I expect errors in the logfile$/,
   });
 
 
+
 // =======================================================================================================
 // TRIGGERS (when)
 // =======================================================================================================
@@ -96,10 +98,11 @@ When(/^I enter "([^"]*)" with RETURN in the input field "([^"]*)"$/,
     await page.inputText(field, text);
     await browser.sleep(2000);
     await browser.actions().sendKeys(protractor.Key.ENTER).perform();
-    //  await browser.sleep(100);
-    //  await browser.actions().sendKeys(protractor.Key.TAB).perform();
-    //  await browser.sleep(2500);
   });
+
+When(/^I remove the input of the field "([^"]*)"$/, {timeout: 20 * 1000}, async (field: string) => {
+  await page.clearInput(field);
+});
 
 When(/^I drag "([^"]*)" to "([^"]*)"$/,
   {timeout: 20 * 1000}, async (id1, id2: string) => {
@@ -110,6 +113,12 @@ When(/^I drag "([^"]*)" to "([^"]*)"$/,
   });
 
 When(/^I enter "([^"]*)" in the input field "([^"]*)"$/,
+  {timeout: 20 * 1000},
+  async (text: string, field: string) => {
+    await page.clearInput(field);
+    await page.inputText(field, text);
+  });
+When(/^I insert "([^"]*)" in the input field "([^"]*)"$/,
   {timeout: 20 * 1000},
   async (text: string, field: string) => {
     await page.inputText(field, text);
@@ -135,8 +144,6 @@ When(/^I remove the input of the autocomplete field "([^"]*)"$/,
 
 When(/^I click the button "([^"]*)"$/,
   {timeout: 20 * 1000}, async (id: string) => {
-    // const button = await page.getButton(id); // TODO click does not work this way
-    // await button.click();
     await page.pressButtonById(id); // old way
   });
 
@@ -175,18 +182,19 @@ Then(/^The select box "([^"]*)" should be set to "([^"]*)"$/,
     expect(await select.getValueText()).to.contain(text);
   });
 
-Then(/^I should see the title "([^"]*)"$/,
+Then(/^I should see the page title "([^"]*)"$/,
   {timeout: 20 * 1000},
   async (title: string) => {
+    await browser.sleep(1000);
     expect(await page.getTitleText()).to.equal(title);
   });
 
 Then(/^The button "([^"]*)" should be (enabled|disabled)$/,
   {timeout: 20 * 1000},
   async (buttonName: string, state: string) => {
-    if (state === 'enabled') { // tslint:disable-next-line:no-unused-expression
+    if (state === 'enabled') {
       expect(await page.checkButtonEnabled(buttonName)).to.be.true;
-    } else { // tslint:disable-next-line:no-unused-expression
+    } else {
       expect(await page.checkButtonEnabled(buttonName)).to.be.false;
     }
   });
@@ -194,9 +202,9 @@ Then(/^The button "([^"]*)" should be (enabled|disabled)$/,
 Then(/^The input "([^"]*)" should be (enabled|disabled)$/,
   {timeout: 20 * 1000},
   async (id: string, state: string) => {
-    if (state === 'enabled') { // tslint:disable-next-line:no-unused-expression
+    if (state === 'enabled') {
       expect(await page.checkInputEnabled(id)).to.be.true;
-    } else { // tslint:disable-next-line:no-unused-expression
+    } else {
       expect(await page.checkInputEnabled(id)).to.be.false;
     }
   });
@@ -233,9 +241,9 @@ Then(/^The radio button "([^"]*)" should be (checked|unchecked)$/,
   {timeout: 20 * 1000},
   async (id: string, state: string) => {
     const radioButton = await page.getRadioButton(id);
-    if (state === 'checked') { // tslint:disable-next-line:no-unused-expression
+    if (state === 'checked') {
       expect(await radioButton.isChecked()).to.be.true;
-    } else { // tslint:disable-next-line:no-unused-expression
+    } else {
       expect(await radioButton.isChecked()).to.be.false;
     }
   });
@@ -244,9 +252,9 @@ Then(/^The radio button "([^"]*)" should be (enabled|disabled)$/,
   {timeout: 20 * 1000},
   async (id: string, state: string) => {
     const radioButton = await page.getRadioButton(id);
-    if (state === 'enabled') { // tslint:disable-next-line:no-unused-expression
+    if (state === 'enabled') {
       expect(await radioButton.isDisabled()).to.be.false;
-    } else { // tslint:disable-next-line:no-unused-expression
+    } else {
       expect(await radioButton.isDisabled()).to.be.true;
     }
   });
@@ -254,9 +262,9 @@ Then(/^The radio button "([^"]*)" should be (enabled|disabled)$/,
 Then(/^The slide toggle "([^"]*)" should be (on|off)$/,
   {timeout: 20 * 1000},
   async (id: string, state: string) => {
-    if (state === 'on') { // tslint:disable-next-line:no-unused-expression
+    if (state === 'on') {
       expect(await (await page.getSlideToggle(id)).isChecked()).to.be.true;
-    } else { // tslint:disable-next-line:no-unused-expression
+    } else {
       expect(await (await page.getSlideToggle(id)).isChecked()).to.be.false;
     }
   });
@@ -299,6 +307,13 @@ Then(/^The specific element "([^"]*)" should be missing$/,
   async (id: string) => {
     const ele = await element(by.deepCss(`[data-test-id=${id}]`));
     expect(ele && await ele.isPresent()).to.be.false;
+  });
+
+Then(/^The specific element "([^"]*)" should exist$/,
+  {timeout: 20 * 1000},
+  async (id: string) => {
+    const ele = await element(by.deepCss(`[data-test-id=${id}]`));
+    expect(ele && await ele.isPresent()).to.be.true;
   });
 
 Then(/^I should see a dialog with the title containing "([^"]*)"$/,

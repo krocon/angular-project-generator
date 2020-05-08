@@ -26,6 +26,7 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
   hidePassword = true;
   focusOnUsername = true;
   focusOnPassword = true;
+  error = '';
 
   isErrorNetwork = false;
   isUnauthorized = false;
@@ -45,7 +46,8 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
   }
 
   get hasError(): boolean {
-    return this.isErrorUnavailable
+    return !!this.error
+      || this.isErrorUnavailable
       || this.isErrorInternalServer
       || this.isErrorForbidden
       || this.isErrorNetwork
@@ -57,6 +59,9 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
   }
 
   get errorMesasage(): string {
+    if (this.error) {
+      return this.error;
+    }
     if (this.isErrorNetwork) {
       return 'Netzwerkfehler. Bitte überprüfen Sie Ihre Internetverbindung.';
     }
@@ -100,20 +105,25 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
     this.initialized = true;
   }
 
-  fetchAuthLogin() {
+  requestAuthLogin() {
+    this.error = '';
     const formCredentials = this.getFormCredentials();
     this.authService
       .login(formCredentials)
       .pipe(takeWhile(() => this.alive))
       .subscribe(
-        (data) => this.loginHandler(),
+        this.loginHandler.bind(this),
         (err) => this.errorHandler(err)
       );
   }
 
-  loginHandler() {
+  loginHandler(data) {
     this.enableLoginInputs();
-    this.router.navigate([this.authService.getNextNavigation()]);
+    if (data.token) {
+      this.router.navigate([this.authService.getNextNavigation()]);
+    } else {
+      this.error = 'Es gab einen Fehler bei der Anmeldung';
+    }
   }
 
 
@@ -145,7 +155,7 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
       this.resetErrors();
       this.buttonSpinnerVisible = true;
       this.disableLoginInputs();
-      this.fetchAuthLogin();
+      this.requestAuthLogin();
     }
   }
 

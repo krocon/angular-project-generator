@@ -55,7 +55,11 @@
         Anmelden
       </a>
 
-      <a [routerLink]="cfg.logoutRoute" href="#" mat-list-item *ngIf="loggedIn" class="__cp__-margin-top-32px">
+      <a [routerLink]="cfg.logoutRoute"
+         href="#"
+         data-test-id="nav-logout-link"
+         mat-list-item *ngIf="loggedIn"
+         class="__cp__-margin-top-32px">
         <mat-icon>directions_walk</mat-icon>
         Abmelden
       </a>

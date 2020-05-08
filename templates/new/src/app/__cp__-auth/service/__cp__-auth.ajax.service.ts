@@ -27,6 +27,9 @@ export class __capcp__AuthAjaxService {
   login(loginData: LoginRequestData): Observable<LoginResponseData> {
     let url = __capcp__AuthAjaxService.config.loginUrl;
     if (url.indexOf('mock-data') > -1) {
+      if (loginData.username === 'unauthorized') {
+        return this.http.get<LoginResponseData>(url.replace(/\.json/g, '-unauthorized.json'));
+      }
       return this.http.get<LoginResponseData>(url);
     }
     return this.http.post<LoginResponseData>(url, loginData);

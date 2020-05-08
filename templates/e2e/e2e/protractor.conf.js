@@ -3,25 +3,37 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 // const {SpecReporter} = require('jasmine-spec-reporter');
 
-const fse = require('fs-extra');
+
 const path = require('path');
 
 const testOuptutDir = 'e2e-target';
-
-fse.emptyDirSync(testOuptutDir);
-
 
 /**
  * @type { import("protractor").Config }
  */
 exports.config = {
   allScriptsTimeout: 11000,
-  // specs: [
-  //   './src/**/*.e2e-spec.ts'
-  // ],
-  capabilities: {
-    browserName: 'chrome'
-  },
+
+  // capabilities: {
+  //   browserName: 'chrome'
+  // },
+  // chromeDriver: './chromedriver/chromedriver_80.0.3987.106.exe',
+  multiCapabilities: [
+    {
+      browserName: 'chrome',
+      shardTestFiles: true,
+      maxInstances: 5,
+      chromeOptions: {
+        args: [ '--headless', '--disable-infobars', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1920,1080']
+      },
+      metadata: {
+        device: 'Desktop',
+        platform: {
+          name: 'windows'
+        }
+      }
+    }
+  ],
   directConnect: true,
   baseUrl: 'http://localhost:4201/',
 

@@ -1,12 +1,12 @@
 @homepage
-Feature: Login
+Feature: 001 Login
   The login page allows the users to log in.
 
   @goto @happy
   Scenario: Home Page
     Given I am on the "anmelden" page
     When I do nothing
-    Then I should see the title "Anmelden"
+    Then I should see the page title "Anmelden"
 
   @login @happy
   Scenario: The login button should be disabled when I enter the login page
@@ -30,32 +30,12 @@ Feature: Login
   @login @unhappy
   Scenario: When I log in with a user that is not authorized I should get an error and cannot navigate further
     Given I am on the "anmelden" page
-      And I expect errors in the logfile
+#      And I expect errors in the logfile
     When I enter "unauthorized" in the input field "login-user-input"
     When I enter "def" in the input field "login-password-input"
     When I click the button "anmelden-login-button"
-    Then I should see an error message containing "Passwort ist abgelaufen" displayed
-    Then I should got routed to page "anmelden"
-
-  @login @unhappy
-  Scenario: When I log in with a user that is forbidden I should get an error and cannot navigate further
-    Given I am on the "anmelden" page
-    And I expect errors in the logfile
-    When I enter "forbidden" in the input field "login-user-input"
-    When I enter "def" in the input field "login-password-input"
-    When I click the button "anmelden-login-button"
-    Then I should see an error message containing "nicht berechtigt" displayed
-    Then I should got routed to page "anmelden"
-
-  @login @unhappy
-  Scenario: When there is a technical problem with the login I should get an error and cannot navigate further
-    Given I am on the "anmelden" page
-    And I expect errors in the logfile
-    When I enter "unavailable" in the input field "login-user-input"
-    When I enter "def" in the input field "login-password-input"
-    When I click the button "anmelden-login-button"
-    Then I should see an error message containing "Serverfehler aufgetreten" displayed
-    Then I should got routed to page "anmelden"
+    Then I should see an error message containing "Es gab einen Fehler bei der Anmeldung" displayed
+    Then The specific element "nav-logout-link" should be missing
 
   @login @happy
   Scenario: I can log in with the right credentials
@@ -63,4 +43,4 @@ Feature: Login
     When I enter "abc" in the input field "login-user-input"
     When I enter "def" in the input field "login-password-input"
     When I click the button "anmelden-login-button"
-    Then I should got routed to page "anfrage"
+    Then The specific element "nav-logout-link" should exist

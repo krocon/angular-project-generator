@@ -32,17 +32,13 @@ export class AppPage {
   }
 
   navigateTo(page: string, timeout?: number) {
-    if (timeout) {
-      return browser.get(browser.baseUrl + page, timeout) as Promise<any>;
-    } else {
-      return browser.get(browser.baseUrl + page, 10000) as Promise<any>;
-    }
+    if (!timeout) timeout = 10000
+    return browser.get(browser.baseUrl + page, timeout) as Promise<any>;
   }
 
   getTitleText() {
     browser.waitForAngularEnabled(false);
-    return element(by.css('[data-test-id="app-title-span"]')).getText() as Promise<string>;
-    // return element(by.xpath('//[data-test-id="app-title-span"]')).getText() as Promise<string>;
+    return element(by.css('[data-test-id="main-header-title-span"]')).getText() as Promise<string>;
   }
 
   inputText(field: string, text: string) {
