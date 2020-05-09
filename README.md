@@ -1,8 +1,18 @@
-# **A**ngular **P**roject **G**enerator (APG) 
-### Setup complete angular PWA with one command
-#### pre-release version
+.
 
-Command line interface (CLI) for angular 9.
+
+
+.
+
+
+![APG2](https://user-images.githubusercontent.com/11378781/81468942-c3b0c600-91e2-11ea-9a42-e0493655154e.png)
+
+
+# **A**ngular **P**roject **G**enerator (apg) 
+### Setup complete angular PWA with one command
+####Command line interface (CLI) for angular 9.
+
+
 It helps you to generate an robust angular project seed.
 To get help just type:
 ```console
