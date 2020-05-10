@@ -40,7 +40,8 @@ The generated app will have a lot of common features like:
  
  - Predefined Deutsche Bahn and Deutsche Bank SCSS according to the company style guides 
 
-![apg-cli](https://user-images.githubusercontent.com/11378781/80909867-f0209a00-8d2b-11ea-9fd4-2c8aff503f3d.png)
+<img src="https://user-images.githubusercontent.com/11378781/81504946-7e78bb00-92ec-11ea-998b-c4de37801763.png" width="50%">
+
 
 #### Install apg
 ```console
@@ -107,4 +108,6 @@ Feature: 001 Login
 ### Login dialog
 <img src="https://user-images.githubusercontent.com/11378781/80910331-1431aa80-8d2f-11ea-972a-db32feab08f2.png" width="50%">
 
+### Demo page / css classes
+<img src="https://user-images.githubusercontent.com/11378781/81505200-eed40c00-92ed-11ea-8b2b-26cd34fe6681.png" width="50%">
 
