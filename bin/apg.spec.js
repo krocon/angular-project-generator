@@ -23,7 +23,7 @@ function extractVersion(stdout) {
 
 function cli(args, cwd) {
   return new Promise(resolve => {
-    exec(`node ${path.resolve('./bin/apge')} ${args.join(' ')}`,
+    exec(`node ${path.resolve('./bin/apg')} ${args.join(' ')}`,
       {cwd},
       (error, stdout, stderr) => {
         resolve({
