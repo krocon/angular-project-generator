@@ -1,16 +1,13 @@
 .
 
-
-
 .
-
 
 ![APG2](https://user-images.githubusercontent.com/11378781/81468942-c3b0c600-91e2-11ea-9a42-e0493655154e.png)
 
 
 # **A**ngular **P**roject **G**enerator (apg) 
-### Setup complete angular PWA with one command
-####Command line interface (CLI) for angular 9.
+## Setup complete angular PWA with one command
+###Command line interface (CLI) for angular 9.
 
 
 It helps you to generate an robust angular project seed.
@@ -33,35 +30,36 @@ The generated app will have a lot of common features like:
    - Version Indicator (shows build date)
    - Couterdown & countup component (for session timeout, ...)
  - Gherkin E2E test setup: chai, cucumber, jasmine, karma, protractor and predefined base steps (given, when, then)
+ - Theme switcher for light and dark
  
  Coming soon:
  - Better description of used patterns
  - More Demo pages
  - Generator für common services (REST, Store, ...) 
  - Generator for dialog patterns (list & detail dialogs, drill down dialogs, ...)
- - Theme switcher for light and dark design
+ 
  - Predefined Deutsche Bahn and Deutsche Bank SCSS according to the company style guides 
 
 ![apg-cli](https://user-images.githubusercontent.com/11378781/80909867-f0209a00-8d2b-11ea-9fd4-2c8aff503f3d.png)
 
-### Install apg
+#### Install apg
 ```console
 npm i -g angular-project-generator@latest
 ```
 
-### Show help
+#### Show help
 ```console
 apg --help 
 apg new --help
 apg generate --help
 ```
 
-### Updating npm, angular cli
+#### Updating npm, angular cli
 ```console
 apg update 
 ```
 
-### Generating app:
+#### Generating app:
 ```console
 apg new -a MyApp -p app -cp ma
 
@@ -73,14 +71,40 @@ apg new -a TradeFinder -p app -cp tf -l deutschebank
 
 ``` 
 
-## Welcome dialog
-<img src="https://user-images.githubusercontent.com/11378781/80910383-607cea80-8d2f-11ea-895f-5d3a8554fe23.png" width="50%">
-
-## Login dialog
-<img src="https://user-images.githubusercontent.com/11378781/80910331-1431aa80-8d2f-11ea-972a-db32feab08f2.png" width="50%">
-
-
 The created app shell has a lot of complexity, which is not required for every project.
 After generating the app: 
  - configure the behaviour in environment.ts
  - delete unnecessary routes, modules and mock data 
+
+
+## E2E
+
+E2E tests can be written in Gherkin notation.
+
+```gherkin
+@homepage
+Feature: 001 Login
+  The login page allows the users to log in.
+
+  @goto @happy
+  Scenario: Home Page
+    Given I am on the "anmelden" page
+    When I do nothing
+    Then I should see the page title "Anmelden"
+
+  @login @happy
+  Scenario: The login button should be disabled when I enter the login page
+    Given I am on the "anmelden" page
+    Then The button "anmelden-login-button" should be disabled
+
+``` 
+
+## Screenshots
+
+### Welcome dialog
+<img src="https://user-images.githubusercontent.com/11378781/80910383-607cea80-8d2f-11ea-895f-5d3a8554fe23.png" width="50%">
+
+### Login dialog
+<img src="https://user-images.githubusercontent.com/11378781/80910331-1431aa80-8d2f-11ea-972a-db32feab08f2.png" width="50%">
+
+
