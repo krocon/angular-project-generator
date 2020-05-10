@@ -125,7 +125,6 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
 
   calcTitle(url: string) {
     url = url.replace(/\//g, '');
-    // console.info('key', url); TODO weg
     const routeTitles = __capcp__NavComponent.config.routeTitles;
     const keys = Object.keys(routeTitles);
     for (const key of keys) {

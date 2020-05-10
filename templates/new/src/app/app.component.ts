@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { environment } from "../environments/environment";
-import { RouterOutlet } from "@angular/router";
 import { __capcp__NavComponent } from "./__cp__-nav/__cp__-nav.component";
 import { __capcp__AuthAjaxService } from "./__cp__-auth/service/__cp__-auth.ajax.service";
 import { __capcp__AuthGuardCanActivate } from "./__cp__-auth/__cp__-auth-guard-can-activate";
@@ -40,21 +39,28 @@ export class AppComponent {
         titleFadeIn: true
       }
     );
+
     __capcp__AuthGuardCanActivate.forRoot({
       loginRoute: environment.loginRoute
     });
+
     __capcp__AuthAjaxService.forRoot(environment.authServiceConfig);
+
     // __capcp____pascalentity__AjaxService.forRoot(environment.__cp____pascalentity__Config);
+
+    // __capcp__ThemeSwitchService.forRoot({
+    //     themes: ['light', 'dark']
+    //   });
   }
 
   // captureStartEvent(event: AnimationEvent) {
-  //   console.info('animation start event:', event); // TODO weg
+  //   console.info('animation start event:', event); // TODO delete
   // }
   //
   // captureDoneEvent(event: AnimationEvent) {
   //   let from = event['fromState'];
   //   let to = event['toState'];
-  //   console.info('animation done: ', `${from} => ${to}`); // TODO weg
+  //   console.info('animation done: ', `${from} => ${to}`); // TODO delete
   // }
   //
   //

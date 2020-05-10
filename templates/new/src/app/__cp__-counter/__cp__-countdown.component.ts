@@ -82,7 +82,7 @@ export class __capcp__CountdownComponent implements OnDestroy, AfterViewInit {
         requestAnimationFrame(this.updateText.bind(this));
       }, 200);
     } else {
-      this.timeout.emit(now);
+      this.ngZone.run(() => this.timeout.emit(now));
     }
   }
 

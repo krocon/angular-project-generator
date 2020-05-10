@@ -1,11 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 @import '__cp__-icons';
 @import '__cp__-help';
+@import '__cp__-geometriy.scss';
 @import '__cp__-responsive.scss';
 @import '__cp__-theme-light';
+@import '__cp__-theme-dark';
 @import '__cp__-font';
 
+
+@include mat-core();
+
+
+.light {
+  @include angular-material-theme($light-theme);
+  @import '__cp__-theme-light-tweak';
+}
+.dark {
+  @include angular-material-theme($dark-theme);
+  @import '__cp__-theme-dark-tweak';
+}
+
+/*
+TODO class or media query. See __capcp__ThemeSwitchComponent. delete this or use this instead of .light & .dark
+
+@media (prefers-color-scheme: light) {
+  @include angular-material-theme($light-theme);
+  @import '__cp__-theme-light-tweak';
+}
+
+@media (prefers-color-scheme: dark) {
+  @include angular-material-theme($dark-theme);
+  @import '__cp__-theme-dark-tweak';
+}
+*/

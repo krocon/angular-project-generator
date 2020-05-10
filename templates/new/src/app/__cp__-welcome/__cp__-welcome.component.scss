@@ -79,5 +79,21 @@ p {
   }
 }
 
-
+body.light :host {
+  .__cp__-welcome-outer-div {
+    background-image: url('../../assets/img/bg-quantum-gradient-01.svg');
+  }
+  .overlay-div {
+    color: #fff;
+  }
+}
+body.dark :host {
+  .__cp__-welcome-outer-div {
+    //background: #141923;
+    background: rgba(20, 25, 35, 0.4);
+  }
+  .overlay-div {
+    color: #fff;
+  }
+}
 

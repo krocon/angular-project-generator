@@ -15,6 +15,10 @@ import { environment } from "../../environments/environment";
       height: 20px;
       z-index: 9999;
     }
+    body.dark :host {
+      background: rgba(255, 220, 60, 0.6);
+      color: #000;
+    }
     .children-hidden > span {
       display: none;
     }

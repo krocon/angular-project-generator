@@ -30,25 +30,40 @@ import { AfterViewInit, ChangeDetectorRef, Component, Input } from '@angular/cor
     }
 
     .st0 {
-      /*fill: #E5E5E5;*/
       fill: #ec0016;
       stroke: #1D1D1B;
+    }
+    body.dark :host .st0 {
+      fill: #e00034;
+      stroke: #fff;
     }
 
     .st1 {
       fill: none;
       stroke: #1D1D1B;
     }
+    body.dark :host .st1 {
+      fill: #fff;
+      stroke: #fff;
+    }
 
     .st2 {
-      /*fill: #AAAAAA;*/
       fill: #4020bd;
       stroke: #1D1D1B;
     }
+    body.dark :host .st2 {
+      fill: #00A2E2;
+      stroke: #fff;
+    }
+
 
     .st3 {
       fill: #ec0016;
       stroke: #000000;
+    }
+    body.dark :host .st3 {
+      fill: #e00034;
+      stroke: #fff;
     }
   `]
 })

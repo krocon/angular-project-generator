@@ -1,6 +1,6 @@
 {
   "name": "angular-project-generator",
-  "version": "9.1.5",
+  "version": "9.1.6",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "jest --findRelatedTests bin/ lib/",

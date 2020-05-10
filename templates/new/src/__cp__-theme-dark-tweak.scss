@@ -1,0 +1,65 @@
+.mat-form-field-appearance-fill {
+  .mat-form-field-flex {
+    background-color: #282d37;
+  }
+}
+
+.mat-drawer {
+  background: #282d37;
+  //background: #fdfdfd;
+  //background: ##F1F2F3;
+}
+
+.mat-drawer-content {
+  background: #282d37;
+}
+
+mat-sidenav-content .mat-toolbar {
+  background: #282d37;
+}
+mat-toolbar.mat-primary.mat-toolbar-single-row {
+  background: #282d37;
+  color: #e5e5e5;
+}
+.mat-card {
+  background: #282d37;
+}
+
+
+a {
+  color: #0087b9;
+  text-decoration: none;
+}
+
+.__cp__-content {
+  background: #282d37;
+}
+
+.__cp__-footer-bg {
+  background: #282d37;
+}
+
+.__cp__-blue-bg-gradient {
+  background: #3d6592;
+  background: linear-gradient(90deg, #8ab3d6 0%, #3d6592 100%);
+}
+
+.mat-table {
+  background: transparent;
+}
+
+.mat-tooltip {
+  background: #0A1E6E;
+  color: #F0F3F5;
+}
+
+mat-card.__cp__-mat-card-fancy-input-semi-bg {
+  background: #f3f5f8;
+}
+
+.__cp__-color-error {
+  color: #ff5a64;
+}
+.__cp__-color-success {
+  color: #3ca532;
+}

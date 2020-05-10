@@ -6,13 +6,13 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to init a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
 
-$candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
-$candy-app-warn:    mat-palette($mat-red);
-$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
-@include angular-material-theme($candy-app-theme);
+
+//$candy-app-primary: mat-palette($mat-indigo);
+//$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+//$candy-app-warn:    mat-palette($mat-red);
+//$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+//@include angular-material-theme($candy-app-theme);
 
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -100,86 +100,13 @@ $__cp__-app-accent:  mat-palette($__cp__-color-blue-palette);
 $__cp__-app-warn:    mat-palette($__cp__-color-red-palette);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$__cp__-app-theme: mat-light-theme($__cp__-app-primary, $__cp__-app-accent, $__cp__-app-warn);
+$light-theme: mat-light-theme($__cp__-app-primary, $__cp__-app-accent, $__cp__-app-warn);
 
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($__cp__-app-theme);
-
-.mat-form-field-appearance-fill {
-  .mat-form-field-flex {
-    background-color: #fff;
-  }
-}
-
-.mat-drawer {
-  background: #fefefe;
-  //background: #fdfdfd;
-  //background: ##F1F2F3;
-}
-
-.mat-drawer-content {
-  background: #fff;
-}
-
-mat-sidenav-content .mat-toolbar {
-  background: #fff;
-}
-mat-toolbar.mat-primary.mat-toolbar-single-row {
-  background: #fff;
-  color: #000;
-}
-.mat-card {
-  background: #fff;
-  .mat-card-header {
-    .mat-icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-    }
-  }
-  .mat-card-header-text{
-    margin-left: 0;
-  }
-}
+//@include angular-material-theme($light-theme);
 
 
-a {
-  color: #0087b9;
-}
-
-.__cp__-content {
-  background: #e1e6eb;
-}
-
-.__cp__-footer-bg {
-  background: #fff;
-}
-
-.__cp__-blue-bg-gradient {
-  background: #3d6592;
-  background: linear-gradient(90deg, #8ab3d6 0%, #3d6592 100%);
-}
-
-.mat-table {
-  background: transparent;
-}
-
-.mat-tooltip {
-  background: #0A1E6E;
-  color: #F0F3F5;
-}
-
-mat-card.__cp__-mat-card-fancy-input-semi-bg {
-  background: #f3f5f8;
-}
-
-.__cp__-color-error {
-  color: $__cp__-color-red;
-}
-.__cp__-color-success {
-  color: #408335;
-}
 
