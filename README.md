@@ -16,7 +16,7 @@ To get help just type:
 apg new --help
 ``` 
 
-The generated app will have a lot of common features like:
+#### The generated app will have a lot of common features like:
  - Predefined pages/routes (Imprint, Login, ...)
  - Responsive layout
  - Basic PWA support
@@ -31,13 +31,13 @@ The generated app will have a lot of common features like:
    - Couterdown & countup component (for session timeout, ...)
  - Gherkin E2E test setup: chai, cucumber, jasmine, karma, protractor and predefined base steps (given, when, then)
  - Theme switcher for light and dark
+ - Predefined npm scripts
  
- Coming soon:
+Coming soon:
  - Better description of used patterns
  - More Demo pages
  - Generator für common services (REST, Store, ...) 
  - Generator for dialog patterns (list & detail dialogs, drill down dialogs, ...)
- 
  - Predefined Deutsche Bahn and Deutsche Bank SCSS according to the company style guides 
 
 <img src="https://user-images.githubusercontent.com/11378781/81504946-7e78bb00-92ec-11ea-998b-c4de37801763.png" width="50%">
