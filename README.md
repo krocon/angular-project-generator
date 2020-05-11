@@ -1,3 +1,5 @@
+
+![xxx](https:///appveyor/build/:krocon/:angular-project-generator)
 .
 
 .

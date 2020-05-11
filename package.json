@@ -7,7 +7,8 @@
     "install-g-local": "npm uninstall -g apge & npm install -g ./",
     "import-templates": "node import-templates.js",
     "npm-patch": "npm version patch",
-    "npm-publish": "npm publish"
+    "npm-publish": "npm publish",
+    "coverage": "nyc npm run test"
   },
   "main": "lib/cmd-generate-new.js",
   "bin": {
@@ -57,6 +58,7 @@
     "window-size": "^1.1.1"
   },
   "devDependencies": {
-    "jest": "^25.5.4"
+    "jest": "^25.5.4",
+    "nyc": "^15.0.1"
   }
 }
