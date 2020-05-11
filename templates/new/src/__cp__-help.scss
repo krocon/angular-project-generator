@@ -1,7 +1,5 @@
-
-
-$properties: 'margin', 'padding';
-$positions: 'top', 'right', 'bottom', 'left';
+$properties: "margin", "padding";
+$positions: "top", "right", "bottom", "left";
 $sizes: 0px, 16px, 32px, 48px;
 
 @each $prop in $properties {
@@ -28,7 +26,6 @@ $sizes: 0px, 16px, 32px, 48px;
   }
 }
 
-
 .__cp__-full-width {
   width: 100% !important;
 }
@@ -39,8 +36,6 @@ $sizes: 0px, 16px, 32px, 48px;
   margin: 0;
   padding: 0;
 }
-
-
 
 .__cp__-font-monospace {
   font-family: monospace !important;
@@ -87,7 +82,6 @@ $sizes: 0px, 16px, 32px, 48px;
   text-align: center;
 }
 
-
 .__cp__-position-fixed {
   position: fixed;
 }
@@ -112,7 +106,7 @@ $sizes: 0px, 16px, 32px, 48px;
   display: none !important;
 }
 
- //This fills the remaining space of the current row
+//This fills the remaining space of the current row
 .__cp__-flex-fill-space {
   flex: 1 1 auto;
 }
@@ -132,13 +126,13 @@ $sizes: 0px, 16px, 32px, 48px;
 $widthPers: 20, 25, 33, 50;
 @each $w in $widthPers {
   .__cp__-width-#{$w}-per {
-    width: unquote(#{$w} + '%');
+    width: unquote(#{$w} + "%");
   }
 }
 
 $maxwidth: 300, 600, 960, 1280, 1920;
 @each $w in $maxwidth {
   .__cp__-max-width-#{$w}-px {
-    max-width: unquote(#{$w} + 'px');
+    max-width: unquote(#{$w} + "px");
   }
 }

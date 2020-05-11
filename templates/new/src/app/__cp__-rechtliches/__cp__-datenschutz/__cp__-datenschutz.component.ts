@@ -4,8 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-__cp__-datenschutz',
   templateUrl: '__cp__-datenschutz.component.html',
   styleUrls: ['__cp__-datenschutz.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class __capcp__DatenschutzComponent {
-
-}
+export class __capcp__DatenschutzComponent {}

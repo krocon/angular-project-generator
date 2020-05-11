@@ -1,16 +1,28 @@
 import { browser, by, element } from 'protractor';
 import { logging } from 'selenium-webdriver';
 import { ProtractorHarnessEnvironment } from '@angular/cdk/testing/protractor';
-import { MatSlideToggleHarness, SlideToggleHarnessFilters } from '@angular/material/slide-toggle/testing';
+import {
+  MatSlideToggleHarness,
+  SlideToggleHarnessFilters,
+} from '@angular/material/slide-toggle/testing';
 import {
   MatRadioButtonHarness,
   MatRadioGroupHarness,
   RadioButtonHarnessFilters,
-  RadioGroupHarnessFilters
+  RadioGroupHarnessFilters,
 } from '@angular/material/radio/testing';
-import { MatSelectHarness, SelectHarnessFilters } from '@angular/material/select/testing';
-import { InputHarnessFilters, MatInputHarness } from '@angular/material/input/testing';
-import { ButtonHarnessFilters, MatButtonHarness } from '@angular/material/button/testing';
+import {
+  MatSelectHarness,
+  SelectHarnessFilters,
+} from '@angular/material/select/testing';
+import {
+  InputHarnessFilters,
+  MatInputHarness,
+} from '@angular/material/input/testing';
+import {
+  ButtonHarnessFilters,
+  MatButtonHarness,
+} from '@angular/material/button/testing';
 import { HarnessLoader } from '@angular/cdk/testing';
 import { MatDialogHarness } from '@angular/material/dialog/testing';
 import { WebdriverWebElement } from 'protractor/built/element';
@@ -25,24 +37,27 @@ export class AppPage {
   constructor() {
     this.expectSevereLogEntries = false;
     this.loader = ProtractorHarnessEnvironment.loader();
-    browser.driver.getCapabilities().then(caps => {
-        this.isChrome = caps.get('browserName') === 'chrome';
-      }
-    );
+    browser.driver.getCapabilities().then((caps) => {
+      this.isChrome = caps.get('browserName') === 'chrome';
+    });
   }
 
   navigateTo(page: string, timeout?: number) {
-    if (!timeout) timeout = 10000
+    if (!timeout) timeout = 10000;
     return browser.get(browser.baseUrl + page, timeout) as Promise<any>;
   }
 
   getTitleText() {
     browser.waitForAngularEnabled(false);
-    return element(by.css('[data-test-id="main-header-title-span"]')).getText() as Promise<string>;
+    return element(
+      by.css('[data-test-id="main-header-title-span"]')
+    ).getText() as Promise<string>;
   }
 
   inputText(field: string, text: string) {
-    return element(by.xpath('//input[@data-test-id="' + field + '"]')).sendKeys(text);
+    return element(by.xpath('//input[@data-test-id="' + field + '"]')).sendKeys(
+      text
+    );
   }
 
   pressButtonById(id: string) {
@@ -59,12 +74,12 @@ export class AppPage {
 
   async checkButtonEnabled(elementName: string) {
     const input = await this.getButton(elementName);
-    return !await input.isDisabled();
+    return !(await input.isDisabled());
   }
 
   async checkInputEnabled(elementName: string) {
     const input = await this.getInput(elementName);
-    return !await input.isDisabled();
+    return !(await input.isDisabled());
   }
 
   async getInputValue(elementName: string) {
@@ -95,10 +110,11 @@ export class AppPage {
   }
 
   dragAndDrop(source, target: WebdriverWebElement) {
-    return browser.actions()
+    return browser
+      .actions()
       .mouseMove(source)
       .mouseDown(source)
-      .mouseMove({x: 10, y: 0})
+      .mouseMove({ x: 10, y: 0 })
       .mouseMove(target)
       .mouseUp();
   }
@@ -112,58 +128,75 @@ export class AppPage {
   }
 
   getErrorMessageById(id: string) {
-    return element(by.deepCss(`mat-error[data-test-id=${id}]`)).getText() as Promise<string>;
+    return element(
+      by.deepCss(`mat-error[data-test-id=${id}]`)
+    ).getText() as Promise<string>;
   }
 
   getHintMessageById(id: string) {
-    return element(by.deepCss(`mat-hint[data-test-id=${id}]`)).getText() as Promise<string>;
+    return element(
+      by.deepCss(`mat-hint[data-test-id=${id}]`)
+    ).getText() as Promise<string>;
   }
 
   getInput(id: string) {
-    return this.loader
-      .getHarness(MatInputHarness
-        .with({selector: `[data-test-id=${id}]`} as InputHarnessFilters));
+    return this.loader.getHarness(
+      MatInputHarness.with({
+        selector: `[data-test-id=${id}]`,
+      } as InputHarnessFilters)
+    );
   }
 
   getCheckbox(id: string) {
-    return this.loader
-      .getHarness(MatCheckboxHarness
-        .with({selector: `[data-test-id=${id}]`}));
+    return this.loader.getHarness(
+      MatCheckboxHarness.with({ selector: `[data-test-id=${id}]` })
+    );
   }
 
   getOptionMenuValue(id: string) {
-    return element.all(by.deepCss(`mat-select[data-test-id=${id}]`))
-      .map(x => x.getText());
+    return element
+      .all(by.deepCss(`mat-select[data-test-id=${id}]`))
+      .map((x) => x.getText());
   }
 
   getButton(id: string) {
-    return this.loader
-      .getHarness(MatButtonHarness
-        .with({selector: `[data-test-id=${id}]`} as ButtonHarnessFilters));
+    return this.loader.getHarness(
+      MatButtonHarness.with({
+        selector: `[data-test-id=${id}]`,
+      } as ButtonHarnessFilters)
+    );
   }
 
   getRadioButtonGroup(id: string) {
-    return this.loader
-      .getHarness(MatRadioGroupHarness
-        .with({selector: `[data-test-id=${id}]`} as RadioGroupHarnessFilters));
+    return this.loader.getHarness(
+      MatRadioGroupHarness.with({
+        selector: `[data-test-id=${id}]`,
+      } as RadioGroupHarnessFilters)
+    );
   }
 
   getRadioButton(id: string) {
-    return this.loader
-      .getHarness(MatRadioButtonHarness
-        .with({selector: `[data-test-id=${id}]`} as RadioButtonHarnessFilters));
+    return this.loader.getHarness(
+      MatRadioButtonHarness.with({
+        selector: `[data-test-id=${id}]`,
+      } as RadioButtonHarnessFilters)
+    );
   }
 
   getSlideToggle(id: string) {
-    return this.loader
-      .getHarness(MatSlideToggleHarness
-        .with({selector: `[data-test-id=${id}]`} as SlideToggleHarnessFilters));
+    return this.loader.getHarness(
+      MatSlideToggleHarness.with({
+        selector: `[data-test-id=${id}]`,
+      } as SlideToggleHarnessFilters)
+    );
   }
 
   getSelect(id: string) {
-    return this.loader
-      .getHarness(MatSelectHarness
-        .with({selector: `[data-test-id=${id}]`} as SelectHarnessFilters));
+    return this.loader.getHarness(
+      MatSelectHarness.with({
+        selector: `[data-test-id=${id}]`,
+      } as SelectHarnessFilters)
+    );
   }
 
   getCurrentUrl() {
@@ -171,16 +204,21 @@ export class AppPage {
   }
 
   getSideNavText() {
-    return element(by.tagName('app-side-navigation-extra')).getText() as Promise<string>;
+    return element(
+      by.tagName('app-side-navigation-extra')
+    ).getText() as Promise<string>;
   }
 
   getOptionsShadowDom() {
-    return element.all(by.deepCss('span.mat-option-text'))
-      .map(x => x.getText()) as Promise<string[]>;
+    return element
+      .all(by.deepCss('span.mat-option-text'))
+      .map((x) => x.getText()) as Promise<string[]>;
   }
 
   getInputValueShadowDom(id: string) {
-    return element(by.deepCss(`input[data-test-id=${id}]`)).getAttribute('value');
+    return element(by.deepCss(`input[data-test-id=${id}]`)).getAttribute(
+      'value'
+    );
   }
 
   getBrowserLog() {
@@ -188,11 +226,16 @@ export class AppPage {
   }
 
   hasErrorsInLog(entries: logging.Entry[]) {
-    return entries.filter(logEntry => logEntry.level === logging.Level.SEVERE &&
-      !this.isIgnorableError(logEntry)).length > 0;
+    return (
+      entries.filter(
+        (logEntry) =>
+          logEntry.level === logging.Level.SEVERE &&
+          !this.isIgnorableError(logEntry)
+      ).length > 0
+    );
   }
 
   isIgnorableError(logEntry: logging.Entry) {
-    return this.logErrorsToIgnore.some(ign => logEntry.message.includes(ign));
+    return this.logErrorsToIgnore.some((ign) => logEntry.message.includes(ign));
   }
 }

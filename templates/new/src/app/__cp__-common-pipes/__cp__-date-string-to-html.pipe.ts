@@ -1,8 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({name: '__cp__DateStringToHtml'})
+@Pipe({ name: '__cp__DateStringToHtml' })
 export class __capcp__DateStringToHtmlPipe implements PipeTransform {
-
   static get2Digits(n: number): string {
     if (n < 10) {
       return '0' + n;
@@ -31,10 +30,8 @@ export class __capcp__DateStringToHtmlPipe implements PipeTransform {
       const _sec = __capcp__DateStringToHtmlPipe.get2Digits(second);
 
       return `<b>${_day}.${_month}.${year}</b> ${_hour}:${_min}<small>:${_sec}</small>`;
-
     } catch (e) {
       return s;
     }
   }
-
 }

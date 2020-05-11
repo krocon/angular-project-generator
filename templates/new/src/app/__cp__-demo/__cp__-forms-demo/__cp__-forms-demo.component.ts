@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-import { ProgressSpinnerMode } from "@angular/material/progress-spinner";
-import { ProgressBarMode } from "@angular/material/progress-bar";
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
+import { ProgressBarMode } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-__cp__-forms-demo',
   templateUrl: './__cp__-forms-demo.component.html',
-  styleUrls: ['./__cp__-forms-demo.component.scss']
+  styleUrls: ['./__cp__-forms-demo.component.scss'],
 })
 export class __capcp__FormsDemoComponent {
-
   selected = 'option2';
   checked = true;
   indeterminate = false;

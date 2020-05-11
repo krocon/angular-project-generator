@@ -1,4 +1,3 @@
-
 :host {
   text-align: center;
 }
@@ -34,7 +33,7 @@ p {
 
 .__cp__-welcome-outer-div {
   height: 450px;
-  background-image: url('../../assets/img/bg-quantum-gradient-01.svg');
+  background-image: url("../../assets/img/bg-quantum-gradient-01.svg");
   //background-image: url('../../assets/img/bg-quantum-gradient-02.svg');
   //background-image: url('../../assets/img/bg-liquid-cheese.svg');
   background-size: cover;
@@ -50,7 +49,7 @@ p {
   max-height: 400px;
   overflow: hidden;
 
-  background-image: url('./../../assets/img/boerse.jpg');
+  background-image: url("./../../assets/img/boerse.jpg");
   background-position: center center;
 
   -webkit-animation-duration: 2.5s;
@@ -81,7 +80,7 @@ p {
 
 body.light :host {
   .__cp__-welcome-outer-div {
-    background-image: url('../../assets/img/bg-quantum-gradient-01.svg');
+    background-image: url("../../assets/img/bg-quantum-gradient-01.svg");
   }
   .overlay-div {
     color: #fff;
@@ -96,4 +95,3 @@ body.dark :host {
     color: #fff;
   }
 }
-

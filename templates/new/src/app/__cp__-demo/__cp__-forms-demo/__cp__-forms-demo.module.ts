@@ -11,15 +11,13 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
-import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-import { MatIconModule } from "@angular/material/icon";
-import { MatProgressBarModule } from "@angular/material/progress-bar";
-import { MatSliderModule } from "@angular/material/slider";
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
-  declarations: [
-    __capcp__FormsDemoComponent
-  ],
+  declarations: [__capcp__FormsDemoComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -30,7 +28,7 @@ import { MatSliderModule } from "@angular/material/slider";
       {
         path: 'forms',
         component: __capcp__FormsDemoComponent,
-      }
+      },
     ]),
     MatFormFieldModule,
     MatSelectModule,
@@ -42,12 +40,8 @@ import { MatSliderModule } from "@angular/material/slider";
     MatProgressSpinnerModule,
     MatIconModule,
     MatProgressBarModule,
-    MatSliderModule
+    MatSliderModule,
   ],
-  providers: [
-    __capcp__FormsDemoComponent
-  ]
+  providers: [__capcp__FormsDemoComponent],
 })
-
-export class __capcp__FormsDemoModule {
-}
+export class __capcp__FormsDemoModule {}

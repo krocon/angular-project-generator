@@ -1,39 +1,58 @@
-import { animate, group, query, style, transition, trigger } from "@angular/animations";
+import {
+  animate,
+  group,
+  query,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 // const timings = '0.3s cubic-bezier(.35,0,.25,1)';
 // const queryOptions = {optional: true};
 
-export const animationLeftRight =
-
-  trigger('routeAnimations', [
-    transition( '* <=> *', [
-      query(':enter,:leave', [
+export const animationLeftRight = trigger('routeAnimations', [
+  transition('* <=> *', [
+    query(
+      ':enter,:leave',
+      [
         style({
-          position: 'fixed'
-        })
-      ],{ optional: true }),
-      group([
-        query( ':leave', [
-          animate('500ms ease-in-out',
-            style( {
+          position: 'fixed',
+        }),
+      ],
+      { optional: true }
+    ),
+    group([
+      query(
+        ':leave',
+        [
+          animate(
+            '500ms ease-in-out',
+            style({
               opacity: 0,
             })
-          )
-        ],{ optional: true }),
-        query( ':enter', [
-          style( {
+          ),
+        ],
+        { optional: true }
+      ),
+      query(
+        ':enter',
+        [
+          style({
             opacity: 0,
           }),
-          animate('2s 250ms ease-in-out',
-            style( {
-              opacity: 1
+          animate(
+            '2s 250ms ease-in-out',
+            style({
+              opacity: 1,
             })
-          )
-        ],{ optional: true }),
-      ])
-    ])
-  ]);
-  /*
+          ),
+        ],
+        { optional: true }
+      ),
+    ]),
+  ]),
+]);
+/*
   trigger('routeAnimation',
     [
 

@@ -1,16 +1,18 @@
 <mat-sidenav-container class="sidenav-container">
-
-  <mat-sidenav #drawer [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(isHandset$ | async) ? 'over' : 'side'"
-               [opened]="(isHandset$ | async) === false"
-               class="sidenav"
-               fixedInViewport>
+  <mat-sidenav
+    #drawer
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+    class="sidenav"
+    fixedInViewport
+  >
     <mat-toolbar>
       <app-__cp__-logo></app-__cp__-logo>
       AppXyz
     </mat-toolbar>
 
-    <mat-nav-list [ngClass]="{menuIconsVisible:menuIconsVisible}">
+    <mat-nav-list [ngClass]="{ menuIconsVisible: menuIconsVisible }">
       <a [routerLink]="cfg.welcomeRoute" href="#" mat-list-item>
         <mat-icon>accessibility_new</mat-icon>
         Willkommen
@@ -30,15 +32,21 @@
         Impressum
       </a>
 
-      <a mat-list-item href="#"
-         routerLink="/recht/nutzungsbedingungen"
-         [ngClass]="{hidden:menuIconsVisible}">
+      <a
+        mat-list-item
+        href="#"
+        routerLink="/recht/nutzungsbedingungen"
+        [ngClass]="{ hidden: menuIconsVisible }"
+      >
         Nutzungsbedingungen
       </a>
 
-      <a href="#" mat-list-item
-         routerLink="/recht/nutzungsbedingungen"
-         [ngClass]="{hidden:!menuIconsVisible}">
+      <a
+        href="#"
+        mat-list-item
+        routerLink="/recht/nutzungsbedingungen"
+        [ngClass]="{ hidden: !menuIconsVisible }"
+      >
         <mat-icon>gavel</mat-icon>
         Nutzungsbedg.
       </a>
@@ -55,38 +63,42 @@
         Anmelden
       </a>
 
-      <a [routerLink]="cfg.logoutRoute"
-         href="#"
-         data-test-id="nav-logout-link"
-         mat-list-item *ngIf="loggedIn"
-         class="__cp__-margin-top-32px">
+      <a
+        [routerLink]="cfg.logoutRoute"
+        href="#"
+        data-test-id="nav-logout-link"
+        mat-list-item
+        *ngIf="loggedIn"
+        class="__cp__-margin-top-32px"
+      >
         <mat-icon>directions_walk</mat-icon>
         Abmelden
       </a>
 
-
       <div class="mat-list-item">
         <div class="mat-list-item-content person">
           <p [innerText]="data?.nameVorname"></p>
-          <p [innerHTML]="data?.email | __cp__ReplaceText:'@':'<br>@'"></p>
+          <p [innerHTML]="data?.email | __cp__ReplaceText: '@':'<br>@'"></p>
         </div>
       </div>
 
       <!-- bottom: -->
       <div class="fixed-at-bottom-left">
         <div *ngIf="logoutCounterVisible">
-          <small>Sitzungszeitlimit:
+          <small
+            >Sitzungszeitlimit:
             <app-__cp__-countdown
               (timeout)="onSessionTimeout()"
-              [diffTimeInMillis]="15*60*1000"
-              [startTimeInMillis]="lastClickInMillis"></app-__cp__-countdown>
+              [diffTimeInMillis]="15 * 60 * 1000"
+              [startTimeInMillis]="lastClickInMillis"
+            ></app-__cp__-countdown>
           </small>
         </div>
         <div>
-          <small>Version: {{version}}</small>
+          <small>Version: {{ version }}</small>
         </div>
         <div *ngIf="commitHash">
-          <small>Commit: {{commitHash}}</small>
+          <small>Commit: {{ commitHash }}</small>
         </div>
         <div>
           <small>&copy; 2020 Deutsche Xyz AG</small>
@@ -95,7 +107,6 @@
     </mat-nav-list>
   </mat-sidenav>
 
-
   <mat-sidenav-content #matSidenavContent>
     <mat-toolbar color="primary">
       <button
@@ -103,20 +114,27 @@
         *ngIf="isHandset$ | async"
         aria-label="Toggle sidenav"
         mat-icon-button
-        type="button">
+        type="button"
+      >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span
         data-test-id="main-header-title-span"
         class="main-header-title-span"
-        [ngClass]="{'fade-in': fadein}">
-        {{title}}
+        [ngClass]="{ 'fade-in': fadein }"
+      >
+        {{ title }}
       </span>
 
       <span class="__cp__-flex-fill-space"></span>
 
-      <app-__cp__-theme-switch class="__cp__-float-right"></app-__cp__-theme-switch>
-      <app-__cp__-logo *ngIf="(isHandset$ | async)" class="__cp__-float-right __cp__-margin-left"></app-__cp__-logo>
+      <app-__cp__-theme-switch
+        class="__cp__-float-right"
+      ></app-__cp__-theme-switch>
+      <app-__cp__-logo
+        *ngIf="isHandset$ | async"
+        class="__cp__-float-right __cp__-margin-left"
+      ></app-__cp__-logo>
     </mat-toolbar>
 
     <div class="__cp__-content">
@@ -126,6 +144,5 @@
     <app-__cp__-footer></app-__cp__-footer>
 
     <app-__cp__-version-indicator></app-__cp__-version-indicator>
-
   </mat-sidenav-content>
 </mat-sidenav-container>

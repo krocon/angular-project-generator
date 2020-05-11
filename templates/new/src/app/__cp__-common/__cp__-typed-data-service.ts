@@ -1,7 +1,6 @@
 import { BehaviorSubject } from 'rxjs';
 
 export class __capcp__TypedDataService<T> {
-
   private readonly bhs: BehaviorSubject<T> = new BehaviorSubject<T>(null);
   valueChanges$ = this.bhs.asObservable();
   private value: T;
@@ -9,10 +8,12 @@ export class __capcp__TypedDataService<T> {
   constructor(
     private readonly key: string,
     private readonly defaultValue: T = null,
-    private readonly equals: (x: T, y: T) => boolean =
-      (x: T, y: T) => JSON.stringify(x) === JSON.stringify(y),
-    private readonly clone: (x: T) => T = (x: T) => JSON.parse(JSON.stringify(x)),
-    private readonly parse: (s: string) => T = (s: string) => JSON.parse(s) as T,
+    private readonly equals: (x: T, y: T) => boolean = (x: T, y: T) =>
+      JSON.stringify(x) === JSON.stringify(y),
+    private readonly clone: (x: T) => T = (x: T) =>
+      JSON.parse(JSON.stringify(x)),
+    private readonly parse: (s: string) => T = (s: string) =>
+      JSON.parse(s) as T,
     private readonly stringify: (x: T) => string = (x: T) => JSON.stringify(x)
   ) {
     this.init();
@@ -46,5 +47,4 @@ export class __capcp__TypedDataService<T> {
   private next() {
     this.bhs.next(this.clone(this.value));
   }
-
 }

@@ -5,28 +5,32 @@ import {
   HostListener,
   OnDestroy,
   OnInit,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay, takeWhile } from 'rxjs/operators';
-import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from "@angular/router";
-import { MatSidenav, MatSidenavContent } from "@angular/material/sidenav";
-import { environment } from "../../environments/environment";
-import { __capcp__AuthService } from "../__cp__-auth/service/__cp__-auth.service";
-import { LoginResponseData } from "../__cp__-auth/data/login.response.data";
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  NavigationStart,
+  Router,
+} from '@angular/router';
+import { MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
+import { environment } from '../../environments/environment';
+import { __capcp__AuthService } from '../__cp__-auth/service/__cp__-auth.service';
+import { LoginResponseData } from '../__cp__-auth/data/login.response.data';
 
 @Component({
   selector: 'app-__cp__-nav',
   templateUrl: './__cp__-nav.component.html',
   styleUrls: ['./__cp__-nav.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class __capcp__NavComponent implements OnInit, OnDestroy {
-
   private static readonly config = {
     routeTitles: {
-      home: 'Herzlich willkommen!'
+      home: 'Herzlich willkommen!',
     },
 
     loginRoute: '/anmelden',
@@ -35,11 +39,12 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
 
     menuIconsVisible: true,
     logoutCounterVisible: true,
-    titleFadeIn: true
+    titleFadeIn: true,
   };
 
-  @ViewChild('drawer', {static: true}) mainNav: MatSidenav;
-  @ViewChild('matSidenavContent', {static: true}) matSidenavContent: MatSidenavContent;
+  @ViewChild('drawer', { static: true }) mainNav: MatSidenav;
+  @ViewChild('matSidenavContent', { static: true })
+  matSidenavContent: MatSidenavContent;
 
   lastClickInMillis = Date.now();
   version = environment.version;
@@ -51,10 +56,11 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
 
   private alive = true;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Handset)
     .pipe(
       takeWhile(() => this.alive),
-      map(result => result.matches),
+      map((result) => result.matches),
       shareReplay()
     );
 
@@ -64,8 +70,7 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
     private readonly activatedRoute: ActivatedRoute,
     private readonly authService: __capcp__AuthService,
     private readonly cdr: ChangeDetectorRef
-  ) {
-  }
+  ) {}
 
   get cfg() {
     return __capcp__NavComponent.config;
@@ -96,27 +101,22 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.calcTitle(this.router.url);
 
-    this.router
-      .events
+    this.router.events.pipe(takeWhile(() => this.alive)).subscribe((evt) => {
+      if (evt instanceof NavigationStart) {
+        this.fadein = false;
+        this.cdr.detectChanges();
+      } else if (evt instanceof NavigationEnd) {
+        // console.info(evt);
+        // console.info(this.activatedRoute);
+        // console.info(this.activatedRoute.firstChild);
+        this.matSidenavContent.scrollTo({ top: 0, left: 0 });
+        let url = evt.url;
+        this.calcTitle(url);
+      }
+    });
+    this.authService.valueChanges$
       .pipe(takeWhile(() => this.alive))
-      .subscribe(evt => {
-        if (evt instanceof NavigationStart) {
-          this.fadein = false;
-          this.cdr.detectChanges();
-
-        } else if (evt instanceof NavigationEnd) {
-          // console.info(evt);
-          // console.info(this.activatedRoute);
-          // console.info(this.activatedRoute.firstChild);
-          this.matSidenavContent.scrollTo({top: 0, left: 0});
-          let url = evt.url;
-          this.calcTitle(url);
-        }
-      });
-    this.authService
-      .valueChanges$
-      .pipe(takeWhile(() => this.alive))
-      .subscribe(data => {
+      .subscribe((data) => {
         this.loggedIn = !!data.token;
         this.data = data;
         this.cdr.detectChanges();
@@ -146,5 +146,4 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
     console.warn('on session timeout...');
     this.authService.logout();
   }
-
 }

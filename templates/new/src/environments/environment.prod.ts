@@ -25,7 +25,6 @@ export const environment = {
     getAllUrl: `${backendUrl}/__entity__`,
     deleteUrl: `${backendUrl}/__entity__`,
     postUrl: `${backendUrl}/__entity__`,
-    putUrl: `${backendUrl}/__entity__`
-  }
-
+    putUrl: `${backendUrl}/__entity__`,
+  },
 };

@@ -14,12 +14,8 @@ describe('DbSettingsPage', () => {
       declarations: [__capcp__SettingsComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
-      imports: [
-        HttpClientTestingModule,
-        RouterTestingModule
-      ]
-    })
-      .compileComponents();
+      imports: [HttpClientTestingModule, RouterTestingModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -10,12 +10,8 @@ describe('__capcp__FormsDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        __capcp__FormsDemoModule,
-        NoopAnimationsModule
-      ]
-    })
-      .compileComponents();
+      imports: [__capcp__FormsDemoModule, NoopAnimationsModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

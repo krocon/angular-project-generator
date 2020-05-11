@@ -19,19 +19,11 @@ import { __capcp__ConfirmationDialogService } from './__cp__-confirmation-dialog
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
   ],
-  entryComponents: [
-    __capcp__ConfirmationDialogComponent
-  ],
-  declarations: [
-    __capcp__ConfirmationDialogComponent,
-  ],
+  entryComponents: [__capcp__ConfirmationDialogComponent],
+  declarations: [__capcp__ConfirmationDialogComponent],
   exports: [],
-  providers: [
-    __capcp__ConfirmationDialogService
-  ]
+  providers: [__capcp__ConfirmationDialogService],
 })
-export class __capcp__ConfirmationModule {
-}
-
+export class __capcp__ConfirmationModule {}

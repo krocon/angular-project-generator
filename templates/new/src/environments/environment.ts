@@ -30,9 +30,8 @@ export const environment = {
     getAllUrl: 'assets/mock-data/__kebabentity__/getall.json',
     deleteUrl: 'assets/mock-data/__kebabentity__/delete.json',
     postUrl: 'assets/mock-data/__kebabentity__/post.json',
-    putUrl: 'assets/mock-data/__kebabentity__/put.json'
-  }
-
+    putUrl: 'assets/mock-data/__kebabentity__/put.json',
+  },
 };
 
 /*

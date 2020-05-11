@@ -6,8 +6,8 @@
       </i>
     </div>
 
-    <br>
-    <br>
+    <br />
+    <br />
 
     <div *ngIf="data" class="formfield-container">
       <mat-form-field>
@@ -25,14 +25,20 @@
       </mat-form-field>
 
       <mat-form-field>
-        <mat-select [(value)]="data.routerAnimation" placeholder="Animation bei Seitenwechsel">
+        <mat-select
+          [(value)]="data.routerAnimation"
+          placeholder="Animation bei Seitenwechsel"
+        >
           <mat-option [value]="false">Nein</mat-option>
           <mat-option [value]="true"> Ja</mat-option>
         </mat-select>
       </mat-form-field>
 
       <mat-form-field>
-        <mat-select [(value)]="data.detailDialogOnDoubleClick" placeholder="Doppelklick auf Tabellezeile">
+        <mat-select
+          [(value)]="data.detailDialogOnDoubleClick"
+          placeholder="Doppelklick auf Tabellezeile"
+        >
           <mat-option [value]="false">zur nächsten Seite navigieren</mat-option>
           <mat-option [value]="true">Detaildialog anzeigen</mat-option>
         </mat-select>
@@ -40,19 +46,22 @@
     </div>
 
     <div class="button-row">
-      <button (click)="onOkClicked()"
-              class="display-inline-block"
-              color="primary"
-              mat-flat-button>Speichern
+      <button
+        (click)="onOkClicked()"
+        class="display-inline-block"
+        color="primary"
+        mat-flat-button
+      >
+        Speichern
       </button>
 
-      <button (click)="onCancelClicked()"
-              class="display-inline-block"
-              mat-flat-button>Abbrechen
+      <button
+        (click)="onCancelClicked()"
+        class="display-inline-block"
+        mat-flat-button
+      >
+        Abbrechen
       </button>
     </div>
-
-
   </div>
-
 </div>

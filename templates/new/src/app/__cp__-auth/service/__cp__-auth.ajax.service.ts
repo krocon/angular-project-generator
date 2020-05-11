@@ -4,10 +4,8 @@ import { LoginRequestData } from '../data/login.request.data';
 import { LoginResponseData } from '../data/login.response.data';
 import { HttpClient } from '@angular/common/http';
 
-
 @Injectable()
 export class __capcp__AuthAjaxService {
-
   private static readonly config = {
     mock: false,
     loginUrl: 'assets/mock-data/auth/login.json',
@@ -15,10 +13,7 @@ export class __capcp__AuthAjaxService {
     logoutMock: true,
   };
 
-  constructor(
-    private readonly http: HttpClient
-  ) {
-  }
+  constructor(private readonly http: HttpClient) {}
 
   static forRoot(config) {
     Object.assign(this.config, config);
@@ -28,12 +23,12 @@ export class __capcp__AuthAjaxService {
     let url = __capcp__AuthAjaxService.config.loginUrl;
     if (url.indexOf('mock-data') > -1) {
       if (loginData.username === 'unauthorized') {
-        return this.http.get<LoginResponseData>(url.replace(/\.json/g, '-unauthorized.json'));
+        return this.http.get<LoginResponseData>(
+          url.replace(/\.json/g, '-unauthorized.json')
+        );
       }
       return this.http.get<LoginResponseData>(url);
     }
     return this.http.post<LoginResponseData>(url, loginData);
   }
-
-
 }

@@ -5,7 +5,6 @@ export class InputData {
     public color = '',
     public clazz = '',
     public type = 'text',
-    public inputValue: any = '',
-  ) {
-  }
+    public inputValue: any = ''
+  ) {}
 }

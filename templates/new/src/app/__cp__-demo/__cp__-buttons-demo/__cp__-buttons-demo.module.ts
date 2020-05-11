@@ -5,25 +5,19 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-
 @NgModule({
-  declarations: [
-    __capcp__ButtonsDemoComponent
-  ],
+  declarations: [__capcp__ButtonsDemoComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: 'buttons',
         component: __capcp__ButtonsDemoComponent,
-      }
+      },
     ]),
     MatButtonModule,
     MatIconModule,
   ],
-  providers: [
-    __capcp__ButtonsDemoComponent
-  ]
+  providers: [__capcp__ButtonsDemoComponent],
 })
-export class __capcp__ButtonsDemoModule {
-}
+export class __capcp__ButtonsDemoModule {}

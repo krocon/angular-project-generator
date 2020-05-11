@@ -1,34 +1,36 @@
 import { Component } from '@angular/core';
-import { environment } from "../../environments/environment";
-
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-__cp__-version-indicator',
-  styles: [`
-    :host {
-      background: #ffdc3c;
-      color: #000046;
-      position: absolute;
-      top: 0;
-      left: 45%;
-      min-width: 110px;
-      height: 20px;
-      z-index: 9999;
-    }
-    body.dark :host {
-      background: rgba(255, 220, 60, 0.6);
-      color: #000;
-    }
-    .children-hidden > span {
-      display: none;
-    }
-  `],
+  styles: [
+    `
+      :host {
+        background: #ffdc3c;
+        color: #000046;
+        position: absolute;
+        top: 0;
+        left: 45%;
+        min-width: 110px;
+        height: 20px;
+        z-index: 9999;
+      }
+      body.dark :host {
+        background: rgba(255, 220, 60, 0.6);
+        color: #000;
+      }
+      .children-hidden > span {
+        display: none;
+      }
+    `,
+  ],
   template: `
-    <div *ngIf="environment?.showVersionIndicator && environment.env!=='prod'">
+    <div
+      *ngIf="environment?.showVersionIndicator && environment.env !== 'prod'"
+    >
       <small>
-        &nbsp;Version ({{environment.env}}):
-        {{environment.version}}&nbsp;
-        ({{environment.commitHash}})&nbsp;&nbsp;
+        &nbsp;Version ({{ environment.env }}): {{ environment.version }}&nbsp;
+        ({{ environment.commitHash }})&nbsp;&nbsp;
         <span class="children-hidden">
           <span class="__cp__-display-inline-xs">xs</span>
           <span class="__cp__-display-inline-sm">sm</span>
@@ -39,10 +41,9 @@ import { environment } from "../../environments/environment";
         &nbsp;
       </small>
     </div>
-  `
+  `,
 })
 export class __capcp__VersionIndicatorComponent {
-
   public environment = environment;
 
   constructor() {
@@ -53,5 +54,4 @@ export class __capcp__VersionIndicatorComponent {
     console.info('        > env          :', environment.env);
     console.info('        > all          :', environment);
   }
-
 }

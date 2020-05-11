@@ -1,22 +1,28 @@
-const protractor = require('./protractor.conf');
+const protractor = require("./protractor.conf");
 const config = protractor.config;
 
-config.multiCapabilities= [
+config.multiCapabilities = [
   {
-    browserName: 'chrome',
+    browserName: "chrome",
     shardTestFiles: true,
     maxInstances: 5,
     chromeOptions: {
-      args: [ '--headless', '--disable-infobars', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1920,1080']
+      args: [
+        "--headless",
+        "--disable-infobars",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--window-size=1920,1080",
+      ],
       // args: ['--disable-infobars', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1920,1080']
     },
     metadata: {
-      device: 'Desktop',
+      device: "Desktop",
       platform: {
-        name: 'windows'
-      }
-    }
-  }
+        name: "windows",
+      },
+    },
+  },
 ];
 
 /**

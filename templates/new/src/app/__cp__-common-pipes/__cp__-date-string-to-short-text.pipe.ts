@@ -1,8 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({name: '__cp__DateStringToShortText'})
+@Pipe({ name: '__cp__DateStringToShortText' })
 export class __capcp__DateStringToShortTextPipe implements PipeTransform {
-
   static get2Digits(n: number): string {
     if (n < 10) {
       return '0' + n;
@@ -24,7 +23,6 @@ export class __capcp__DateStringToShortTextPipe implements PipeTransform {
       const d = __capcp__DateStringToShortTextPipe.get2Digits(day);
       const m = __capcp__DateStringToShortTextPipe.get2Digits(month);
       return `${d}.${m} ${year}`;
-
     } catch (e) {
       return s;
     }

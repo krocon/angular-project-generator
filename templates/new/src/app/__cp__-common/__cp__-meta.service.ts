@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
 
-
 @Injectable()
 export class __capcp__MetaService<T> {
-
   readonly = false;
 
-  constructor() {
-  }
-
+  constructor() {}
 
   getRowClassFn() {
     return (params) => {
@@ -31,7 +27,6 @@ export class __capcp__MetaService<T> {
       return '';
     };
   }
-
 
   actionDeleteCellRenderer(evt) {
     if (!evt.data || this.readonly) {
@@ -86,7 +81,6 @@ export class __capcp__MetaService<T> {
     return '';
   }
 
-
   setChangeByUserDetected(data: T) {
     this.setChanged(data, true);
   }
@@ -98,7 +92,6 @@ export class __capcp__MetaService<T> {
   isChanged(data: T): boolean {
     return this.isMeta(data, 'changed');
   }
-
 
   setDelete(data: T, b: boolean) {
     this.setMeta(data, 'deleted', b);
@@ -112,7 +105,6 @@ export class __capcp__MetaService<T> {
     this.toggleMeta(data, 'deleted');
   }
 
-
   setInserted(data: T, b: boolean) {
     this.setMeta(data, 'inserted', b);
   }
@@ -120,7 +112,6 @@ export class __capcp__MetaService<T> {
   isInserted(data: T): boolean {
     return this.isMeta(data, 'inserted');
   }
-
 
   setWarn(data: T, b: boolean) {
     this.setMeta(data, 'warn', b);
@@ -137,7 +128,6 @@ export class __capcp__MetaService<T> {
   isTemp(data: T): boolean {
     return this.isMeta(data, 'temp');
   }
-
 
   setRestorable(data: T, b: boolean) {
     this.setMeta(data, 'restorable', b);
@@ -171,7 +161,7 @@ export class __capcp__MetaService<T> {
       }
       delete ele['_meta'];
     }
-    return arr.filter(n => n);
+    return arr.filter((n) => n);
   }
 
   private toggleMeta(data: T, key: string) {

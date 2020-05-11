@@ -1,24 +1,34 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { takeWhile } from 'rxjs/operators';
-import { __capcp__TypedDataService } from "../../__cp__-common/__cp__-typed-data-service";
-import { __capcp__AuthService } from "../service/__cp__-auth.service";
-import { LoginRequestData } from "../data/login.request.data";
+import { __capcp__TypedDataService } from '../../__cp__-common/__cp__-typed-data-service';
+import { __capcp__AuthService } from '../service/__cp__-auth.service';
+import { LoginRequestData } from '../data/login.request.data';
 
 @Component({
   selector: 'app-__cp__-start',
   templateUrl: './__cp__-login-page.component.html',
   styleUrls: ['./__cp__-login-page.component.scss'],
 })
-
 export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
+  private static readonly innerService = new __capcp__TypedDataService<
+    LoginRequestData
+  >('login', new LoginRequestData('', '', true));
 
-  private static readonly innerService =
-    new __capcp__TypedDataService<LoginRequestData>('login', new LoginRequestData('', '', true));
-
-  @ViewChild('username', {static: false}) username: ElementRef;
+  @ViewChild('username', { static: false }) username: ElementRef;
 
   login: object;
   formGroup: FormGroup;
@@ -42,20 +52,21 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
     private readonly authService: __capcp__AuthService,
     private readonly formBuilder: FormBuilder,
     public readonly router: Router
-  ) {
-  }
+  ) {}
 
   get hasError(): boolean {
-    return !!this.error
-      || this.isErrorUnavailable
-      || this.isErrorInternalServer
-      || this.isErrorForbidden
-      || this.isErrorNetwork
-      || this.isUnauthorized;
+    return (
+      !!this.error ||
+      this.isErrorUnavailable ||
+      this.isErrorInternalServer ||
+      this.isErrorForbidden ||
+      this.isErrorNetwork ||
+      this.isUnauthorized
+    );
   }
 
   get linkPasswordReset(): string {
-    return 'TODO-linkPasswordReset'
+    return 'TODO-linkPasswordReset';
   }
 
   get errorMesasage(): string {
@@ -90,12 +101,17 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
   }
 
   buildForm() {
-    this.formGroup = this.formBuilder
-      .group({
-        username: new FormControl('', [Validators.required, Validators.minLength(2)]),
-        password: new FormControl('', [Validators.required, Validators.minLength(2)]),
-        remember: new FormControl(false)
-      });
+    this.formGroup = this.formBuilder.group({
+      username: new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+      ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+      ]),
+      remember: new FormControl(false),
+    });
     const loginData = __capcp__LoginPageComponent.innerService.getValue();
     if (loginData?.remember) {
       this.formGroup.patchValue(loginData);
@@ -111,10 +127,7 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
     this.authService
       .login(formCredentials)
       .pipe(takeWhile(() => this.alive))
-      .subscribe(
-        this.loginHandler.bind(this),
-        (err) => this.errorHandler(err)
-      );
+      .subscribe(this.loginHandler.bind(this), (err) => this.errorHandler(err));
   }
 
   loginHandler(data) {
@@ -126,7 +139,6 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
     }
   }
 
-
   errorHandler(error: HttpErrorResponse) {
     const status = error.status;
     this.isErrorNetwork = status === 0 || status === 404;
@@ -136,7 +148,6 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
     this.isErrorUnavailable = status === 503;
     this.enableLoginInputs();
   }
-
 
   getFormCredentials(): LoginRequestData {
     return new LoginRequestData(
@@ -149,7 +160,11 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
   onLogin() {
     if (this.formGroup.valid) {
       const raw: LoginRequestData = this.formGroup.getRawValue() as LoginRequestData;
-      let loginRequestData = new LoginRequestData(raw.username, '', raw.remember);
+      let loginRequestData = new LoginRequestData(
+        raw.username,
+        '',
+        raw.remember
+      );
       __capcp__LoginPageComponent.innerService.update(loginRequestData);
 
       this.resetErrors();
@@ -176,5 +191,4 @@ export class __capcp__LoginPageComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.alive = false;
   }
-
 }

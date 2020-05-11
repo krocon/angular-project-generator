@@ -14,10 +14,9 @@ describe('__capcp__ButtonsDemoComponent', () => {
       imports: [
         __capcp__ButtonsDemoModule,
         NoopAnimationsModule,
-        RouterTestingModule
-      ]
-    })
-      .compileComponents();
+        RouterTestingModule,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

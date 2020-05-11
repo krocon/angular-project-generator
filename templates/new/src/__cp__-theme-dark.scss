@@ -1,6 +1,4 @@
-
-
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -8,13 +6,14 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-
 $my-alternate-primary: mat-palette($mat-red);
 $my-alternate-accent: mat-palette($mat-blue, 400);
 $my-alternate-warn: mat-palette($mat-deep-orange);
 
-$dark-theme: mat-dark-theme($my-alternate-primary, $my-alternate-accent, $my-alternate-warn);
+$dark-theme: mat-dark-theme(
+  $my-alternate-primary,
+  $my-alternate-accent,
+  $my-alternate-warn
+);
 
 //@include angular-material-theme($dark-theme);
-
-

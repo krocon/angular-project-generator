@@ -1,33 +1,38 @@
 <div class="__cp__-padding">
-  <div fxLayout="row wrap"
-       fxLayoutAlign="start stretch"
-       fxLayoutGap="1rem grid">
-
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign="start stretch"
+    fxLayoutGap="1rem grid"
+  >
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <h3>mat-form-field appearance="fill"</h3>
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>Input</mat-label>
-          <input matInput>
+          <input matInput />
         </mat-form-field>
-        <br>
+        <br />
         <mat-form-field appearance="fill">
           <mat-label>Input</mat-label>
-          <input [value]="'Marc'" matInput>
+          <input [value]="'Marc'" matInput />
         </mat-form-field>
         <mat-form-field appearance="fill">
           <mat-label>Input</mat-label>
-          <input [value]="'1234567.45678'" matInput type="number">
+          <input [value]="'1234567.45678'" matInput type="number" />
         </mat-form-field>
 
-        <br>
+        <br />
         <mat-form-field appearance="fill">
           <mat-label>Select</mat-label>
           <mat-select>
             <mat-option value="option">Option</mat-option>
           </mat-select>
         </mat-form-field>
-        <br>
+        <br />
         <mat-form-field appearance="fill">
           <mat-label>Textarea</mat-label>
           <textarea matInput></textarea>
@@ -35,12 +40,16 @@
       </div>
     </div>
 
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <h3>mat-form-field > input</h3>
       <form class="example-form">
         <mat-form-field class="example-full-width">
           <mat-label>Favorite food</mat-label>
-          <input matInput placeholder="Ex. Pizza" value="Sushi">
+          <input matInput placeholder="Ex. Pizza" value="Sushi" />
         </mat-form-field>
 
         <mat-form-field>
@@ -50,17 +59,16 @@
           </mat-select>
         </mat-form-field>
 
-        <br>
+        <br />
 
         <mat-form-field class="example-full-width">
           <mat-label>Leave a comment</mat-label>
           <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
         </mat-form-field>
-
       </form>
-      <br>
-      <br>
-      <br>
+      <br />
+      <br />
+      <br />
       <mat-form-field>
         <mat-label>Select an option</mat-label>
         <mat-select [(value)]="selected">
@@ -71,7 +79,6 @@
         </mat-select>
       </mat-form-field>
 
-
       <mat-form-field>
         <mat-label>Select an option</mat-label>
         <mat-select [(value)]="selected">
@@ -81,11 +88,13 @@
           <mat-option value="option3">Option 3</mat-option>
         </mat-select>
       </mat-form-field>
-
-
     </div>
 
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <h3>mat-radio-group > mat-radio-button</h3>
       <mat-radio-group aria-label="Select an option">
         <mat-radio-button value="1">Option 1</mat-radio-button>
@@ -93,26 +102,37 @@
       </mat-radio-group>
     </div>
 
-
-
-
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <h3 class="example-h3">Checkbox configuration</h3>
 
       <section class="example-section">
-        <mat-checkbox [(ngModel)]="checked" class="example-margin">Checked</mat-checkbox>
-        <mat-checkbox [(ngModel)]="indeterminate" class="example-margin">Indeterminate</mat-checkbox>
+        <mat-checkbox [(ngModel)]="checked" class="example-margin"
+          >Checked</mat-checkbox
+        >
+        <mat-checkbox [(ngModel)]="indeterminate" class="example-margin"
+          >Indeterminate</mat-checkbox
+        >
       </section>
 
       <section class="example-section">
         <mat-radio-group [(ngModel)]="labelPosition">
-          <mat-radio-button class="example-margin" value="after">Align after</mat-radio-button>
-          <mat-radio-button class="example-margin" value="before">Align before</mat-radio-button>
+          <mat-radio-button class="example-margin" value="after"
+            >Align after</mat-radio-button
+          >
+          <mat-radio-button class="example-margin" value="before"
+            >Align before</mat-radio-button
+          >
         </mat-radio-group>
       </section>
 
       <section class="example-section">
-        <mat-checkbox [(ngModel)]="disabled" class="example-margin">Disabled</mat-checkbox>
+        <mat-checkbox [(ngModel)]="disabled" class="example-margin"
+          >Disabled</mat-checkbox
+        >
       </section>
 
       <h3 class="example-h3">Result</h3>
@@ -122,13 +142,18 @@
           [(ngModel)]="checked"
           [disabled]="disabled"
           [labelPosition]="labelPosition"
-          class="example-margin">
+          class="example-margin"
+        >
           I'm a checkbox
         </mat-checkbox>
       </section>
     </div>
 
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <h3 class="example-h3">Slider configuration</h3>
 
       <section class="example-section">
@@ -147,11 +172,15 @@
       </section>
 
       <section class="example-section">
-        <mat-checkbox [(ngModel)]="checked" class="example-margin">Checked</mat-checkbox>
+        <mat-checkbox [(ngModel)]="checked" class="example-margin"
+          >Checked</mat-checkbox
+        >
       </section>
 
       <section class="example-section">
-        <mat-checkbox [(ngModel)]="disabled" class="example-margin">Disabled</mat-checkbox>
+        <mat-checkbox [(ngModel)]="disabled" class="example-margin"
+          >Disabled</mat-checkbox
+        >
       </section>
 
       <h3 class="example-h3">Result</h3>
@@ -161,14 +190,18 @@
           [checked]="checked"
           [color]="color"
           [disabled]="disabled"
-          class="example-margin">
+          class="example-margin"
+        >
           Slide me!
         </mat-slide-toggle>
       </section>
     </div>
 
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
-
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <h3 class="example-h3">Progress spinner configuration</h3>
 
       <section class="example-section">
@@ -203,38 +236,43 @@
         <mat-slider [(ngModel)]="value" class="example-margin"></mat-slider>
       </section>
 
-      <br>
+      <br />
 
       <h3 class="example-h3">Result</h3>
       <mat-progress-spinner
         [color]="color"
         [mode]="mode"
         [value]="value"
-        class="example-margin">
+        class="example-margin"
+      >
       </mat-progress-spinner>
       <mat-progress-spinner
         [color]="color"
         [diameter]="24"
         [mode]="mode"
         [value]="value"
-        class="example-margin">
+        class="example-margin"
+      >
       </mat-progress-spinner>
       <mat-progress-spinner
         [color]="color"
         [diameter]="60"
         [mode]="mode"
         [value]="value"
-        class="example-margin">
+        class="example-margin"
+      >
       </mat-progress-spinner>
     </div>
 
-
-
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <p>
         <mat-form-field appearance="legacy">
           <mat-label>Legacy form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -242,7 +280,7 @@
       <p>
         <mat-form-field appearance="standard">
           <mat-label>Standard form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -250,7 +288,7 @@
       <p>
         <mat-form-field appearance="fill">
           <mat-label>Fill form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -258,18 +296,22 @@
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Outline form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
       </p>
     </div>
 
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <p>
         <mat-form-field appearance="legacy">
           <mat-label>Legacy form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -277,7 +319,7 @@
       <p>
         <mat-form-field appearance="standard">
           <mat-label>Standard form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -285,7 +327,7 @@
       <p>
         <mat-form-field appearance="fill">
           <mat-label>Fill form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -293,14 +335,18 @@
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Outline form field</mat-label>
-          <input matInput placeholder="Placeholder">
+          <input matInput placeholder="Placeholder" />
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
       </p>
     </div>
 
-    <div fxFlex="calc(50% - 1rem)" fxFlex.lg="calc(33.33% - 1rem)" fxFlex.lt-md="calc(100% - 1rem)">
+    <div
+      fxFlex="calc(50% - 1rem)"
+      fxFlex.lg="calc(33.33% - 1rem)"
+      fxFlex.lt-md="calc(100% - 1rem)"
+    >
       <mat-card>
         <mat-card-content>
           <h3 class="example-h3">Progress bar configuration</h3>
@@ -338,17 +384,23 @@
             </mat-radio-group>
           </section>
 
-          <section *ngIf="barmode === 'determinate' || barmode === 'buffer'" class="example-section">
+          <section
+            *ngIf="barmode === 'determinate' || barmode === 'buffer'"
+            class="example-section"
+          >
             <label class="example-margin">Progress:</label>
             <mat-slider [(ngModel)]="value" class="example-margin"></mat-slider>
           </section>
           <section *ngIf="barmode === 'buffer'" class="example-section">
             <label class="example-margin">Buffer:</label>
-            <mat-slider [(ngModel)]="bufferValue" class="example-margin"></mat-slider>
+            <mat-slider
+              [(ngModel)]="bufferValue"
+              class="example-margin"
+            ></mat-slider>
           </section>
         </mat-card-content>
       </mat-card>
-      <br>
+      <br />
       <mat-card>
         <mat-card-content>
           <h3 class="example-h3">Result</h3>
@@ -359,14 +411,12 @@
               [color]="color"
               [mode]="barmode"
               [value]="value"
-              class="example-margin">
+              class="example-margin"
+            >
             </mat-progress-bar>
           </section>
         </mat-card-content>
       </mat-card>
     </div>
-
-
-
   </div>
 </div>

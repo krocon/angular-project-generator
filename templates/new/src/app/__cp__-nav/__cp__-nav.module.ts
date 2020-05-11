@@ -6,19 +6,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-import { __capcp__NavComponent } from "./__cp__-nav.component";
-import { __capcp__LogoModule } from "../__cp__-logo/__cp__-logo.module";
-import { __capcp__FooterModule } from "../__cp__-footer/__cp__-footer.module";
-import { __capcp__CounterModule } from "../__cp__-counter/__cp__-counter.module";
-import { __capcp__CommonPipesModule } from "../__cp__-common-pipes/__cp__-common-pipes.module";
-import { __capcp__CommonModule } from "../__cp__-common/__cp__-common.module";
-import { __capcp__ThemeSwitchModule } from "../__cp__-theme-switch/__cp__-theme-switch.module";
-
+import { __capcp__NavComponent } from './__cp__-nav.component';
+import { __capcp__LogoModule } from '../__cp__-logo/__cp__-logo.module';
+import { __capcp__FooterModule } from '../__cp__-footer/__cp__-footer.module';
+import { __capcp__CounterModule } from '../__cp__-counter/__cp__-counter.module';
+import { __capcp__CommonPipesModule } from '../__cp__-common-pipes/__cp__-common-pipes.module';
+import { __capcp__CommonModule } from '../__cp__-common/__cp__-common.module';
+import { __capcp__ThemeSwitchModule } from '../__cp__-theme-switch/__cp__-theme-switch.module';
 
 @NgModule({
-  declarations: [
-    __capcp__NavComponent
-  ],
+  declarations: [__capcp__NavComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -32,11 +29,8 @@ import { __capcp__ThemeSwitchModule } from "../__cp__-theme-switch/__cp__-theme-
     __capcp__CounterModule,
     __capcp__CommonPipesModule,
     __capcp__CommonModule,
-    __capcp__ThemeSwitchModule
+    __capcp__ThemeSwitchModule,
   ],
-  exports: [
-    __capcp__NavComponent
-  ]
+  exports: [__capcp__NavComponent],
 })
-export class __capcp__NavModule {
-}
+export class __capcp__NavModule {}

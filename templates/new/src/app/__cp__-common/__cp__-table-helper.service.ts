@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class __capcp__TableHelperService {
-
   static get2Digits(n: number): string {
     if (n < 10) {
       return '0' + n;
@@ -50,7 +49,6 @@ export class __capcp__TableHelperService {
       const d = __capcp__TableHelperService.get2Digits(day);
       const m = __capcp__TableHelperService.get2Digits(month);
       return `${d}.${m} ${year}`;
-
     } catch (e) {
       return st;
     }
@@ -77,5 +75,4 @@ export class __capcp__TableHelperService {
       return '';
     }
   }
-
 }

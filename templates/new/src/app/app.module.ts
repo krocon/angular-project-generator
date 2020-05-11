@@ -10,15 +10,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { __capcp__NavModule } from "./__cp__-nav/__cp__-nav.module";
+import { __capcp__NavModule } from './__cp__-nav/__cp__-nav.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { __capcp__AuthModule } from "./__cp__-auth/__cp__-auth.module";
+import { __capcp__AuthModule } from './__cp__-auth/__cp__-auth.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -33,10 +31,11 @@ import { __capcp__AuthModule } from "./__cp__-auth/__cp__-auth.module";
     __capcp__NavModule,
     __capcp__AuthModule,
 
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

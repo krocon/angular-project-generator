@@ -1,12 +1,7 @@
-import { browser } from "protractor";
-import { RadioButtonHarnessFilters } from "@angular/material/radio/testing";
-import { AppPage } from "../pages/base.po";
+import { browser } from 'protractor';
+import { RadioButtonHarnessFilters } from '@angular/material/radio/testing';
+import { AppPage } from '../pages/base.po';
 
+function setupGivens(page: AppPage, Given: Function) {}
 
-
-function setupGivens(page: AppPage, Given: Function) {
-
-}
-
-export {setupGivens}
-
+export { setupGivens };
