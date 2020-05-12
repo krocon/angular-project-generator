@@ -3,7 +3,8 @@
   "version": "9.1.12",
   "description": "Angular Project Generator",
   "scripts": {
-    "test": "jest --findRelatedTests bin/ lib/",
+    "test": "npm run test-clear-target & jest --findRelatedTests bin/ lib/",
+    "test-clear-target": "del-cli --force ./test-target",
     "install-g-local": "npm uninstall -g apge & npm install -g ./",
     "import-templates": "node import-templates.js",
     "npm-patch": "npm version patch",
@@ -58,6 +59,7 @@
     "window-size": "^1.1.1"
   },
   "devDependencies": {
+    "del-cli": "^3.0.0",
     "jest": "^25.5.4",
     "nyc": "^15.0.1"
   }

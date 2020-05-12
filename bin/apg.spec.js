@@ -2,6 +2,8 @@ const path = require('path');
 const exec = require('child_process').exec;
 const pkg = require('../package.json');
 
+const testTarget = './test-target';
+
 test('Exit code should be 0', async () => {
   let result = await cli(['-v'], '.');
   expect(result.code).toBe(0);
@@ -10,6 +12,13 @@ test('Exit code should be 0', async () => {
 test('Version should be ' + pkg.version, async () => {
   let result = await cli(['--version'], '.');
   expect(result.code).toBe(0);
+  expect(extractVersion(result.stdout)).toBe(pkg.version);
+})
+
+test('Project should be built', async () => {
+  let result = await cli(['new -a click-n-ride -p app -cp cr -l deutschebahn -f'], testTarget);
+  expect(result.code).toBe(0);
+  console.info(result);
   expect(extractVersion(result.stdout)).toBe(pkg.version);
 })
 
