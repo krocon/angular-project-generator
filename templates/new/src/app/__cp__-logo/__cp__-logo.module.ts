@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { __capcp__DummyLogoComponent } from './__cp__dummy-logo.component';
-import { __capcp__DeutscheBahnLogoComponent } from './__cp__deutsche-bahn-logo.component';
-import { __capcp__DeutscheBankLogoComponent } from './__cp__deutsche-bank-logo.component';
-import { __capcp__LufthansaLogoComponent } from './__cp__lufthansa-logo.component';
+import { __capcp__DummyLogoComponent } from './__cp__-dummy-logo.component';
+import { __capcp__DeutscheBahnLogoComponent } from './__cp__-deutsche-bahn-logo.component';
+import { __capcp__DeutscheBankLogoComponent } from './__cp__-deutsche-bank-logo.component';
+import { __capcp__LufthansaLogoComponent } from './__cp__-lufthansa-logo.component';
 
 // TODO a) enable or insert your logo component. b) delete other logo components.
 
