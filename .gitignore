@@ -106,3 +106,5 @@ dist
 .idea
 /package-lock.json
 /.idea/
+/test-target/
+/.nyc_output/
