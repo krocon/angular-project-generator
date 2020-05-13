@@ -5,17 +5,12 @@ import {
   HostListener,
   OnDestroy,
   OnInit,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay, takeWhile } from 'rxjs/operators';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  NavigationStart,
-  Router,
-} from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { MatSidenav, MatSidenavContent } from '@angular/material/sidenav';
 import { environment } from '../../environments/environment';
 import { __capcp__AuthService } from '../__cp__-auth/service/__cp__-auth.service';
@@ -25,12 +20,12 @@ import { LoginResponseData } from '../__cp__-auth/data/login.response.data';
   selector: 'app-__cp__-nav',
   templateUrl: './__cp__-nav.component.html',
   styleUrls: ['./__cp__-nav.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class __capcp__NavComponent implements OnInit, OnDestroy {
   private static readonly config = {
     routeTitles: {
-      home: 'Herzlich willkommen!',
+      home: 'Herzlich willkommen!'
     },
 
     loginRoute: '/anmelden',
@@ -39,11 +34,11 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
 
     menuIconsVisible: true,
     logoutCounterVisible: true,
-    titleFadeIn: true,
+    titleFadeIn: true
   };
 
-  @ViewChild('drawer', { static: true }) mainNav: MatSidenav;
-  @ViewChild('matSidenavContent', { static: true })
+  @ViewChild('drawer', {static: true}) mainNav: MatSidenav;
+  @ViewChild('matSidenavContent', {static: true})
   matSidenavContent: MatSidenavContent;
 
   lastClickInMillis = Date.now();
@@ -56,13 +51,11 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
 
   private alive = true;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(
-      takeWhile(() => this.alive),
-      map((result) => result.matches),
-      shareReplay()
-    );
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+    takeWhile(() => this.alive),
+    map(result => result.matches),
+    shareReplay()
+  );
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -70,7 +63,8 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
     private readonly activatedRoute: ActivatedRoute,
     private readonly authService: __capcp__AuthService,
     private readonly cdr: ChangeDetectorRef
-  ) {}
+  ) {
+  }
 
   get cfg() {
     return __capcp__NavComponent.config;
@@ -101,7 +95,7 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.calcTitle(this.router.url);
 
-    this.router.events.pipe(takeWhile(() => this.alive)).subscribe((evt) => {
+    this.router.events.pipe(takeWhile(() => this.alive)).subscribe(evt => {
       if (evt instanceof NavigationStart) {
         this.fadein = false;
         this.cdr.detectChanges();
@@ -109,18 +103,16 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
         // console.info(evt);
         // console.info(this.activatedRoute);
         // console.info(this.activatedRoute.firstChild);
-        this.matSidenavContent.scrollTo({ top: 0, left: 0 });
+        this.matSidenavContent.scrollTo({top: 0, left: 0});
         let url = evt.url;
         this.calcTitle(url);
       }
     });
-    this.authService.valueChanges$
-      .pipe(takeWhile(() => this.alive))
-      .subscribe((data) => {
-        this.loggedIn = !!data.token;
-        this.data = data;
-        this.cdr.detectChanges();
-      });
+    this.authService.valueChanges$.pipe(takeWhile(() => this.alive)).subscribe(data => {
+      this.loggedIn = !!data.token;
+      this.data = data;
+      this.cdr.detectChanges();
+    });
   }
 
   calcTitle(url: string) {

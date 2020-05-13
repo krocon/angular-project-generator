@@ -3,5 +3,6 @@ export class LoginRequestData {
     public username: string = '',
     public password: string = '',
     public remember: boolean = true
-  ) {}
+  ) {
+  }
 }

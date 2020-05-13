@@ -7,63 +7,54 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const data = {
   breadcrumb: true,
-  animationLevel: 2,
+  animationLevel: 2
 };
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./__cp__-welcome/__cp__-welcome.module').then(
-        (m) => m.__capcp__WelcomeModule
-      ),
+      import('./__cp__-welcome/__cp__-welcome.module').then(m => m.__capcp__WelcomeModule)
   },
   {
     path: 'willkommen',
-    redirectTo: '/',
+    redirectTo: '/'
   },
   {
     path: 'recht',
     loadChildren: () =>
       import('./__cp__-rechtliches/__cp__-rechtliches.module').then(
-        (m) => m.__capcp__RechtlichesModule
+        m => m.__capcp__RechtlichesModule
       ),
-    data,
+    data
   },
   {
     path: 'anmelden',
-    component: __capcp__LoginPageComponent,
+    component: __capcp__LoginPageComponent
   },
   {
     path: 'demo',
-    loadChildren: () =>
-      import('./__cp__-demo/__cp__-demo.module').then(
-        (m) => m.__capcp__DemoModule
-      ),
+    loadChildren: () => import('./__cp__-demo/__cp__-demo.module').then(m => m.__capcp__DemoModule),
     canActivate: [__capcp__AuthGuardCanActivate],
-    data,
+    data
   },
   {
     path: '',
-    loadChildren: () =>
-      import('./__cp__-auth/__cp__-auth.module').then(
-        (m) => m.__capcp__AuthModule
-      ),
+    loadChildren: () => import('./__cp__-auth/__cp__-auth.module').then(m => m.__capcp__AuthModule)
   },
   {
     path: '**',
     loadChildren: () =>
-      import('./__cp__-welcome/__cp__-welcome.module').then(
-        (m) => m.__capcp__WelcomeModule
-      ),
-  },
+      import('./__cp__-welcome/__cp__-welcome.module').then(m => m.__capcp__WelcomeModule)
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { enableTracing: environment.routerTracing }),
-    BrowserAnimationsModule,
+    RouterModule.forRoot(routes, {enableTracing: environment.routerTracing}),
+    BrowserAnimationsModule
   ],
-  exports: [RouterModule, BrowserAnimationsModule],
+  exports: [RouterModule, BrowserAnimationsModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

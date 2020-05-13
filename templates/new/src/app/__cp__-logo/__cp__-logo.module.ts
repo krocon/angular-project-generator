@@ -12,13 +12,14 @@ import { __capcp__LufthansaLogoComponent } from './__cp__-lufthansa-logo.compone
     __capcp__DummyLogoComponent,
     __capcp__DeutscheBahnLogoComponent,
     __capcp__DeutscheBankLogoComponent,
-    __capcp__LufthansaLogoComponent,
+    __capcp__LufthansaLogoComponent
   ],
   exports: [
-    __capcp__DummyLogoComponent,
+    __capcp__DummyLogoComponent
     // __capcp__DeutscheBahnLogoComponent,
     // __capcp__DeutscheBankLogoComponent,
     // __capcp__LufthansaLogoComponent
-  ],
+  ]
 })
-export class __capcp__LogoModule {}
+export class __capcp__LogoModule {
+}

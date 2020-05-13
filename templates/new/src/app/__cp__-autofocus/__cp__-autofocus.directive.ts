@@ -6,25 +6,22 @@ import {
   NgZone,
   OnChanges,
   OnDestroy,
-  SimpleChanges,
+  SimpleChanges
 } from '@angular/core';
 
 const BASE_TIMER_DELAY = 50;
 
 @Directive({
-  selector: '[app__capcp__Autofocus]',
+  selector: '[app__capcp__Autofocus]'
 })
-export class __capcp__AutofocusDirective
-  implements AfterContentInit, OnChanges, OnDestroy {
+export class __capcp__AutofocusDirective implements AfterContentInit, OnChanges, OnDestroy {
   @Input('app__capcp__AutofocusDelay')
   public timerDelay: number | string = BASE_TIMER_DELAY;
 
   private timeout: any = null;
 
-  constructor(
-    private readonly elementRef: ElementRef,
-    private readonly ngZone: NgZone
-  ) {}
+  constructor(private readonly elementRef: ElementRef, private readonly ngZone: NgZone) {
+  }
 
   private _condition = false;
 

@@ -12,12 +12,13 @@ import { MatIconModule } from '@angular/material/icon';
     RouterModule.forChild([
       {
         path: 'buttons',
-        component: __capcp__ButtonsDemoComponent,
-      },
+        component: __capcp__ButtonsDemoComponent
+      }
     ]),
     MatButtonModule,
-    MatIconModule,
+    MatIconModule
   ],
-  providers: [__capcp__ButtonsDemoComponent],
+  providers: [__capcp__ButtonsDemoComponent]
 })
-export class __capcp__ButtonsDemoModule {}
+export class __capcp__ButtonsDemoModule {
+}

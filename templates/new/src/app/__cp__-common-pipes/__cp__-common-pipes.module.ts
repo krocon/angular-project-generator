@@ -11,13 +11,14 @@ import { __capcp__ReplaceTextPipe } from './__cp__-replace-text.pipe';
     __capcp__DateStringToTextPipe,
     __capcp__DateStringToShortTextPipe,
     __capcp__DateStringToHtmlPipe,
-    __capcp__ReplaceTextPipe,
+    __capcp__ReplaceTextPipe
   ],
   exports: [
     __capcp__DateStringToTextPipe,
     __capcp__DateStringToShortTextPipe,
     __capcp__DateStringToHtmlPipe,
-    __capcp__ReplaceTextPipe,
-  ],
+    __capcp__ReplaceTextPipe
+  ]
 })
-export class __capcp__CommonPipesModule {}
+export class __capcp__CommonPipesModule {
+}

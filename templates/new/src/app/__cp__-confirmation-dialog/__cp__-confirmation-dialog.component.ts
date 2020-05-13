@@ -6,7 +6,7 @@ import { ButtonData } from './data/button.data';
 @Component({
   selector: 'app-__cp__-confirmation-dialog',
   templateUrl: './__cp__-confirmation-dialog.component.html',
-  styleUrls: ['./__cp__-confirmation-dialog.component.scss'],
+  styleUrls: ['./__cp__-confirmation-dialog.component.scss']
 })
 export class __capcp__ConfirmationDialogComponent {
   public vertical = false;

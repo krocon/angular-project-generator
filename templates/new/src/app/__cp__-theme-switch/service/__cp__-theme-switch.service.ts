@@ -4,18 +4,16 @@ import { Observable } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class __capcp__ThemeSwitchService {
   private static readonly config = {
-    themes: ['light', 'dark'],
+    themes: ['light', 'dark']
   };
 
   private static readonly innerService = new __capcp__TypedDataService<string>(
     'theme', // key in localstorage
-    window?.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light' // very first default value
+    window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light' // very first default value
   );
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {
@@ -44,9 +42,7 @@ export class __capcp__ThemeSwitchService {
     if (!arr.length) return;
 
     const v = __capcp__ThemeSwitchService.innerService.getValue();
-    __capcp__ThemeSwitchService.innerService.update(
-      v === arr[0] ? arr[1] : arr[0]
-    );
+    __capcp__ThemeSwitchService.innerService.update(v === arr[0] ? arr[1] : arr[0]);
 
     let value = this.getValue();
     this.updateTheme(value);

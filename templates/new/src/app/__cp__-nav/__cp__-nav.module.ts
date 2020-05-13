@@ -29,8 +29,9 @@ import { __capcp__ThemeSwitchModule } from '../__cp__-theme-switch/__cp__-theme-
     __capcp__CounterModule,
     __capcp__CommonPipesModule,
     __capcp__CommonModule,
-    __capcp__ThemeSwitchModule,
+    __capcp__ThemeSwitchModule
   ],
-  exports: [__capcp__NavComponent],
+  exports: [__capcp__NavComponent]
 })
-export class __capcp__NavModule {}
+export class __capcp__NavModule {
+}

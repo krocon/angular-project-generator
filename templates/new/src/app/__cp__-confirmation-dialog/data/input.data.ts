@@ -6,5 +6,6 @@ export class InputData {
     public clazz = '',
     public type = 'text',
     public inputValue: any = ''
-  ) {}
+  ) {
+  }
 }

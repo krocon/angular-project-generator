@@ -8,7 +8,7 @@ import { map, shareReplay, takeWhile } from 'rxjs/operators';
   selector: 'app-__cp__-welcome',
   templateUrl: './__cp__-welcome.component.html',
   styleUrls: ['./__cp__-welcome.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class __capcp__WelcomeComponent implements OnDestroy {
   public environment = environment;
@@ -16,16 +16,16 @@ export class __capcp__WelcomeComponent implements OnDestroy {
   bgImageVisible = false;
   textAsOverlay = true;
   alive = true;
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
   isSmall$: Observable<boolean> = this.breakpointObserver
     .observe([Breakpoints.Small, Breakpoints.Handset])
     .pipe(
       takeWhile(() => this.alive),
-      map((result) => result.matches),
+      map(result => result.matches),
       shareReplay()
     );
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+  }
 
   ngOnDestroy(): void {
     this.alive = false;

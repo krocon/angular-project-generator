@@ -7,7 +7,7 @@ describe('__capcp__WelcomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [__capcp__WelcomeComponent],
+      declarations: [__capcp__WelcomeComponent]
     }).compileComponents();
   }));
 

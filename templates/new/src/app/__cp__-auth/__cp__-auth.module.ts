@@ -20,8 +20,8 @@ import { __capcp__LoginPageComponent } from './__cp__-login/__cp__-login-page.co
 import { __capcp__AutofocusModule } from '../__cp__-autofocus/__cp__-common.module';
 
 const routes = [
-  { path: 'anmelden', component: __capcp__LoginPageComponent },
-  { path: 'abmelden', component: __capcp__AuthLogoutComponent },
+  {path: 'anmelden', component: __capcp__LoginPageComponent},
+  {path: 'abmelden', component: __capcp__AuthLogoutComponent}
 ];
 
 @NgModule({
@@ -40,15 +40,12 @@ const routes = [
     MatFormFieldModule,
 
     __capcp__ConfirmationModule,
-    __capcp__AutofocusModule,
+    __capcp__AutofocusModule
   ],
   entryComponents: [],
   declarations: [__capcp__AuthLogoutComponent, __capcp__LoginPageComponent],
   exports: [RouterModule],
-  providers: [
-    __capcp__AuthService,
-    __capcp__AuthAjaxService,
-    __capcp__AuthGuardCanActivate,
-  ],
+  providers: [__capcp__AuthService, __capcp__AuthAjaxService, __capcp__AuthGuardCanActivate]
 })
-export class __capcp__AuthModule {}
+export class __capcp__AuthModule {
+}

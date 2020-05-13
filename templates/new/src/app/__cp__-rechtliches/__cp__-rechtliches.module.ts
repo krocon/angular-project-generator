@@ -19,32 +19,33 @@ import { __capcp__NutzungsbedingungenComponent } from './__cp__-nutzungsbedingun
       {
         path: '',
         component: __capcp__DatenschutzComponent,
-        data: { animationLevel: 1 },
+        data: {animationLevel: 1}
       },
       {
         path: 'impressum',
         component: __capcp__ImprintComponent,
-        data: { animationLevel: 3 },
+        data: {animationLevel: 3}
       },
       {
         path: 'nutzungsbedingungen',
         component: __capcp__NutzungsbedingungenComponent,
-        data: { animationLevel: 4 },
+        data: {animationLevel: 4}
       },
       {
         path: 'datenschutz',
         component: __capcp__DatenschutzComponent,
-        data: { animationLevel: 5 },
-      },
+        data: {animationLevel: 5}
+      }
     ]),
     HttpClientModule,
-    FlexLayoutModule,
+    FlexLayoutModule
   ],
   declarations: [
     __capcp__DatenschutzComponent,
     __capcp__ImprintComponent,
-    __capcp__NutzungsbedingungenComponent,
+    __capcp__NutzungsbedingungenComponent
   ],
-  providers: [],
+  providers: []
 })
-export class __capcp__RechtlichesModule {}
+export class __capcp__RechtlichesModule {
+}

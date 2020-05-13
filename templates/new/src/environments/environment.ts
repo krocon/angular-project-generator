@@ -6,32 +6,32 @@
 import pkg from '../../package.json';
 
 export const environment = {
-  production: false,
-  env: 'dev',
-  version: pkg.version,
-  commitHash: '-',
-  showVersionIndicator: true,
-  routerTracing: false,
+	production: false,
+	env: 'dev',
+	version: pkg.version,
+	commitHash: '-',
+	showVersionIndicator: true,
+	routerTracing: false,
 
-  loginRoute: '/anmelden', // login
-  logoutRoute: '/abmelden', // logout
-  welcomeRoute: '/willkommen', // welcome or home
+	loginRoute: '/anmelden', // login
+	logoutRoute: '/abmelden', // logout
+	welcomeRoute: '/willkommen', // welcome or home
 
-  authServiceConfig: {
-    mock: false,
-    loginUrl: 'assets/mock-data/auth/login.json',
-    logoutUrl: 'assets/mock-data/auth/logout.json',
-    logoutMock: true,
-  },
+	authServiceConfig: {
+		mock: false,
+		loginUrl: 'assets/mock-data/auth/login.json',
+		logoutUrl: 'assets/mock-data/auth/logout.json',
+		logoutMock: true
+	},
 
-  // TODO delete:
+	// TODO delete:
   TODO_delete: {
-    getUrl: 'assets/mock-data/__kebabentity__/get.json',
-    getAllUrl: 'assets/mock-data/__kebabentity__/getall.json',
-    deleteUrl: 'assets/mock-data/__kebabentity__/delete.json',
-    postUrl: 'assets/mock-data/__kebabentity__/post.json',
-    putUrl: 'assets/mock-data/__kebabentity__/put.json',
-  },
+		getUrl: 'assets/mock-data/__kebabentity__/get.json',
+		getAllUrl: 'assets/mock-data/__kebabentity__/getall.json',
+		deleteUrl: 'assets/mock-data/__kebabentity__/delete.json',
+		postUrl: 'assets/mock-data/__kebabentity__/post.json',
+		putUrl: 'assets/mock-data/__kebabentity__/put.json'
+	}
 };
 
 /*

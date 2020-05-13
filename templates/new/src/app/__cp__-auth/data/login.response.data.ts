@@ -5,5 +5,6 @@ export class LoginResponseData {
     public faxNr: string = '',
     public email: string = '',
     public token: string = ''
-  ) {}
+  ) {
+  }
 }

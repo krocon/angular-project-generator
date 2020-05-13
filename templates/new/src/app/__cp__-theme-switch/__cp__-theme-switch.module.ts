@@ -9,6 +9,7 @@ import { __capcp__ThemeSwitchService } from './service/__cp__-theme-switch.servi
   imports: [CommonModule, MatButtonModule, MatIconModule],
   exports: [__capcp__ThemeSwitchComponent],
   declarations: [__capcp__ThemeSwitchComponent],
-  providers: [__capcp__ThemeSwitchService],
+  providers: [__capcp__ThemeSwitchService]
 })
-export class __capcp__ThemeSwitchModule {}
+export class __capcp__ThemeSwitchModule {
+}

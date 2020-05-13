@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: '__cp__DateStringToText' })
+@Pipe({name: '__cp__DateStringToText'})
 export class __capcp__DateStringToTextPipe implements PipeTransform {
   static date2Text(_date: Date): string {
     const year = _date.getFullYear();

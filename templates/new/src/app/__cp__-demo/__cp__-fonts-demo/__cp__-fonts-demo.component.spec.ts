@@ -10,7 +10,7 @@ describe('__capcp__FontsDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [__capcp__FontsDemoModule, NoopAnimationsModule],
+      imports: [__capcp__FontsDemoModule, NoopAnimationsModule]
     }).compileComponents();
   }));
 

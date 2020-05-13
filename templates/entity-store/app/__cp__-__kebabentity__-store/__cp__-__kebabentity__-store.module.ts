@@ -4,6 +4,7 @@ import { __capcp____pascalentity__StoreService } from './service/__cp__-__kebabe
 
 @NgModule({
   providers: [__capcp____pascalentity__StoreService],
-  imports: [CommonModule],
+  imports: [CommonModule]
 })
-export class __capcp____pascalentity__StoreModule {}
+export class __capcp____pascalentity__StoreModule {
+}

@@ -10,10 +10,8 @@ export class __capcp__TypedDataService<T> {
     private readonly defaultValue: T = null,
     private readonly equals: (x: T, y: T) => boolean = (x: T, y: T) =>
       JSON.stringify(x) === JSON.stringify(y),
-    private readonly clone: (x: T) => T = (x: T) =>
-      JSON.parse(JSON.stringify(x)),
-    private readonly parse: (s: string) => T = (s: string) =>
-      JSON.parse(s) as T,
+    private readonly clone: (x: T) => T = (x: T) => JSON.parse(JSON.stringify(x)),
+    private readonly parse: (s: string) => T = (s: string) => JSON.parse(s) as T,
     private readonly stringify: (x: T) => string = (x: T) => JSON.stringify(x)
   ) {
     this.init();

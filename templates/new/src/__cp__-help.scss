@@ -1,6 +1,7 @@
 $properties: "margin", "padding";
 $positions: "top", "right", "bottom", "left";
 $sizes: 0px, 16px, 32px, 48px;
+$border-color: #e1e6eb; // TODO themes!
 
 @each $prop in $properties {
   .__cp__-#{$prop} {
@@ -22,7 +23,7 @@ $sizes: 0px, 16px, 32px, 48px;
 
 @each $pos in $positions {
   .__cp__-border-#{$pos} {
-    border#{$pos}: solid 1px #e1e6eb;
+    border-#{$pos}: solid 1px $border-color;
   }
 }
 

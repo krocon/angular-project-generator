@@ -5,8 +5,7 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
     class="sidenav"
-    fixedInViewport
-  >
+    fixedInViewport>
     <mat-toolbar>
       <app-__cp__-logo></app-__cp__-logo>
       AppXyz
@@ -33,20 +32,18 @@
       </a>
 
       <a
-        mat-list-item
-        href="#"
-        routerLink="/recht/nutzungsbedingungen"
         [ngClass]="{ hidden: menuIconsVisible }"
-      >
+        href="#"
+        mat-list-item
+        routerLink="/recht/nutzungsbedingungen">
         Nutzungsbedingungen
       </a>
 
       <a
+        [ngClass]="{ hidden: !menuIconsVisible }"
         href="#"
         mat-list-item
-        routerLink="/recht/nutzungsbedingungen"
-        [ngClass]="{ hidden: !menuIconsVisible }"
-      >
+        routerLink="/recht/nutzungsbedingungen">
         <mat-icon>gavel</mat-icon>
         Nutzungsbedg.
       </a>
@@ -58,19 +55,18 @@
 
       <mat-divider></mat-divider>
 
-      <a [routerLink]="cfg.loginRoute" href="#" mat-list-item *ngIf="!loggedIn">
+      <a *ngIf="!loggedIn" [routerLink]="cfg.loginRoute" href="#" mat-list-item>
         <mat-icon>face</mat-icon>
         Anmelden
       </a>
 
       <a
-        [routerLink]="cfg.logoutRoute"
-        href="#"
-        data-test-id="nav-logout-link"
-        mat-list-item
         *ngIf="loggedIn"
+        [routerLink]="cfg.logoutRoute"
         class="__cp__-margin-top-32px"
-      >
+        data-test-id="nav-logout-link"
+        href="#"
+        mat-list-item>
         <mat-icon>directions_walk</mat-icon>
         Abmelden
       </a>
@@ -85,13 +81,11 @@
       <!-- bottom: -->
       <div class="fixed-at-bottom-left">
         <div *ngIf="logoutCounterVisible">
-          <small
-            >Sitzungszeitlimit:
+          <small>Sitzungszeitlimit:
             <app-__cp__-countdown
               (timeout)="onSessionTimeout()"
               [diffTimeInMillis]="15 * 60 * 1000"
-              [startTimeInMillis]="lastClickInMillis"
-            ></app-__cp__-countdown>
+              [startTimeInMillis]="lastClickInMillis"></app-__cp__-countdown>
           </small>
         </div>
         <div>
@@ -114,27 +108,23 @@
         *ngIf="isHandset$ | async"
         aria-label="Toggle sidenav"
         mat-icon-button
-        type="button"
-      >
+        type="button">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span
-        data-test-id="main-header-title-span"
-        class="main-header-title-span"
         [ngClass]="{ 'fade-in': fadein }"
-      >
+        class="main-header-title-span"
+        data-test-id="main-header-title-span">
         {{ title }}
       </span>
 
       <span class="__cp__-flex-fill-space"></span>
 
       <app-__cp__-theme-switch
-        class="__cp__-float-right"
-      ></app-__cp__-theme-switch>
+        class="__cp__-float-right"></app-__cp__-theme-switch>
       <app-__cp__-logo
         *ngIf="isHandset$ | async"
-        class="__cp__-float-right __cp__-margin-left"
-      ></app-__cp__-logo>
+        class="__cp__-float-right __cp__-margin-left"></app-__cp__-logo>
     </mat-toolbar>
 
     <div class="__cp__-content">

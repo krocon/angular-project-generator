@@ -21,16 +21,11 @@ import { __capcp__TableHelperService } from './__cp__-table-helper.service';
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule,
+    MatCheckboxModule
   ],
-  declarations: [
-    __capcp__VersionIndicatorComponent,
-    __capcp__LabelValueReadonlyComponent,
-  ],
-  exports: [
-    __capcp__VersionIndicatorComponent,
-    __capcp__LabelValueReadonlyComponent,
-  ],
-  providers: [__capcp__MetaService, __capcp__TableHelperService],
+  declarations: [__capcp__VersionIndicatorComponent, __capcp__LabelValueReadonlyComponent],
+  exports: [__capcp__VersionIndicatorComponent, __capcp__LabelValueReadonlyComponent],
+  providers: [__capcp__MetaService, __capcp__TableHelperService]
 })
-export class __capcp__CommonModule {}
+export class __capcp__CommonModule {
+}

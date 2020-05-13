@@ -10,10 +10,11 @@ export class __capcp__AuthAjaxService {
     mock: false,
     loginUrl: 'assets/mock-data/auth/login.json',
     logoutUrl: 'assets/mock-data/auth/logout.json',
-    logoutMock: true,
+    logoutMock: true
   };
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {
+  }
 
   static forRoot(config) {
     Object.assign(this.config, config);
@@ -23,9 +24,7 @@ export class __capcp__AuthAjaxService {
     let url = __capcp__AuthAjaxService.config.loginUrl;
     if (url.indexOf('mock-data') > -1) {
       if (loginData.username === 'unauthorized') {
-        return this.http.get<LoginResponseData>(
-          url.replace(/\.json/g, '-unauthorized.json')
-        );
+        return this.http.get<LoginResponseData>(url.replace(/\.json/g, '-unauthorized.json'));
       }
       return this.http.get<LoginResponseData>(url);
     }

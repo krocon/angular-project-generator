@@ -37,8 +37,8 @@ describe('DbNavComponent', () => {
         __capcp__FooterModule,
         __capcp__CounterModule,
         __capcp__CommonPipesModule,
-        __capcp__CommonModule,
-      ],
+        __capcp__CommonModule
+      ]
     }).compileComponents();
   }));
 

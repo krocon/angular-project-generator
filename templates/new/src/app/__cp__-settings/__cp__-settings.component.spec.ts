@@ -14,7 +14,7 @@ describe('DbSettingsPage', () => {
       declarations: [__capcp__SettingsComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
-      imports: [HttpClientTestingModule, RouterTestingModule],
+      imports: [HttpClientTestingModule, RouterTestingModule]
     }).compileComponents();
   }));
 

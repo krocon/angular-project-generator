@@ -4,12 +4,10 @@ import { __capcp____pascalentity__Data } from '../data/__cp__-__kebabentity__.da
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class __capcp____pascalentity__StoreService {
-  private static readonly innerService = new __capcp__TypedDataService<
-    __capcp____pascalentity__Data
-  >(
+  private static readonly innerService = new __capcp__TypedDataService<__capcp____pascalentity__Data>(
     '__kebabentity__', // key in localstorage
     new __capcp____pascalentity__Data() // default-value
   );

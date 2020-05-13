@@ -17,11 +17,12 @@ import { MatButtonModule } from '@angular/material/button';
     RouterModule.forChild([
       {
         path: 'mix',
-        component: __capcp__MixDemoComponent,
-      },
+        component: __capcp__MixDemoComponent
+      }
     ]),
-    MatButtonModule,
+    MatButtonModule
   ],
-  providers: [__capcp__MixDemoComponent],
+  providers: [__capcp__MixDemoComponent]
 })
-export class __capcp__MixDemoModule {}
+export class __capcp__MixDemoModule {
+}

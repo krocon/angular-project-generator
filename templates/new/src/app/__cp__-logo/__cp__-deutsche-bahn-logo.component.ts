@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  Input,
-} from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, Input } from '@angular/core';
 
 /**
  * https://de.wikipedia.org/wiki/Datei:Deutsche_Bahn_AG-Logo.svg
@@ -12,11 +7,7 @@ import {
 @Component({
   selector: 'app-__cp__-logo',
   template: `
-    <svg
-      [attr.height]="_height"
-      [attr.width]="_width"
-      viewBox="0 0 94.606644 66.223038"
-    >
+    <svg [attr.height]="_height" [attr.width]="_width" viewBox="0 0 94.606644 66.223038">
       <g transform="translate(-17.708578,-29.543191)">
         <g transform="matrix(3.2184604,0,0,-3.2184604,-661.27392,1901.4416)">
           <g transform="translate(237.435,581.613)">
@@ -49,31 +40,33 @@ import {
   `,
   styles: [
     `
-      .logo-path-fill-01 {
-        fill: #e30613;
-        fill-opacity: 1;
-        fill-rule: nonzero;
-        stroke: none;
-      }
-      .logo-path-fill-02 {
-        fill: #ffffff;
-        fill-opacity: 1;
-        fill-rule: nonzero;
-        stroke: none;
-      }
-    `,
-  ],
+			.logo-path-fill-01 {
+				fill: #e30613;
+				fill-opacity: 1;
+				fill-rule: nonzero;
+				stroke: none;
+			}
+			.logo-path-fill-02 {
+				fill: #ffffff;
+				fill-opacity: 1;
+				fill-rule: nonzero;
+				stroke: none;
+			}
+		`
+  ]
 })
 export class __capcp__DeutscheBahnLogoComponent implements AfterViewInit {
+  constructor(private readonly cdr: ChangeDetectorRef) {
+  }
+
+  _height = 66.223038 / 2;
+
   @Input()
   set height(value: number) {
     this._height = value;
   }
 
-  _height = 66.223038 / 2;
   _width = (this._height * 94.606644) / 66.223038;
-
-  constructor(private readonly cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit(): void {
     this.cdr.detach();

@@ -3,8 +3,7 @@
     <button
       (click)="onCloseClicked()"
       class="__cp__-float-right"
-      mat-icon-button
-    >
+      mat-icon-button>
       &#x2716;
     </button>
     <h4>{{ data?.title }}</h4>
@@ -18,8 +17,7 @@
         <div *ngFor="let input of data?.inputs">
           <mat-form-field
             *ngIf="input.type === 'text'"
-            class="__cp__-full-width"
-          >
+            class="__cp__-full-width">
             <input
               [(ngModel)]="data.inputModel[input.key]"
               [attr.name]="input.key"
@@ -34,9 +32,7 @@
           <mat-checkbox
             *ngIf="input.type === 'checkbox'"
             [(ngModel)]="data.inputModel[input.key]"
-            name="{{ input.key }}"
-            >{{ input.label }}</mat-checkbox
-          >
+            name="{{ input.key }}">{{ input.label }}</mat-checkbox>
         </div>
       </form>
     </div>
@@ -46,8 +42,7 @@
     *ngIf="vertical"
     align="end"
     class="buttons-vertical-div"
-    layout-align="vertical"
-  >
+    layout-align="vertical">
     <button
       (click)="onButtonClicked(btn)"
       *ngFor="let btn of data?.buttons; let i = index"
@@ -55,8 +50,7 @@
       [color]="btn.color"
       [ngClass]="{ '__cp__-full-width': vertical }"
       class="display-inline-block"
-      mat-flat-button
-    >
+      mat-flat-button>
       {{ btn.label }}
     </button>
   </div>
@@ -68,8 +62,7 @@
       [color]="btn.color"
       [ngClass]="{ '__cp__-full-width': vertical }"
       class="display-inline-block"
-      mat-flat-button
-    >
+      mat-flat-button>
       {{ btn.label }}
     </button>
   </div>

@@ -9,7 +9,7 @@ import {
   NgZone,
   OnDestroy,
   Output,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 
 @Component({
@@ -17,29 +17,24 @@ import {
   template: '<div #cmp></div>',
   styles: [
     `
-      div {
-        display: inline-block;
-        font-variant-numeric: slahed-zero;
-      }
-    `,
+			div {
+				display: inline-block;
+				font-variant-numeric: slahed-zero;
+			}
+		`
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class __capcp__CountupComponent implements OnDestroy, AfterViewInit {
   @Input() startTimeInMillis: number;
   @Input() diffTimeInMillis = -1;
   @Output() timeout = new EventEmitter();
 
-  @ViewChild('cmp', { static: true }) private readonly div: ElementRef<
-    HTMLElement
-  >;
+  @ViewChild('cmp', {static: true}) private readonly div: ElementRef<HTMLElement>;
 
   private alive = true;
 
-  constructor(
-    private readonly ngZone: NgZone,
-    private readonly cdr: ChangeDetectorRef
-  ) {
+  constructor(private readonly ngZone: NgZone, private readonly cdr: ChangeDetectorRef) {
     this.cdr.detach();
   }
 

@@ -17,17 +17,17 @@ import { __capcp__SettingsService } from './service/__cp__-settings.service';
     RouterModule.forChild([
       {
         path: '',
-        component: __capcp__SettingsComponent,
-      },
+        component: __capcp__SettingsComponent
+      }
     ]),
     HttpClientModule,
     MatSelectModule,
     MatButtonModule,
-    MatFormFieldModule,
+    MatFormFieldModule
   ],
   exports: [],
   declarations: [__capcp__SettingsComponent],
-  providers: [__capcp__SettingsService],
+  providers: [__capcp__SettingsService]
 })
 export class __capcp__SettingsModule {
   constructor(@Optional() @SkipSelf() parentModule: __capcp__SettingsModule) {

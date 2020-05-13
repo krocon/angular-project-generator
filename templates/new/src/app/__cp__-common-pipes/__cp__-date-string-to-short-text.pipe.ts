@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: '__cp__DateStringToShortText' })
+@Pipe({name: '__cp__DateStringToShortText'})
 export class __capcp__DateStringToShortTextPipe implements PipeTransform {
   static get2Digits(n: number): string {
     if (n < 10) {

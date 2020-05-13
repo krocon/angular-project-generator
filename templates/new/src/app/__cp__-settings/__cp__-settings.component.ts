@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { __capcp__SettingsService } from './service/__cp__-settings.service';
 import { Router } from '@angular/router';
 import { __capcp__SettingsData } from './data/settings.data';
@@ -12,7 +7,7 @@ import { __capcp__SettingsData } from './data/settings.data';
   selector: 'app-__cp__-settings',
   templateUrl: '__cp__-settings.component.html',
   styleUrls: ['__cp__-settings.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class __capcp__SettingsComponent implements OnInit, OnDestroy {
   public data: __capcp__SettingsData = new __capcp__SettingsData();
@@ -21,7 +16,8 @@ export class __capcp__SettingsComponent implements OnInit, OnDestroy {
   constructor(
     private readonly service: __capcp__SettingsService,
     private readonly router: Router
-  ) {}
+  ) {
+  }
 
   ngOnDestroy(): void {
     this.alive = false;

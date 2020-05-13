@@ -1,0 +1,41 @@
+
+.__cp__-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.__cp__-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+
+.__cp__-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg)
+}
+
+.__cp__-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1)
+}
+
+.__cp__-flip-vertical {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1)
+}
+
+.__cp__-flip-both,
+.__cp__-flip-horizontal.__cp__-flip-vertical,
+.__cp__-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"
+}
+
+.__cp__-flip-both,
+.__cp__-flip-horizontal.__cp__-flip-vertical {
+  -webkit-transform: scale(-1);
+  transform: scale(-1)
+}

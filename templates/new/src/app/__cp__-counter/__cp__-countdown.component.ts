@@ -9,7 +9,7 @@ import {
   NgZone,
   OnDestroy,
   Output,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 
 @Component({
@@ -17,28 +17,23 @@ import {
   template: '<div #cmp></div>',
   styles: [
     `
-      div {
-        display: inline-block;
-        font-variant-numeric: slashed-zero;
-      }
-    `,
+			div {
+				display: inline-block;
+				font-variant-numeric: slashed-zero;
+			}
+		`
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class __capcp__CountdownComponent implements OnDestroy, AfterViewInit {
   @Input() startTimeInMillis: number;
   @Input() diffTimeInMillis: number = 15 * 60 * 1000;
   @Output() readonly timeout = new EventEmitter();
-  @ViewChild('cmp', { static: true }) private readonly div: ElementRef<
-    HTMLElement
-  >;
+  @ViewChild('cmp', {static: true}) private readonly div: ElementRef<HTMLElement>;
 
   private alive = true;
 
-  constructor(
-    private readonly ngZone: NgZone,
-    private readonly cdr: ChangeDetectorRef
-  ) {
+  constructor(private readonly ngZone: NgZone, private readonly cdr: ChangeDetectorRef) {
     this.cdr.detach();
   }
 
@@ -68,14 +63,9 @@ export class __capcp__CountdownComponent implements OnDestroy, AfterViewInit {
       return; // skip
     }
     const now = Date.now();
-    const remainingInMillis =
-      this.startTimeInMillis + this.diffTimeInMillis - now;
-    const seconds = __capcp__CountdownComponent.pad(
-      (remainingInMillis / 1000) % 60
-    );
-    const minutes = __capcp__CountdownComponent.pad(
-      (remainingInMillis / 1000 / 60) % 60
-    );
+    const remainingInMillis = this.startTimeInMillis + this.diffTimeInMillis - now;
+    const seconds = __capcp__CountdownComponent.pad((remainingInMillis / 1000) % 60);
+    const minutes = __capcp__CountdownComponent.pad((remainingInMillis / 1000 / 60) % 60);
     // const hours = this.pad((total / (1000 * 60 * 60)) % 24);
     // const days = this.pad(total / (1000 * 60 * 60 * 24));
 

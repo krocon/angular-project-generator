@@ -4,10 +4,8 @@ import { __capcp____pascalentity__AjaxService } from './service/__cp__-__kebaben
 import { __capcp____pascalentity__Service } from './service/__cp__-__kebabentity__.service';
 
 @NgModule({
-  providers: [
-    __capcp____pascalentity__Service,
-    __capcp____pascalentity__AjaxService,
-  ],
-  imports: [CommonModule],
+  providers: [__capcp____pascalentity__Service, __capcp____pascalentity__AjaxService],
+  imports: [CommonModule]
 })
-export class __capcp____pascalentity__ServiceModule {}
+export class __capcp____pascalentity__ServiceModule {
+}

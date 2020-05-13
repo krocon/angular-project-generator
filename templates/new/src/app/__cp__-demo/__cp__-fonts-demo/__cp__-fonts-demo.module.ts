@@ -10,10 +10,11 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([
       {
         path: 'fonts',
-        component: __capcp__FontsDemoComponent,
-      },
-    ]),
+        component: __capcp__FontsDemoComponent
+      }
+    ])
   ],
-  providers: [__capcp__FontsDemoComponent],
+  providers: [__capcp__FontsDemoComponent]
 })
-export class __capcp__FontsDemoModule {}
+export class __capcp__FontsDemoModule {
+}

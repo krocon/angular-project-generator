@@ -27,8 +27,8 @@ import { MatSliderModule } from '@angular/material/slider';
     RouterModule.forChild([
       {
         path: 'forms',
-        component: __capcp__FormsDemoComponent,
-      },
+        component: __capcp__FormsDemoComponent
+      }
     ]),
     MatFormFieldModule,
     MatSelectModule,
@@ -40,8 +40,9 @@ import { MatSliderModule } from '@angular/material/slider';
     MatProgressSpinnerModule,
     MatIconModule,
     MatProgressBarModule,
-    MatSliderModule,
+    MatSliderModule
   ],
-  providers: [__capcp__FormsDemoComponent],
+  providers: [__capcp__FormsDemoComponent]
 })
-export class __capcp__FormsDemoModule {}
+export class __capcp__FormsDemoModule {
+}

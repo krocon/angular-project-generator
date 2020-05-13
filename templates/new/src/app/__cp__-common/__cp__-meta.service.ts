@@ -4,10 +4,11 @@ import { Injectable } from '@angular/core';
 export class __capcp__MetaService<T> {
   readonly = false;
 
-  constructor() {}
+  constructor() {
+  }
 
   getRowClassFn() {
-    return (params) => {
+    return params => {
       const rowNode: any = params.node;
       if (rowNode['data']) {
         const row: T = rowNode.data;
@@ -161,7 +162,7 @@ export class __capcp__MetaService<T> {
       }
       delete ele['_meta'];
     }
-    return arr.filter((n) => n);
+    return arr.filter(n => n);
   }
 
   private toggleMeta(data: T, key: string) {

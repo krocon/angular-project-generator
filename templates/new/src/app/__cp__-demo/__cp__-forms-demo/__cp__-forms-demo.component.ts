@@ -6,7 +6,7 @@ import { ProgressBarMode } from '@angular/material/progress-bar';
 @Component({
   selector: 'app-__cp__-forms-demo',
   templateUrl: './__cp__-forms-demo.component.html',
-  styleUrls: ['./__cp__-forms-demo.component.scss'],
+  styleUrls: ['./__cp__-forms-demo.component.scss']
 })
 export class __capcp__FormsDemoComponent {
   selected = 'option2';

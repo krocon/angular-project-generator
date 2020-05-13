@@ -10,7 +10,12 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 @import "__cp__-icons";
+@import "__cp__-rotate";
 @import "__cp__-help";
 @import "__cp__-geometriy.scss";
 @import "__cp__-responsive.scss";

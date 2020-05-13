@@ -9,7 +9,7 @@ describe('__capcp__MixDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [__capcp__MixDemoModule, NoopAnimationsModule],
+      imports: [__capcp__MixDemoModule, NoopAnimationsModule]
     }).compileComponents();
   }));
 

@@ -11,11 +11,7 @@ describe('__capcp__ButtonsDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        __capcp__ButtonsDemoModule,
-        NoopAnimationsModule,
-        RouterTestingModule,
-      ],
+      imports: [__capcp__ButtonsDemoModule, NoopAnimationsModule, RouterTestingModule]
     }).compileComponents();
   }));
 

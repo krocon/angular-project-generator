@@ -32,10 +32,11 @@ import { __capcp__AuthModule } from './__cp__-auth/__cp__-auth.module';
     __capcp__AuthModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-    }),
+      enabled: environment.production
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}

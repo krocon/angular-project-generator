@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  Input,
-} from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, Input } from '@angular/core';
 
 /**
  * https://de.wikipedia.org/wiki/Datei:Deutsche_Bahn_AG-Logo.svg
@@ -12,14 +7,10 @@ import {
 @Component({
   selector: 'app-__cp__-logo',
   template: `
-    <svg
-      [attr.height]="_height"
-      [attr.width]="_width"
-      viewBox="0 0 192.756 192.756"
-    >
+    <svg [attr.height]="_height" [attr.width]="_width" viewBox="0 0 192.756 192.756">
       <g fill-rule="evenodd" clip-rule="evenodd">
-        <path class="logo-path-fill-02" d="M0 0h192.756v192.756H0V0z" />
-        <path class="logo-path-fill-02" d="M0 0h192.756v192.756H0V0z" />
+        <path class="logo-path-fill-02" d="M0 0h192.756v192.756H0V0z"/>
+        <path class="logo-path-fill-02" d="M0 0h192.756v192.756H0V0z"/>
         <path
           class="logo-path-fill-01"
           d="M96.377 5.379c50.009 0 90.966 41.021 90.966 91.031 0 49.945-40.957 90.967-90.966 90.967-50.009 0-90.966-40.957-90.966-90.967 0-50.009 40.958-91.031 90.966-91.031z"
@@ -37,26 +28,28 @@ import {
   `,
   styles: [
     `
-      .logo-path-fill-01 {
-        fill: #ff9e1c;
-        fill-rule: evenodd;
-      }
-      .logo-path-fill-02 {
-        fill: #fff;
-      }
-    `,
-  ],
+			.logo-path-fill-01 {
+				fill: #ff9e1c;
+				fill-rule: evenodd;
+			}
+			.logo-path-fill-02 {
+				fill: #fff;
+			}
+		`
+  ]
 })
 export class __capcp__LufthansaLogoComponent implements AfterViewInit {
+  constructor(private readonly cdr: ChangeDetectorRef) {
+  }
+
+  _height = 40;
+
   @Input()
   set height(value: number) {
     this._height = value;
   }
 
-  _height = 40;
   _width = this._height;
-
-  constructor(private readonly cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit(): void {
     this.cdr.detach();

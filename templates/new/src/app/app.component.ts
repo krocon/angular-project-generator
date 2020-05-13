@@ -13,7 +13,7 @@ import { __capcp__AuthGuardCanActivate } from './__cp__-auth/__cp__-auth-guard-c
   // animations: [
   //   animationLeftRight
   // ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   constructor() {
@@ -30,15 +30,15 @@ export class AppComponent {
         setup: 'Einstellungen',
         impressum: 'Impressum, Kontakt & Hilfe',
         nutzungsbedingungen: 'Nutzungsbedingungen',
-        datenschutz: 'Datenschutzerklärung',
+        datenschutz: 'Datenschutzerklärung'
       },
       logoutCounterVisible: true,
       menuIconsVisible: true,
-      titleFadeIn: true,
+      titleFadeIn: true
     });
 
     __capcp__AuthGuardCanActivate.forRoot({
-      loginRoute: environment.loginRoute,
+      loginRoute: environment.loginRoute
     });
 
     __capcp__AuthAjaxService.forRoot(environment.authServiceConfig);

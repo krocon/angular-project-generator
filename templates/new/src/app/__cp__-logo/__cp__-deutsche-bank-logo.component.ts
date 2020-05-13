@@ -1,9 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  Input,
-} from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, Input } from '@angular/core';
 
 /**
  * https://de.wikipedia.org/wiki/Datei:Deutsche_Bahn_AG-Logo.svg
@@ -26,26 +21,28 @@ import {
   `,
   styles: [
     `
-      .logo-path-fill-01 {
-        fill: #0018a8;
-        fill-rule: evenodd;
-      }
-      .logo-path-fill-02 {
-        background: #fff;
-      }
-    `,
-  ],
+			.logo-path-fill-01 {
+				fill: #0018a8;
+				fill-rule: evenodd;
+			}
+			.logo-path-fill-02 {
+				background: #fff;
+			}
+		`
+  ]
 })
 export class __capcp__DeutscheBankLogoComponent implements AfterViewInit {
+  constructor(private readonly cdr: ChangeDetectorRef) {
+  }
+
+  _height = 36;
+
   @Input()
   set height(value: number) {
     this._height = value;
   }
 
-  _height = 36;
   _width = this._height;
-
-  constructor(private readonly cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit(): void {
     this.cdr.detach();
