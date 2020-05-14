@@ -1,6 +1,6 @@
 {
   "name": "angular-project-generator",
-  "version": "9.1.18",
+  "version": "9.1.19",
   "description": "Angular Project Generator",
   "scripts": {
     "test": "npm run test-clear-target & jest --findRelatedTests bin/ lib/",
@@ -30,10 +30,9 @@
     "angular 10"
   ],
   "files": [
-    "bin/*.*",
-    "lib/*.*",
-    "templates/*.*",
-    "!test"
+    "*",
+    "!test",
+    "node_modules"
   ],
   "readmeFilename": "README.md",
   "author": {
