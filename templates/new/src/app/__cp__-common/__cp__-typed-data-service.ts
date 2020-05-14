@@ -31,9 +31,14 @@ export class __capcp__TypedDataService<T> {
 
   update(nvObj: T) {
     if (!this.equals(nvObj, this.value)) {
-      this.value = this.parse(this.stringify(nvObj));
-      const nv = this.stringify(nvObj);
-      localStorage.setItem(this.key, nv);
+      if (nvObj === null) {
+        localStorage.removeItem(this.key);
+
+      } else {
+        this.value = this.parse(this.stringify(nvObj));
+        const nv = this.stringify(nvObj);
+        localStorage.setItem(this.key, nv);
+      }
       this.next();
     }
   }

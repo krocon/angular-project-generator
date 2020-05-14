@@ -14,7 +14,8 @@
     <mat-nav-list [ngClass]="{ menuIconsVisible: menuIconsVisible }">
       <a [routerLink]="cfg.welcomeRoute" href="#" mat-list-item>
         <mat-icon>accessibility_new</mat-icon>
-        Willkommen
+        Welcome
+<!--        Willkommen-->
       </a>
 
       <a href="#" mat-list-item routerLink="/demo">
@@ -28,36 +29,31 @@
 
       <a href="#" mat-list-item routerLink="/recht/impressum">
         <mat-icon>import_contacts</mat-icon>
-        Impressum
+        Imprint
+<!--        Impressum-->
       </a>
 
       <a
-        [ngClass]="{ hidden: menuIconsVisible }"
-        href="#"
-        mat-list-item
-        routerLink="/recht/nutzungsbedingungen">
-        Nutzungsbedingungen
-      </a>
-
-      <a
-        [ngClass]="{ hidden: !menuIconsVisible }"
         href="#"
         mat-list-item
         routerLink="/recht/nutzungsbedingungen">
         <mat-icon>gavel</mat-icon>
-        Nutzungsbedg.
+        Conditions of Use
+<!--        Nutzungbedingungen-->
       </a>
 
       <a href="#" mat-list-item routerLink="/recht/datenschutz">
         <mat-icon>sentiment_satisfied_alt</mat-icon>
-        Datenschutz
+        Privacy Notice
+<!--        Datenschutz-->
       </a>
 
       <mat-divider></mat-divider>
 
       <a *ngIf="!loggedIn" [routerLink]="cfg.loginRoute" href="#" mat-list-item>
         <mat-icon>face</mat-icon>
-        Anmelden
+        Login
+<!--        Anmelden-->
       </a>
 
       <a
@@ -68,7 +64,8 @@
         href="#"
         mat-list-item>
         <mat-icon>directions_walk</mat-icon>
-        Abmelden
+        Logout
+<!--        Abmelden-->
       </a>
 
       <div class="mat-list-item">
@@ -81,7 +78,9 @@
       <!-- bottom: -->
       <div class="fixed-at-bottom-left">
         <div *ngIf="logoutCounterVisible">
-          <small>Sitzungszeitlimit:
+          <small>
+            Session countdown
+<!--            Sitzungszeitlimit:-->
             <app-__cp__-countdown
               (timeout)="onSessionTimeout()"
               [diffTimeInMillis]="15 * 60 * 1000"
@@ -95,7 +94,7 @@
           <small>Commit: {{ commitHash }}</small>
         </div>
         <div>
-          <small>&copy; 2020 Deutsche Xyz AG</small>
+          <small>&copy; 2020 AppXyz</small>
         </div>
       </div>
     </mat-nav-list>

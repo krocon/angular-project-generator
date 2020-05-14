@@ -13,7 +13,10 @@
         </mat-icon>
       </div>
 
-      <h2>Bitte melden Sie sich an, um fortzufahren.</h2>
+      <h2>
+        Please log in to continue.
+<!--        Bitte melden Sie sich an, um fortzufahren.-->
+      </h2>
 
       <mat-form-field>
         <input
@@ -23,10 +26,11 @@
           data-test-id="login-user-input"
           formControlName="username"
           matInput
-          placeholder="Benutzername"
+          placeholder="User name"
         />
         <mat-error>
-          Bitte geben Sie einen gültigen Benutzernamen ein (min. 2 Zeichen)
+          Please enter a valid username
+<!--          Bitte geben Sie einen gültigen Benutzernamen ein (min. 2 Zeichen)-->
         </mat-error>
       </mat-form-field>
 
@@ -38,15 +42,17 @@
           data-test-id="login-password-input"
           formControlName="password"
           matInput
-          placeholder="Kennwort"
+          placeholder="Password"
         />
+<!--        Kennwort-->
         <mat-error>
-          Bitte geben Sie einen gültiges Kennwort oder einen gültigen
-          Benutzernamen ein (min. 2 Zeichen)
+<!--          Bitte geben Sie einen gültiges Kennwort oder einen gültigen-->
+<!--          Benutzernamen ein (min. 2 Zeichen)-->
+          Please enter a valid password or a valid username
         </mat-error>
         <button
           (click)="hidePassword = !hidePassword"
-          [attr.aria-label]="'Kennwort ausblenden'"
+          [attr.aria-label]="'Hide password'"
           [attr.aria-pressed]="hidePassword"
           [disabled]="buttonSpinnerVisible"
           mat-icon-button
@@ -64,13 +70,15 @@
             [attr.disabled]="buttonSpinnerVisible"
             color="primary"
             formControlName="remember">
-            Benutzername merken
+            Remember name
+<!--            Benutzername merken-->
           </mat-checkbox>
         </div>
 
         <div class="__cp__-text-align-right __cp__-float-right">
           <a [attr.href]="linkPasswordReset" target="_blank">
-            Passwort wiederherstellen
+            Request new password
+<!--            Passwort wiederherstellen-->
           </a>
         </div>
       </div>
@@ -90,7 +98,10 @@
           <mat-spinner
             *ngIf="buttonSpinnerVisible"
             [diameter]="24"></mat-spinner>
-          <span>Anmelden</span>
+          <span>
+            Login
+<!--            Anmelden-->
+          </span>
         </button>
       </div>
     </div>

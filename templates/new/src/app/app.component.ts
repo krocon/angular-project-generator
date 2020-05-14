@@ -19,18 +19,18 @@ export class AppComponent {
   constructor() {
     __capcp__NavComponent.forRoot({
       routeTitles: {
-        home: 'Herzlich willkommen!',
-        anmelden: 'Anmelden',
+        home: 'Welcome!',
+        anmelden: 'Login',
         demofonts: 'Demos / Fonts',
         demobuttons: 'Demos / Buttons',
         demoforms: 'Demos / Forms',
         demomix: 'Demos / CSS Utils',
         demo: 'Demos',
-        abmelden: 'Abmelden',
-        setup: 'Einstellungen',
-        impressum: 'Impressum, Kontakt & Hilfe',
-        nutzungsbedingungen: 'Nutzungsbedingungen',
-        datenschutz: 'Datenschutzerklärung'
+        abmelden: 'Logout',
+        setup: 'Setup',
+        impressum: 'Imprint, Contact & Support',
+        nutzungsbedingungen: 'Conditions of Use',
+        datenschutz: 'Privacy Notice'
       },
       logoutCounterVisible: true,
       menuIconsVisible: true,
