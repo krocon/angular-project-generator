@@ -9,7 +9,7 @@
 ## Setup complete angular PWA with one command
 ###Command line interface (CLI) for angular 9.
 
-
+Project generator based on angular-cli with best practices.
 It helps you to generate an robust angular project seed.
 To get help just type:
 ```console
@@ -21,7 +21,6 @@ apg new --help
  - Responsive layout
  - Basic PWA support
    - It contains manifest file and service worker configuration.
-   - For more information see: https://angular.io/guide/service-worker-getting-started
  - Dynamic routes with AuthGuardCanActivate
  - Global data store via facade services (BehaviorSubject, Local Storage support) 
  - Usefull helpers like: 
@@ -32,6 +31,7 @@ apg new --help
  - Gherkin E2E test setup: chai, cucumber, jasmine, karma, protractor and predefined base steps (given, when, then)
  - Theme switcher for light and dark
  - Predefined npm scripts
+ - A complete starter template: example app structure tailored for scalability, with examples and boilerplate code for every common thing needed in enterprise projects, such as unit tests, routing & authentication.
  
 Coming soon:
  - Better description of used patterns

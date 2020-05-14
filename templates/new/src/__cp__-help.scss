@@ -27,6 +27,19 @@ $border-color: #e1e6eb; // TODO themes!
   }
 }
 
+body.dark {
+  .__cp__-display-none-for-dark {display: none !important; visibility: hidden !important;}
+  .__cp__-display-inline-block-for-dark {display: inline-block !important;}
+  .__cp__-display-inline-for-dark {display: inline !important;}
+  .__cp__-display-block-for-dark {display: block !important;}
+}
+body.light {
+  .__cp__-display-none-for-light {display: none !important;visibility: hidden !important;}
+  .__cp__-display-inline-block-for-light {display: inline-block !important;}
+  .__cp__-display-inline-for-light {display: inline !important;}
+  .__cp__-display-block-for-light {display: block !important;}
+}
+
 .__cp__-full-width {
   width: 100% !important;
 }
