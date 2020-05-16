@@ -1,0 +1,52 @@
+<div class="__cp__-padding">
+
+  <h2>CSS Color classes</h2>
+  <p>
+    More informations about Deutsch Bahn Colors:
+    <a target="_blank" href="https://marketingportal.extranet.deutschebahn.com/sites/default/files/pdf/6c8d956121e24be4283d5009e2c35072.pdf">Unternehmensfarben (PDF)</a>
+  </p>
+  <p>For CSS Color classes see <strong>src\__cp__-colors-deutsche-bahn-classes.scss</strong></p>
+  <p>For SCSS color variables see <strong>src\__cp__-colors-deutsche-bahn-const.scss</strong></p>
+
+  <h3>Primary colors</h3>
+  <h2>Pure</h2>
+
+  <div>
+    <app-__cp__-color-primary-square *ngFor="let color of ['red', 'blue', 'siver']"
+      [bgClass]="'db-bg-' + color"
+      [colorClass]="'db-color-' + color"
+      [scssVariable]="'$db-' + color"></app-__cp__-color-primary-square>
+    <app-__cp__-color-primary-square
+      [bgClass]="'db-bg-white'"
+      [colorClass]="'db-color-white'"
+      [scssVariable]="'$db-white'"
+      [textWhite]="false"></app-__cp__-color-primary-square>
+  </div>
+
+  <h2>Gradients</h2>
+  <div *ngFor="let y of pys">
+    <app-__cp__-color-square
+      *ngFor="let x of pxs"
+      [y]="y"
+      [x]="x"
+    ></app-__cp__-color-square>
+  </div>
+  <div>
+    <app-__cp__-color-square
+      *ngFor="let x of pgxs"
+      [y]="3"
+      [x]="x"
+    ></app-__cp__-color-square>
+  </div>
+  <br>
+
+  <h3>Secondary colors</h3>
+  <div *ngFor="let y of ys">
+    <app-__cp__-color-square
+      *ngFor="let x of xs"
+      [y]="y"
+      [x]="x"
+    ></app-__cp__-color-square>
+  </div>
+
+</div>

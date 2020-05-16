@@ -50,14 +50,6 @@ export class __capcp__CountdownComponent implements OnDestroy, AfterViewInit {
     }, 200);
   }
 
-  private static pad(value) {
-    const n = Math.floor(value);
-    if (n < 10) {
-      return '0' + n;
-    }
-    return n;
-  }
-
   ngOnDestroy(): void {
     this.alive = false;
   }
@@ -77,8 +69,8 @@ export class __capcp__CountdownComponent implements OnDestroy, AfterViewInit {
     }
     const now = Date.now();
     const remainingInMillis = this._startTimeInMillis + this.diffTimeInMillis - now;
-    const seconds = __capcp__CountdownComponent.pad((remainingInMillis / 1000) % 60);
-    const minutes = __capcp__CountdownComponent.pad((remainingInMillis / 1000 / 60) % 60);
+    const seconds = remainingInMillis <= 0 ? '00' : this.pad((remainingInMillis / 1000) % 60);
+    const minutes = remainingInMillis <= 0 ? '00' : this.pad((remainingInMillis / 1000 / 60) % 60);
     // const hours = this.pad((total / (1000 * 60 * 60)) % 24);
     // const days = this.pad(total / (1000 * 60 * 60 * 24));
 
@@ -92,5 +84,13 @@ export class __capcp__CountdownComponent implements OnDestroy, AfterViewInit {
     } else {
       this.ngZone.run(() => this.timeout.emit(now));
     }
+  }
+
+  private pad(value) {
+    const n = Math.floor(value);
+    if (n < 10) {
+      return '0' + n;
+    }
+    return n;
   }
 }

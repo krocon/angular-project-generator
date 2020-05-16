@@ -3,10 +3,10 @@
 @import "__cp__-colors-deutsche-bahn-const.scss";
 
 /* Primärfarben */
-.db-color-blue {color: #375FC3;}
-.db-color-red {color: #F01414;}
-.db-color-silver {color: #878C96;}
-.db-color-white {color: #fff;}
+.db-color-red {color: $db-red;} .db-bg-red {background-color: $db-red;}
+.db-color-blue {color: $db-blue;} .db-bg-blue {background-color: $db-blue;}
+.db-color-silver {color: $db-silver;} .db-bg-silver {background-color: $db-silver;}
+.db-color-white {color: $db-white;} .db-bg-white {background-color: $db-white;}
 
 /* Farbabstufungen der Primärfarben */
 
