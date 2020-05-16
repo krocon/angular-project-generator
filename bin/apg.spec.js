@@ -26,9 +26,21 @@ test('Version should be ' + pkg.version, async () => {
 });
 
 
+test('Cmd update should be run without errors', async () => {
+  let result = await cli(`node ${cmdApg} update`, '.');
+  expect(result.code).toBe(0);
+
+  const extractVersion = (stdout) => {
+    const arr = stdout.split('\n');
+    return (arr.splice(arr.length - 2).join('')).replace(/ /g, '');
+  };
+  expect(extractVersion(result.stdout)).toBe(pkg.version);
+});
+
+
 test('Project should be generated', async () => {
   const result = await cli(
-    `node ${cmdApg} new -a click-n-ride -p app -cp cr -l deutschebahn -f`,
+    `node ${cmdApg} new -a click-n-ride -p app -l deutschebahn -f`,
     pathTarget);
   expect(result.code).toBe(0);
   expect(result.stdout).toMatch('Project successfully generated.');
