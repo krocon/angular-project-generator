@@ -20,13 +20,13 @@ export class AppComponent {
     __capcp__NavComponent.forRoot({
       routeTitles: {
         home: 'Welcome!',
-        anmelden: 'Login',
+        login: 'Login',
         demofonts: 'Demos / Fonts',
         demobuttons: 'Demos / Buttons',
         demoforms: 'Demos / Forms',
         demomix: 'Demos / CSS Utils',
         demo: 'Demos',
-        abmelden: 'Logout',
+        logout: 'Logout',
         setup: 'Setup',
         impressum: 'Imprint, Contact & Support',
         nutzungsbedingungen: 'Conditions of Use',

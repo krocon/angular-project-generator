@@ -8,9 +8,9 @@ export const environment = {
 	showVersionIndicator: false,
 	routerTracing: false,
 
-	loginRoute: '/anmelden',
-	logoutRoute: '/abmelden',
-	welcomeRoute: '/willkommen',
+	loginRoute: '/login',
+	logoutRoute: '/logout',
+	welcomeRoute: '/welcome',
 
 	authServiceConfig: {
 		mock: false,

@@ -17,7 +17,7 @@ const routes: Routes = [
       import('./__cp__-welcome/__cp__-welcome.module').then(m => m.__capcp__WelcomeModule)
   },
   {
-    path: 'willkommen',
+    path: 'welcome',
     redirectTo: '/'
   },
   {
@@ -29,7 +29,7 @@ const routes: Routes = [
     data
   },
   {
-    path: 'anmelden',
+    path: 'login',
     component: __capcp__LoginPageComponent
   },
   {

@@ -42,6 +42,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
+      import('./__cp__-color-demo/__cp__-color-demo.module').then(
+        m => m.__capcp__ColorDemoModule
+      ),
+    data
+  },
+  {
+    path: '',
+    loadChildren: () =>
       import('./__cp__-mix-demo/__cp__-mix-demo.module.js').then(m => m.__capcp__MixDemoModule),
     data
   }

@@ -6,7 +6,7 @@ import { __capcp__AuthService } from './service/__cp__-auth.service';
 @Injectable()
 export class __capcp__AuthGuardCanActivate implements CanActivate, CanActivateChild {
   private static readonly config = {
-    loginRoute: '/anmelden'
+    loginRoute: '/login'
   };
 
   constructor(

@@ -14,8 +14,7 @@
     <mat-nav-list [ngClass]="{ menuIconsVisible: menuIconsVisible }">
       <a [routerLink]="cfg.welcomeRoute" href="#" mat-list-item>
         <mat-icon>accessibility_new</mat-icon>
-        Welcome
-<!--        Willkommen-->
+        Welcome<!-- Willkommen-->
       </a>
 
       <a href="#" mat-list-item routerLink="/demo">
@@ -29,8 +28,7 @@
 
       <a href="#" mat-list-item routerLink="/recht/impressum">
         <mat-icon>import_contacts</mat-icon>
-        Imprint
-<!--        Impressum-->
+        Imprint<!-- Impressum-->
       </a>
 
       <a
@@ -38,22 +36,19 @@
         mat-list-item
         routerLink="/recht/nutzungsbedingungen">
         <mat-icon>gavel</mat-icon>
-        Conditions of Use
-<!--        Nutzungbedingungen-->
+        Conditions of Use<!-- Nutzungbedingungen-->
       </a>
 
       <a href="#" mat-list-item routerLink="/recht/datenschutz">
         <mat-icon>sentiment_satisfied_alt</mat-icon>
-        Privacy Notice
-<!--        Datenschutz-->
+        Privacy Notice<!-- Datenschutz-->
       </a>
 
       <mat-divider></mat-divider>
 
       <a *ngIf="!loggedIn" [routerLink]="cfg.loginRoute" href="#" mat-list-item>
         <mat-icon>face</mat-icon>
-        Login
-<!--        Anmelden-->
+        Login<!-- Anmelden-->
       </a>
 
       <a
@@ -64,8 +59,7 @@
         href="#"
         mat-list-item>
         <mat-icon>directions_walk</mat-icon>
-        Logout
-<!--        Abmelden-->
+        Logout<!-- Abmelden-->
       </a>
 
       <div class="mat-list-item">
@@ -79,8 +73,7 @@
       <div class="fixed-at-bottom-left">
         <div *ngIf="logoutCounterVisible">
           <small>
-            Session countdown
-<!--            Sitzungszeitlimit:-->
+            Session limit:&nbsp;<!-- Sitzungszeitlimit:-->
             <app-__cp__-countdown
               (timeout)="onSessionTimeout()"
               [diffTimeInMillis]="15 * 60 * 1000"

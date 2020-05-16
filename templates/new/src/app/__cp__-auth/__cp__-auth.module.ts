@@ -20,8 +20,8 @@ import { __capcp__LoginPageComponent } from './__cp__-login/__cp__-login-page.co
 import { __capcp__AutofocusModule } from '../__cp__-autofocus/__cp__-common.module';
 
 const routes = [
-  {path: 'anmelden', component: __capcp__LoginPageComponent},
-  {path: 'abmelden', component: __capcp__AuthLogoutComponent}
+  {path: 'login', component: __capcp__LoginPageComponent},
+  {path: 'logout', component: __capcp__AuthLogoutComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,113 @@
+/*  D e u t s c b e    B a h n   F a r b e n    */
+
+@import "__cp__-colors-deutsche-bahn-const.scss";
+
+/* Primärfarben */
+.db-color-blue {color: #375FC3;}
+.db-color-red {color: #F01414;}
+.db-color-silver {color: #878C96;}
+.db-color-white {color: #fff;}
+
+/* Farbabstufungen der Primärfarben */
+
+/* DB 01 */
+.db-color-01-01 {color: $db-01-01} .db-bg-01-01 {background-color: $db-01-01}
+.db-color-01-02 {color: $db-01-02} .db-bg-01-02 {background-color: $db-01-02}
+.db-color-01-03 {color: $db-01-03} .db-bg-01-03 {background-color: $db-01-03}
+.db-color-01-04 {color: $db-01-04} .db-bg-01-04 {background-color: $db-01-04}
+.db-color-01-05 {color: $db-01-05} .db-bg-01-05 {background-color: $db-01-05}
+.db-color-01-06 {color: $db-01-06} .db-bg-01-06 {background-color: $db-01-06}
+.db-color-01-07 {color: $db-01-07} .db-bg-01-07 {background-color: $db-01-07}
+
+.db-color-02-01 {color: $db-02-01} .db-bg-02-01 {background-color: $db-02-01}
+.db-color-02-02 {color: $db-02-02} .db-bg-02-02 {background-color: $db-02-02}
+.db-color-02-03 {color: $db-02-03} .db-bg-02-03 {background-color: $db-02-03}
+.db-color-02-04 {color: $db-02-04} .db-bg-02-04 {background-color: $db-02-04}
+.db-color-02-05 {color: $db-02-05} .db-bg-02-05 {background-color: $db-02-05}
+.db-color-02-06 {color: $db-02-06} .db-bg-02-06 {background-color: $db-02-06}
+.db-color-02-07 {color: $db-02-07} .db-bg-02-07 {background-color: $db-02-07}
+
+.db-color-03-01 {color: $db-03-01} .db-bg-03-01 {background-color: $db-03-01}
+.db-color-03-02 {color: $db-03-02} .db-bg-03-02 {background-color: $db-03-02}
+.db-color-03-03 {color: $db-03-03} .db-bg-03-03 {background-color: $db-03-03}
+.db-color-03-04 {color: $db-03-04} .db-bg-03-04 {background-color: $db-03-04}
+.db-color-03-05 {color: $db-03-05} .db-bg-03-05 {background-color: $db-03-05}
+.db-color-03-06 {color: $db-03-06} .db-bg-03-06 {background-color: $db-03-06}
+.db-color-03-07 {color: $db-03-07} .db-bg-03-07 {background-color: $db-03-07}
+.db-color-03-08 {color: $db-03-08} .db-bg-03-08 {background-color: $db-03-08}
+.db-color-03-09 {color: $db-03-09} .db-bg-03-09 {background-color: $db-03-09}
+.db-color-03-10 {color: $db-03-10} .db-bg-03-10 {background-color: $db-03-10}
+.db-color-03-11 {color: $db-03-11} .db-bg-03-11 {background-color: $db-03-11}
+.db-color-03-12 {color: $db-03-12} .db-bg-03-12 {background-color: $db-03-12}
+.db-color-03-13 {color: $db-03-13} .db-bg-03-13 {background-color: $db-03-13}
+.db-color-03-14 {color: $db-03-14} .db-bg-03-14 {background-color: $db-03-14}
+
+
+
+/* Sekundärfarben */
+
+/* DB 04 */
+.db-color-04-01 {color: $db-04-01} .db-bg-04-01 {background-color: $db-04-01}
+.db-color-04-02 {color: $db-04-02} .db-bg-04-02 {background-color: $db-04-02}
+.db-color-04-03 {color: $db-04-03} .db-bg-04-03 {background-color: $db-04-03}
+.db-color-04-04 {color: $db-04-04} .db-bg-04-04 {background-color: $db-04-04}
+.db-color-04-05 {color: $db-04-05} .db-bg-04-05 {background-color: $db-04-05}
+.db-color-04-06 {color: $db-04-06} .db-bg-04-06 {background-color: $db-04-06}
+
+/* DB 05 */
+.db-color-05-01 {color: $db-05-01} .db-bg-05-01 {background-color: $db-05-01}
+.db-color-05-02 {color: $db-05-02} .db-bg-05-02 {background-color: $db-05-02}
+.db-color-05-03 {color: $db-05-03} .db-bg-05-03 {background-color: $db-05-03}
+.db-color-05-04 {color: $db-05-04} .db-bg-05-04 {background-color: $db-05-04}
+.db-color-05-05 {color: $db-05-05} .db-bg-05-05 {background-color: $db-05-05}
+.db-color-05-06 {color: $db-05-06} .db-bg-05-06 {background-color: $db-05-06}
+
+/* DB 06 */
+.db-color-06-01 {color: $db-06-01} .db-bg-06-01 {background-color: $db-06-01}
+.db-color-06-02 {color: $db-06-02} .db-bg-06-02 {background-color: $db-06-02}
+.db-color-06-03 {color: $db-06-03} .db-bg-06-03 {background-color: $db-06-03}
+.db-color-06-04 {color: $db-06-04} .db-bg-06-04 {background-color: $db-06-04}
+.db-color-06-05 {color: $db-06-05} .db-bg-06-05 {background-color: $db-06-05}
+.db-color-06-06 {color: $db-06-06} .db-bg-06-06 {background-color: $db-06-06}
+
+/* DB 07 */
+.db-color-07-01 {color: $db-07-01} .db-bg-07-01 {background-color: $db-07-01}
+.db-color-07-02 {color: $db-07-02} .db-bg-07-02 {background-color: $db-07-02}
+.db-color-07-03 {color: $db-07-03} .db-bg-07-03 {background-color: $db-07-03}
+.db-color-07-04 {color: $db-07-04} .db-bg-07-04 {background-color: $db-07-04}
+.db-color-07-05 {color: $db-07-05} .db-bg-07-05 {background-color: $db-07-05}
+.db-color-07-06 {color: $db-07-06} .db-bg-07-06 {background-color: $db-07-06}
+
+/* DB 08 */
+.db-color-08-01 {color: $db-08-01} .db-bg-08-01 {background-color: $db-08-01}
+.db-color-08-02 {color: $db-08-02} .db-bg-08-02 {background-color: $db-08-02}
+.db-color-08-03 {color: $db-08-03} .db-bg-08-03 {background-color: $db-08-03}
+.db-color-08-04 {color: $db-08-04} .db-bg-08-04 {background-color: $db-08-04}
+.db-color-08-05 {color: $db-08-05} .db-bg-08-05 {background-color: $db-08-05}
+.db-color-08-06 {color: $db-08-06} .db-bg-08-06 {background-color: $db-08-06}
+
+/* DB 09 */
+.db-color-09-01 {color: $db-09-01} .db-bg-09-01 {background-color: $db-09-01}
+.db-color-09-02 {color: $db-09-02} .db-bg-09-02 {background-color: $db-09-02}
+.db-color-09-03 {color: $db-09-03} .db-bg-09-03 {background-color: $db-09-03}
+.db-color-09-04 {color: $db-09-04} .db-bg-09-04 {background-color: $db-09-04}
+.db-color-09-05 {color: $db-09-05} .db-bg-09-05 {background-color: $db-09-05}
+.db-color-09-06 {color: $db-09-06} .db-bg-09-06 {background-color: $db-09-06}
+
+/* DB 10 */
+.db-color-10-01 {color: $db-10-01} .db-bg-10-01 {background-color: $db-10-01}
+.db-color-10-02 {color: $db-10-02} .db-bg-10-02 {background-color: $db-10-02}
+.db-color-10-03 {color: $db-10-03} .db-bg-10-03 {background-color: $db-10-03}
+.db-color-10-04 {color: $db-10-04} .db-bg-10-04 {background-color: $db-10-04}
+.db-color-10-05 {color: $db-10-05} .db-bg-10-05 {background-color: $db-10-05}
+.db-color-10-06 {color: $db-10-06} .db-bg-10-06 {background-color: $db-10-06}
+
+/* DB 11 */
+.db-color-11-01 {color: $db-11-01} .db-bg-11-01 {background-color: $db-11-01}
+.db-color-11-02 {color: $db-11-02} .db-bg-11-02 {background-color: $db-11-02}
+.db-color-11-03 {color: $db-11-03} .db-bg-11-03 {background-color: $db-11-03}
+.db-color-11-04 {color: $db-11-04} .db-bg-11-04 {background-color: $db-11-04}
+.db-color-11-05 {color: $db-11-05} .db-bg-11-05 {background-color: $db-11-05}
+.db-color-11-06 {color: $db-11-06} .db-bg-11-06 {background-color: $db-11-06}
+
+

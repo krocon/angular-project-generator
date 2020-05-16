@@ -25,12 +25,12 @@ import { LoginResponseData } from '../__cp__-auth/data/login.response.data';
 export class __capcp__NavComponent implements OnInit, OnDestroy {
   private static readonly config = {
     routeTitles: {
-      home: 'Herzlich willkommen!'
+      home: 'Welcome!'
     },
 
-    loginRoute: '/anmelden',
-    logoutRoute: '/abmelden',
-    welcomeRoute: '/willkommen',
+    loginRoute: '/login',
+    logoutRoute: '/logout',
+    welcomeRoute: '/welcome',
 
     menuIconsVisible: true,
     logoutCounterVisible: true,
@@ -46,7 +46,7 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
   commitHash = environment.commitHash;
   loggedIn = false;
   data: LoginResponseData = null;
-  title = 'Herzlich willkommen!';
+  title = 'Welcome!';
   fadein = true;
 
   private alive = true;
@@ -89,7 +89,9 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
   @HostListener('window:resize', ['$event'])
   @HostListener('window:click', ['$event'])
   onResize(_) {
-    this.lastClickInMillis = Date.now();
+    if (this.loggedIn) {
+      this.lastClickInMillis = Date.now();
+    }
   }
 
   ngOnInit() {
@@ -100,17 +102,18 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
         this.fadein = false;
         this.cdr.detectChanges();
       } else if (evt instanceof NavigationEnd) {
-        // console.info(evt);
-        // console.info(this.activatedRoute);
-        // console.info(this.activatedRoute.firstChild);
         this.matSidenavContent.scrollTo({top: 0, left: 0});
         let url = evt.url;
         this.calcTitle(url);
       }
     });
-    this.authService.valueChanges$.pipe(takeWhile(() => this.alive)).subscribe(data => {
+    this.authService.valueChanges$
+      .pipe(takeWhile(() => this.alive)).subscribe(data => {
       this.loggedIn = !!data.token;
       this.data = data;
+      if (this.loggedIn) {
+        this.lastClickInMillis = Date.now();
+      }
       this.cdr.detectChanges();
     });
   }
@@ -125,7 +128,7 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
         return;
       }
     }
-    this.setTitle('Herzlich willkommen!');
+    this.setTitle('Welcome!');
   }
 
   setTitle(title: string) {

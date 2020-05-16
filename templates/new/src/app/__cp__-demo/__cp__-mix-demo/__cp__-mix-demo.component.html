@@ -2,219 +2,231 @@
 
   <h2>Some (app global) util css classes</h2>
 
-  <h3>Size dependent classes</h3>
-  <div>
-    <h4>.__cp__-display-none-*</h4>
-    <div class="mat-hint">See: __cp__-responsive.scss</div>
-    <table>
-      <tr>
-        <td></td>
-        <td>xs</td>
-        <td>sm</td>
-        <td>md</td>
-        <td>lg</td>
-        <td>xl</td>
-      </tr>
-      <tr>
-        <td>=</td>
-        <td>
-          <button class="__cp__-display-none-xs" color="primary" mat-stroked-button>
-            xs
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-sm" color="primary" mat-stroked-button>
-            sm
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-md" color="primary" mat-stroked-button>
-            md
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-lg" color="primary" mat-stroked-button>
-            lg
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-xl" color="primary" mat-stroked-button>
-            xl
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <td>gt</td>
-        <td>
-          <button class="__cp__-display-none-gt-xs" color="accent" mat-flat-button>
-            gt-xs
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-gt-sm" color="accent" mat-flat-button>
-            gt-sm
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-gt-md" color="accent" mat-flat-button>
-            gt-md
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-gt-lg" color="accent" mat-flat-button>
-            gt-lg
-          </button>
-        </td>
-        <td>NA</td>
-      </tr>
-      <tr>
-        <td>lt</td>
-        <td>NA</td>
-        <td>
-          <button class="__cp__-display-none-lt-sm" color="warn" mat-flat-button>
-            lt-sm
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-lt-md" color="warn" mat-flat-button>
-            lt-md
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-lt-lg" color="warn" mat-flat-button>
-            lt-lg
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-none-lt-xl" color="warn" mat-flat-button>
-            lt-xl
-          </button>
-        </td>
-      </tr>
-    </table>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <h4>.__cp__-display-block-*</h4>
-    <table class="button-display-none">
-      <tr>
-        <td></td>
-        <td>xs</td>
-        <td>sm</td>
-        <td>md</td>
-        <td>lg</td>
-        <td>xl</td>
-      </tr>
-      <tr>
-        <td>=</td>
-        <td>
-          <button class="__cp__-display-block-xs" color="primary" mat-stroked-button>
-            xs
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-sm" color="primary" mat-stroked-button>
-            sm
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-md" color="primary" mat-stroked-button>
-            md
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-lg" color="primary" mat-stroked-button>
-            lg
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-xl" color="primary" mat-stroked-button>
-            xl
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <td>gt</td>
-        <td>
-          <button class="__cp__-display-block-gt-xs" color="accent" mat-flat-button>
-            gt-xs
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-gt-sm" color="accent" mat-flat-button>
-            gt-sm
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-gt-md" color="accent" mat-flat-button>
-            gt-md
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-gt-lg" color="accent" mat-flat-button>
-            gt-lg
-          </button>
-        </td>
-        <td>NA</td>
-      </tr>
-      <tr>
-        <td>lt</td>
-        <td>NA</td>
-        <td>
-          <button class="__cp__-display-block-lt-sm" color="warn" mat-flat-button>
-            lt-sm
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-lt-md" color="warn" mat-flat-button>
-            lt-md
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-lt-lg" color="warn" mat-flat-button>
-            lt-lg
-          </button>
-        </td>
-        <td>
-          <button class="__cp__-display-block-lt-xl" color="warn" mat-flat-button>
-            lt-xl
-          </button>
-        </td>
-      </tr>
-    </table>
-
-    <br/>
-    <br/>
-    <br/>
-  </div>
-
-
-
-  <h3>Helper classes</h3>
-  <div class="mat-hint">See: __cp__-help.scss</div>
   <div
     fxLayout="row wrap"
     fxLayoutAlign="start stretch"
     fxLayoutGap="16px">
 
     <div
-      fxFlex="calc(25% - 16px)"
-      fxFlex.lt-md="calc(50% - 16px)"
+      fxFlex="calc(50% - 16px)"
       fxFlex.lt-sm="calc(100% - 16px)">
+      <h3>Size dependent classes</h3>
+      <div>
+        <h4>.__cp__-display-none-*</h4>
+        <div class="mat-hint">See: __cp__-responsive.scss</div>
+        <table>
+          <tr>
+            <td></td>
+            <td>xs</td>
+            <td>sm</td>
+            <td>md</td>
+            <td>lg</td>
+            <td>xl</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>
+              <button class="__cp__-display-none-xs" color="primary" mat-stroked-button>
+                xs
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-sm" color="primary" mat-stroked-button>
+                sm
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-md" color="primary" mat-stroked-button>
+                md
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-lg" color="primary" mat-stroked-button>
+                lg
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-xl" color="primary" mat-stroked-button>
+                xl
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>gt</td>
+            <td>
+              <button class="__cp__-display-none-gt-xs" color="accent" mat-flat-button>
+                gt-xs
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-gt-sm" color="accent" mat-flat-button>
+                gt-sm
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-gt-md" color="accent" mat-flat-button>
+                gt-md
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-gt-lg" color="accent" mat-flat-button>
+                gt-lg
+              </button>
+            </td>
+            <td>NA</td>
+          </tr>
+          <tr>
+            <td>lt</td>
+            <td>NA</td>
+            <td>
+              <button class="__cp__-display-none-lt-sm" color="warn" mat-flat-button>
+                lt-sm
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-lt-md" color="warn" mat-flat-button>
+                lt-md
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-lt-lg" color="warn" mat-flat-button>
+                lt-lg
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-none-lt-xl" color="warn" mat-flat-button>
+                lt-xl
+              </button>
+            </td>
+          </tr>
+        </table>
 
-  <h4>Border</h4>
-  <pre>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <h4>.__cp__-display-block-*</h4>
+        <table class="button-display-none">
+          <tr>
+            <td></td>
+            <td>xs</td>
+            <td>sm</td>
+            <td>md</td>
+            <td>lg</td>
+            <td>xl</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>
+              <button class="__cp__-display-block-xs" color="primary" mat-stroked-button>
+                xs
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-sm" color="primary" mat-stroked-button>
+                sm
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-md" color="primary" mat-stroked-button>
+                md
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-lg" color="primary" mat-stroked-button>
+                lg
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-xl" color="primary" mat-stroked-button>
+                xl
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>gt</td>
+            <td>
+              <button class="__cp__-display-block-gt-xs" color="accent" mat-flat-button>
+                gt-xs
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-gt-sm" color="accent" mat-flat-button>
+                gt-sm
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-gt-md" color="accent" mat-flat-button>
+                gt-md
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-gt-lg" color="accent" mat-flat-button>
+                gt-lg
+              </button>
+            </td>
+            <td>NA</td>
+          </tr>
+          <tr>
+            <td>lt</td>
+            <td>NA</td>
+            <td>
+              <button class="__cp__-display-block-lt-sm" color="warn" mat-flat-button>
+                lt-sm
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-lt-md" color="warn" mat-flat-button>
+                lt-md
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-lt-lg" color="warn" mat-flat-button>
+                lt-lg
+              </button>
+            </td>
+            <td>
+              <button class="__cp__-display-block-lt-xl" color="warn" mat-flat-button>
+                lt-xl
+              </button>
+            </td>
+          </tr>
+        </table>
+
+        <br/>
+        <br/>
+        <br/>
+      </div>
+
+    </div>
+    <div
+      fxFlex="calc(50% - 16px)"
+      fxFlex.lt-sm="calc(100% - 16px)">
+<!--      <h3>Color classes</h3>-->
+    </div>
+
+    <h3>Helper classes</h3>
+    <div class="mat-hint">See: __cp__-help.scss</div>
+    <div
+      fxLayout="row wrap"
+      fxLayoutAlign="start stretch"
+      fxLayoutGap="16px">
+
+      <div
+        fxFlex="calc(25% - 16px)"
+        fxFlex.lt-md="calc(50% - 16px)"
+        fxFlex.lt-sm="calc(100% - 16px)">
+
+        <h4>Border</h4>
+        <pre>
 .__cp__-border-top
 .__cp__-border-bottom
 .__cp__-border-right
-.__cp__-border-left
-	</pre>
+.__cp__-border-left</pre>
 
-  <h4>Text</h4>
-  <pre>
+        <h4>Text</h4>
+        <pre>
 .__cp__-font-monospace
 .__cp__-font-weight-bold
 
@@ -228,17 +240,16 @@
 
 .__cp__-text-align-left
 .__cp__-text-align-right
-.__cp__-text-align-center
-	</pre>
+.__cp__-text-align-center</pre>
 
-    </div>
-    <div
-      fxFlex="calc(25% - 16px)"
-      fxFlex.lt-md="calc(50% - 16px)"
-      fxFlex.lt-sm="calc(100% - 16px)">
+      </div>
+      <div
+        fxFlex="calc(25% - 16px)"
+        fxFlex.lt-md="calc(50% - 16px)"
+        fxFlex.lt-sm="calc(100% - 16px)">
 
-  <h4>Margin</h4>
-  <pre>
+        <h4>Margin</h4>
+        <pre>
 .__cp__-margin
 .__cp__-margin-top
 .__cp__-margin-top-0px
@@ -262,17 +273,16 @@
 .__cp__-margin-left-0px
 .__cp__-margin-left-16px
 .__cp__-margin-left-32px
-.__cp__-margin-left-48px
-  </pre>
+.__cp__-margin-left-48px</pre>
 
-    </div>
-    <div
-      fxFlex="calc(25% - 16px)"
-      fxFlex.lt-md="calc(50% - 16px)"
-      fxFlex.lt-sm="calc(100% - 16px)">
+      </div>
+      <div
+        fxFlex="calc(25% - 16px)"
+        fxFlex.lt-md="calc(50% - 16px)"
+        fxFlex.lt-sm="calc(100% - 16px)">
 
-  <h4>Padding</h4>
-  <pre>
+        <h4>Padding</h4>
+        <pre>
 .__cp__-padding
 
 .__cp__-padding-top
@@ -297,19 +307,18 @@
 .__cp__-padding-left-0px
 .__cp__-padding-left-16px
 .__cp__-padding-left-32px
-.__cp__-padding-left-48px
-	</pre>
+.__cp__-padding-left-48px</pre>
 
 
-    </div>
-    <div
-      fxFlex="calc(25% - 16px)"
-      fxFlex.lt-md="calc(50% - 16px)"
-      fxFlex.lt-sm="calc(100% - 16px)">
+      </div>
+      <div
+        fxFlex="calc(25% - 16px)"
+        fxFlex.lt-md="calc(50% - 16px)"
+        fxFlex.lt-sm="calc(100% - 16px)">
 
 
-      <h4>Width</h4>
-      <pre>
+        <h4>Width</h4>
+        <pre>
 .__cp__-width-20-per
 .__cp__-width-25-per
 .__cp__-width-33-per
@@ -322,11 +331,10 @@
 .__cp__-max-width-1920-px
 
 .__cp__-full-width
-.__cp__-full-height-and-width
-	</pre>
+.__cp__-full-height-and-width</pre>
 
-  <h4>Position</h4>
-  <pre>
+        <h4>Position</h4>
+        <pre>
 .__cp__-position-fixed
 .__cp__-float-right
 .__cp__-float-left
@@ -338,17 +346,16 @@
 .__cp__-flex-direction-row
 
 .__cp__-flex-direction-column
-.__cp__-display-inline-flex
-	</pre>
+.__cp__-display-inline-flex</pre>
 
-    </div>
-    <div
-      fxFlex="calc(25% - 16px)"
-      fxFlex.lt-md="calc(50% - 16px)"
-      fxFlex.lt-sm="calc(100% - 16px)">
+      </div>
+      <div
+        fxFlex="calc(25% - 16px)"
+        fxFlex.lt-md="calc(50% - 16px)"
+        fxFlex.lt-sm="calc(100% - 16px)">
 
-  <h4>Theme (light/dark) dependent visibilities</h4>
-  <pre>
+        <h4>Theme (light/dark) dependent visibilities</h4>
+        <pre>
 .__cp__-display-none-for-dark
 .__cp__-display-inline-block-for-dark
 .__cp__-display-inline-for-dark
@@ -357,9 +364,9 @@
 .__cp__-display-none-for-light
 .__cp__-display-inline-block-for-light
 .__cp__-display-inline-for-light
-.__cp__-display-block-for-light
-  </pre>
-    </div>
+.__cp__-display-block-for-light</pre>
+      </div>
 
+    </div>
   </div>
 </div>

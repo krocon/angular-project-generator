@@ -28,7 +28,7 @@ export class __capcp__SettingsComponent implements OnInit, OnDestroy {
   }
 
   go2Welcome() {
-    this.router.navigate(['/willkommen']);
+    this.router.navigate(['/welcome']);
   }
 
   onOkClicked() {

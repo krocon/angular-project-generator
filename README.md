@@ -111,3 +111,6 @@ Feature: 001 Login
 ### Demo page / css classes
 <img src="https://user-images.githubusercontent.com/11378781/81505200-eed40c00-92ed-11ea-8b2b-26cd34fe6681.png" width="50%">
 
+### Demo page / company color
+<img src="https://user-images.githubusercontent.com/11378781/82115556-cb80e500-9763-11ea-806c-3ca4bda333da.png" width="50%">
+
