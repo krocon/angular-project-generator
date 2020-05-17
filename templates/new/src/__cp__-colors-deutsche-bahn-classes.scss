@@ -1,6 +1,6 @@
 /*  D e u t s c b e    B a h n   F a r b e n    */
 
-@import "__cp__-colors-deutsche-bahn-const.scss";
+@import "_cp__-colors-deutsche-bahn-vars";
 
 /* Primärfarben */
 .db-color-red {color: $db-red;} .db-bg-red {background-color: $db-red;}

@@ -1,0 +1,36 @@
+<div class="__cp__-padding">
+
+  <h2>Deutsch Bank color classes</h2>
+  <p>
+    Deutsche Bank’s color
+    way is built around small
+    quantities of an intense
+    new blue and generous
+    amounts of white.
+  </p>
+  <p>
+    White must be valued as
+    a color and included as an
+    essential element of our
+    design.
+  </p>
+  <p>For CSS Color classes see <strong>src\__cp__-colors-deutsche-bank-classes.scss</strong></p>
+  <p>For SCSS color variables see <strong>src\__cp__-colors-deutsche-bank-vars.scss</strong></p>
+
+  <h3>Primary colors</h3>
+  <div>
+    <app-__cp__-color-primary-square *ngFor="let color of primary"
+      [bgClass]="'db-bg-' + color"
+      [colorClass]="'db-color-' + color"
+      [scssVariable]="'$db-' + color"></app-__cp__-color-primary-square>
+  </div>
+
+  <h3>Secondary colors</h3>
+  <div>
+    <app-__cp__-color-primary-square *ngFor="let color of secondary"
+      [bgClass]="'db-bg-' + color"
+      [colorClass]="'db-color-' + color"
+      [scssVariable]="'$db-' + color"></app-__cp__-color-primary-square>
+  </div>
+
+</div>

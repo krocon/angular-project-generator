@@ -103,8 +103,7 @@ export class __capcp__NavComponent implements OnInit, OnDestroy {
         this.cdr.detectChanges();
       } else if (evt instanceof NavigationEnd) {
         this.matSidenavContent.scrollTo({top: 0, left: 0});
-        let url = evt.url;
-        this.calcTitle(url);
+        this.calcTitle(evt.url);
       }
     });
     this.authService.valueChanges$

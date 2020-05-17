@@ -4,16 +4,18 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
-import { __capcp__ColorDemoComponent } from './__cp__-color-demo.component';
+import { __capcp__ColorDemoDeutscheBahnComponent } from './__cp__-color-demo-deutsche-bahn.component';
 import { __capcp__ColorSquareComponent } from "./__cp__-color-square.component";
 import { __capcp__ColorSquarePrimaryComponent } from "./__cp__-color-square-primary.component";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { __capcp__ColorDemoDeutscheBankComponent } from "./__cp__-color-demo-deutsche-bank.component";
 
 @NgModule({
     declarations: [
-        __capcp__ColorDemoComponent,
-        __capcp__ColorSquareComponent,
-        __capcp__ColorSquarePrimaryComponent
+      __capcp__ColorDemoDeutscheBahnComponent,
+      __capcp__ColorDemoDeutscheBankComponent,
+      __capcp__ColorSquareComponent,
+      __capcp__ColorSquarePrimaryComponent
     ],
   imports: [
     CommonModule,
@@ -23,15 +25,22 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     ReactiveFormsModule,
     RouterModule.forChild([
       {
-        path: 'color',
-        component: __capcp__ColorDemoComponent
+        path: 'colordeutschebahn',
+        component: __capcp__ColorDemoDeutscheBahnComponent
+      }
+    ]),
+    RouterModule.forChild([
+      {
+        path: 'colordeutschebank',
+        component: __capcp__ColorDemoDeutscheBankComponent
       }
     ]),
     MatButtonModule,
     MatTooltipModule,
   ],
   providers: [
-    __capcp__ColorDemoComponent
+    __capcp__ColorDemoDeutscheBahnComponent,
+    __capcp__ColorDemoDeutscheBankComponent
   ]
 })
 export class __capcp__ColorDemoModule {

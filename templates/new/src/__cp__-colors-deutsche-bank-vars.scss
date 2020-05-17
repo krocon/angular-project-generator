@@ -1,0 +1,125 @@
+/*  D e u t s c b e    B a h n   F a r b e n    */
+
+/* Primärfarben */
+
+$db-dark-blue: #002244;
+$db-deutsche-blue: #0018A8;
+$db-bright-blue: #0098db;
+$db-light-blue: #eaf1f7;
+
+/* Sekundärfarben */
+$db-black: #000;
+$db-light-grey: #999;
+$db-dark-grey: #666;
+$db-white: #fff;
+
+$db-pink: #d71f85;
+$db-red: #e00034;
+$db-amber: #ffa100;
+$db-green: #7ab800;
+$db-purple: #57068c;
+
+
+
+
+
+
+/* Color palettes */
+$mat-db-prime: (
+  50 : #fde3e3,
+  100 : #fbb9b9,
+  200 : #f88a8a,
+  300 : #f55b5b,
+  400 : #f23737,
+  500 : #f01414,
+  600 : #ee1212,
+  700 : #ec0e0e,
+  800 : #e90b0b,
+  900 : #e50606,
+  A100 : #ffffff,
+  A200 : #ffdada,
+  A400 : #ffa7a7,
+  A700 : #ff8d8d,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$mat-db-second: (
+  50 : #ecedee,
+  100 : #d1d2d5,
+  200 : #b2b4b9,
+  300 : #93969d,
+  400 : #7b8088,
+  500 : #646973,
+  600 : #5c616b,
+  700 : #525660,
+  800 : #484c56,
+  900 : #363b43,
+  A100 : #9cbcfc,
+  A200 : #6b9bfa,
+  A400 : #3377ff,
+  A700 : #1a66ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$mat-db-blue: (
+  50 : #e2e4ee,
+  100 : #b6bcd4,
+  200 : #858fb7,
+  300 : #54629a,
+  400 : #2f4084,
+  500 : #0a1e6e,
+  600 : #091a66,
+  700 : #07165b,
+  800 : #051251,
+  900 : #030a3f,
+  A100 : #747dff,
+  A200 : #414eff,
+  A400 : #0e1eff,
+  A700 : #0010f4,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
