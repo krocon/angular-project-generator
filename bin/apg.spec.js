@@ -23,14 +23,14 @@ test('Version should be ' + pkg.version, async () => {
     return (arr.splice(arr.length - 2).join('')).replace(/ /g, '');
   };
   expect(extractVersion(result.stdout)).toBe(pkg.version);
-});
+}, 60 * 1000);
 
 
 test('Help text should be displayed', async () => {
   let result = await cli(`node ${cmdApg} --help`, '.');
   expect(result.code).toBe(0);
   expect(result.stdout).toContain('Usage: apg');
-});
+}, 60 * 1000);
 
 
 test('Cmd update should be run without errors', async () => {
