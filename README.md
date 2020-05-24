@@ -29,6 +29,7 @@ apg new --help
    - Version Indicator (shows build date)
    - Couterdown & countup component (for session timeout, ...)
  - Gherkin E2E test setup: chai, cucumber, jasmine, karma, protractor and predefined base steps (given, when, then)
+ - Integrated jest for better and faster unit testing
  - Theme switcher for light and dark
  - Predefined npm scripts
  - A complete starter template: example app structure tailored for scalability, with examples and boilerplate code for every common thing needed in enterprise projects, such as unit tests, routing & authentication.
