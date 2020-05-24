@@ -10,6 +10,7 @@ import { __capcp__SettingsData } from './data/settings.data';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class __capcp__SettingsComponent implements OnInit, OnDestroy {
+
   public data: __capcp__SettingsData = new __capcp__SettingsData();
   private alive = true;
 

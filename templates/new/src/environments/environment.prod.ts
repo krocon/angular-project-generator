@@ -4,7 +4,7 @@ export const environment = {
 	production: true,
 	env: 'prod',
 	version: '{BUILD_VERSION}',
-	commitHash: 'd73a26c',
+	commitHash: '{COMMIT_HASH}',
 	showVersionIndicator: false,
 	routerTracing: false,
 

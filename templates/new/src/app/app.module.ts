@@ -14,6 +14,7 @@ import { __capcp__NavModule } from './__cp__-nav/__cp__-nav.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { __capcp__AuthModule } from './__cp__-auth/__cp__-auth.module';
+import { __capcp__SettingsModule } from "./__cp__-settings/__cp__-settings.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +31,7 @@ import { __capcp__AuthModule } from './__cp__-auth/__cp__-auth.module';
     AppRoutingModule,
     __capcp__NavModule,
     __capcp__AuthModule,
+    __capcp__SettingsModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production

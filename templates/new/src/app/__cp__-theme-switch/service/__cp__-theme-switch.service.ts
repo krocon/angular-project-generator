@@ -13,7 +13,7 @@ export class __capcp__ThemeSwitchService {
 
   private static readonly innerService = new __capcp__TypedDataService<string>(
     'theme', // key in localstorage
-    window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light' // very first default value
+    window?.matchMedia('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light' // very first default value
   );
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {

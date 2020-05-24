@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -44,15 +44,17 @@ import { environment } from '../../environments/environment';
     </div>
   `
 })
-export class __capcp__VersionIndicatorComponent {
+export class __capcp__VersionIndicatorComponent implements OnInit {
   public environment = environment;
 
-  constructor() {
-    // tslint:disable:no-console
-    console.info('Version >');
-    console.info('        > Build Version:', environment.version);
-    console.info('        > Commit Hash  :', environment.commitHash);
-    console.info('        > env          :', environment.env);
-    console.info('        > all          :', environment);
+  ngOnInit(): void {
+    if (environment.env !== 'dev') {
+      // tslint:disable:no-console
+      console.info('Version >');
+      console.info('        > Build Version:', environment.version);
+      console.info('        > Commit Hash  :', environment.commitHash);
+      console.info('        > env          :', environment.env);
+      console.info('        > all          :', environment);
+    }
   }
 }
