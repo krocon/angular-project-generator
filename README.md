@@ -17,6 +17,7 @@ apg new --help
 ``` 
 
 #### The generated app will have a lot of common features like:
+ - Based on angular material UI library
  - Predefined pages/routes (Imprint, Login, ...)
  - Responsive layout
  - Basic PWA support
