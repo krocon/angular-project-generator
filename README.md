@@ -1,12 +1,10 @@
-.
 
-.
-
-![APG2](https://user-images.githubusercontent.com/11378781/81468942-c3b0c600-91e2-11ea-9a42-e0493655154e.png)
+# **A**ngular **P**roject **G**enerator (apg)
 
 
-# **A**ngular **P**roject **G**enerator (apg) 
-## Setup complete angular PWA with one command
+[![npm-badge-url](https://img.shields.io/npm/v/%40angular/cli.svg)](/LICENSE)   [![License](https://img.shields.io/npm/l/@angular/cli.svg)](/LICENSE) 
+ 
+## Setup a complete PWA based on angular and material design
 ###Command line interface (CLI) for angular 9.
 
 Project generator based on angular-cli with best practices.
@@ -44,6 +42,8 @@ Coming soon:
 
 <img src="https://user-images.githubusercontent.com/11378781/81504946-7e78bb00-92ec-11ea-998b-c4de37801763.png" width="50%">
 
+#### Prerequisites
+Both the CLI and generated project have dependencies that require Node 8.9 or higher, together with NPM 5.5.1 or higher.
 
 #### Install apg
 ```console
@@ -116,3 +116,9 @@ Feature: 001 Login
 ### Demo page / company colors
 <img src="https://user-images.githubusercontent.com/11378781/82115556-cb80e500-9763-11ea-806c-3ca4bda333da.png" width="50%">
 
+## License
+
+[MIT](https://github.com/krocon/angular-project-generator/blob/master/LICENSE)
+
+[license-url]: https://github.com/krocon/angular-project-generator/blob/master/LICENSE
+[npm-badge-url]: https://www.npmjs.com/package/angular-project-generator
